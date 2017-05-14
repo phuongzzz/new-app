@@ -8,7 +8,8 @@ import Main from './Main';
 function mapStateToProps(state) {
   return {
     users: state.users,
-    topics: state.topics
+    topics: state.topics,
+    cvs: state.cvs
     //MORE FROM STATE
   }
 }
