@@ -8,10 +8,8 @@
 }
 
 .topics, .registered-topics {
-  /*border: 5px solid rgba(26, 188, 156,1.0);*/
+  border: 2px solid rgba(26, 188, 156,1.0);
   border-radius: 5px;
   /*background-color: #fff;*/
-  -webkit-box-shadow: 0px 0px 23px -5px rgba(52,73,94,0.58);
-  -moz-box-shadow: 0px 0px 23px -5px rgba(52,73,94,0.58);
-  box-shadow: 0px 0px 23px -5px rgba(52,73,94,0.58);
+  /*box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.2);*/
 }

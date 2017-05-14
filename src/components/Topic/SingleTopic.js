@@ -15,15 +15,38 @@ const SingleTopic = React.createClass({
         <div className="single-topic-box col-md-8 col-md-offset-2">
           <div className="content-box">
             <h4>Topic name</h4>
-            <p>{topic.}</p>
+            <p>{topic.title}</p>
             <hr/>
           </div>
 
           <div className="content-box">
-            <h4>Topic name</h4>
-            <p>{topic.}</p>
+            <h4>Categories</h4>
+            <p>{topic.categories}</p>
             <hr/>
           </div>
+
+          <div className="content-box">
+            <h4>Company</h4>
+            <p>{topic.company_name}</p>
+            <hr/>
+          </div>
+
+          <div className="content-box">
+            <h4>Instructor</h4>
+            <p>{topic.name}</p>
+            <hr/>
+          </div>
+
+          <div className="content-box">
+            <h4>Description</h4>
+            <p>{topic.description}</p>
+            <hr/>
+          </div>
+
+          <div className="content-box ">
+            <button className="btn btn-success">Apply Job</button>
+          </div>
+
         </div>
       </div>
     );

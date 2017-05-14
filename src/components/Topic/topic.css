@@ -1,12 +1,13 @@
 .topic-box {
-  border: 1px solid rgba(26, 188, 156,.2);
+  border-bottom: 1px solid rgba(26, 188, 156,.2);
   margin-top: 5px;
   padding: 10px;
   border-radius: 5px;
-  transition: all ease .25s;
+  transition: all ease .5s;
 }
 .topic-box:hover {
-  border: 1px solid rgba(26, 188, 156,1);
+  /*border: 1px solid rgba(26, 188, 156,1);*/
+  background-color: #ecf0f1;
 }
 
 .topic-box h6 {

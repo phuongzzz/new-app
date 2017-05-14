@@ -1,10 +1,19 @@
 .single-topic-box {
-  background-color: red;
+  /*background-color: red;*/
   margin-top: 50px;
+  margin-bottom: 50px;
   padding: 20px 50px;
   border-radius: 5px;
+  /*border: 1px solid rgba(0,0,0,.5);*/
+  -webkit-box-shadow: 0px 0px 26px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 26px -5px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 26px -5px rgba(0,0,0,0.75);
 }
 
 .content-box {
   text-align: left;
+}
+
+.content-box:last-child {
+  text-align: center;
 }
