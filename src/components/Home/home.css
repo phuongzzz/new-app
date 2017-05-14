@@ -1,0 +1,19 @@
+.banner {
+  /*margin-top: 20vh;*/
+  overflow-x: hidden;
+  margin-bottom: 0 !important;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  background: url(https://static.teamtreehouse.com/assets/views/landing_pages/green-illustration-bg-c581b2117435570bf3f91b6bdfdaf78a3365cc0846b97d8e2631b4ef206fa5c7.svg) #5fcf80;
+}
+.banner-wrapper {
+  width: 65%;
+  margin: 15vh auto 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px 20px;
+  border-radius: 5px;
+}
+ .banner-wrapper::before {
+   filter: blur(20px);
+ }
