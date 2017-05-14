@@ -6,9 +6,13 @@ const ManageUser = React.createClass({
     e.preventDefault();
     console.log(this.refs);
     const username = this.refs.username.value;
-    const email = this.refs.email.value;
-    this.props.addUser(username)
+    const name = this.refs.name.value;
+    const phonenumber = this.refs.phonenumber.value;
+    this.props.addUser(username, name, phonenumber);
+    console.log(username, name, phonenumber);
   },
+
+
   render() {
     var user = {};
     const { userId } = this.props.params;
@@ -20,7 +24,7 @@ const ManageUser = React.createClass({
     }
     else {
       user = {};
-      console.log(user);
+      // console.log(user);
     }
 
     return (
@@ -35,6 +39,7 @@ const ManageUser = React.createClass({
             <label>Phone Number</label>
             <input type="text" ref="phonenumber" placeholder="Phone Number" className="form-control" defaultValue={user.phonenumber}/>
             <input type="submit" hidden/>
+            <input type="submit" className="btn btn-success" value="Save"/>
           </form>
         </div>
       </div>
