@@ -31,7 +31,7 @@ module.exports =
       "company_name": "VIETTEL"
     },
     {
-      "name": "Trần Lê Hải",
+      "name": "Nguyen Van Quy",
       "topic_id": 4,
       "title": "PHP",
       "categories": "PHP",
