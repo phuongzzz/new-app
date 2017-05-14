@@ -12,6 +12,7 @@ import SingleUser from './components/User/SingleUser';
 import UserGrid from './components/User/UserGrid';
 import HomePage from './components/Home/HomePage';
 import TopicPage from './components/Topic/TopicPage';
+import SingleTopic from './components/Topic/SingleTopic';
 import AddUser from './components/User/AddUser';
 
 import store, { history } from './store/store';
@@ -26,6 +27,7 @@ const router = (
       <Route path="/user/:userId" component={SingleUser}></Route>
       <Route path="/add-user" component={AddUser}></Route>
       <Route path="/topics" component={TopicPage}></Route>
+      <Route path="/topic/:topicId" component={SingleTopic}></Route>
     </Route>
   </Router>
 </Provider>

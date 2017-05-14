@@ -1,0 +1,10 @@
+.single-topic-box {
+  background-color: red;
+  margin-top: 50px;
+  padding: 20px 50px;
+  border-radius: 5px;
+}
+
+.content-box {
+  text-align: left;
+}
