@@ -16,7 +16,7 @@ module.exports =
       "company_name": "VIETTEL"
     },
     {
-      "name": "Lee Thi Mai",
+      "name": "Tran Quang Chien",
       "topic_id": 3,
       "title": "Java",
       "categories": "Desktop App",
@@ -31,7 +31,7 @@ module.exports =
       "company_name": "VIETTEL"
     },
     {
-      "name": "Trần Lê Hải",
+      "name": "Nguyen Van Quy",
       "topic_id": 4,
       "title": "PHP",
       "categories": "PHP",
@@ -46,7 +46,7 @@ module.exports =
       "company_name": "VIETTEL"
     },
     {
-      "name": "Trần Lê Hải",
+      "name": "Nguyen Phuong Thao",
       "topic_id": 5,
       "title": "Perl",
       "categories": "Desktop App",
@@ -61,7 +61,7 @@ module.exports =
       "company_name": "VIETTEL"
     },
     {
-      "name": "Trần Lê Hải",
+      "name": "Hoang Ngoc Luc",
       "topic_id": 6,
       "title": "Rust",
       "categories": "System programing",
@@ -76,7 +76,7 @@ module.exports =
       "company_name": "VIETTEL"
     },
     {
-      "name": "Trần Lê Hải",
+      "name": "Ninh Manh Dung ",
       "topic_id": 7,
       "title": "Python",
       "categories": "Machine Learning",
@@ -91,7 +91,7 @@ module.exports =
       "company_name": "VIETTEL"
     },
     {
-      "name": "Trần Lê Hải",
+      "name": "Le Van Duc",
       "topic_id": 8,
       "title": "Ruby",
       "categories": "Metasploit",
