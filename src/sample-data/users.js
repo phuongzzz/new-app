@@ -95,5 +95,53 @@ module.exports =
       "lock": 0,
       "status": 1,
       "groupname": "students"
+    },
+    {
+      "id": 2,
+      "username": "lelan",
+      "email": "lan@gmail.com",
+      "name": "Le Thi Lan",
+      "phonenumber": 123456789,
+      "dateofbirth": "0000-00-00",
+      "gender": 0,
+      "lock": 0,
+      "status": 1,
+      "groupname": "students"
+    },
+    {
+      "id": 3,
+      "username": "trungkien",
+      "email": "kientt@soict.hust.edu.vn",
+      "name": "Tran Trung Kien",
+      "phonenumber": 123456789,
+      "dateofbirth": "0000-00-00",
+      "gender": 0,
+      "lock": 0,
+      "status": 1,
+      "groupname": "teacher_managers"
+    },
+    {
+      "id": 4,
+      "username": "binhminh",
+      "email": "minhbn@soict.hust.edu.vn",
+      "name": "Nguyen Binh Minh",
+      "phonenumber": 123456789,
+      "dateofbirth": "0000-00-00",
+      "gender": 0,
+      "lock": 0,
+      "status": 1,
+      "groupname": "teacher_instructions"
+    },
+    {
+      "id": 6,
+      "username": "nguyentruong",
+      "email": "truong@vnist.com",
+      "name": "Nguyen Van Truong",
+      "phonenumber": 123456789,
+      "dateofbirth": "0000-00-00",
+      "gender": 0,
+      "lock": 0,
+      "status": 1,
+      "groupname": "company's instructors"
     }
   ]
