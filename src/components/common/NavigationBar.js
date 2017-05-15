@@ -29,10 +29,20 @@ const NavigationBar = React.createClass({
                 <li><a href="#">Internship Schedule</a></li>
               </ul>
             </li>
+
+
+            <li className="dropdown">
+              <a href="#" className="dropdown-toggle" data-toggle="dropdown">Curriculum<b className="caret"></b></a>
+              <span className="dropdown-arrow"></span>
+              <ul className="dropdown-menu">
+                <li><Link to="/reports">Reports</Link></li>
+                <li><Link to="/marks">Marks</Link></li>
+                <li><Link to="/assigns">Assigns</Link></li>
+              </ul>
+            </li>
+
             <li><Link to="/users">Users</Link></li>
-            <li><Link to="/reports">Reports</Link></li>
-            <li><Link to="/marks">Marks</Link></li>
-            <li><Link to="/assigns">Assigns</Link></li>
+
           </ul>
           {(Object.keys(this.props.session).length !== 0) ?
             <button className="btn btn-danger navbar-right log-btn"
