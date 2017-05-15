@@ -14,3 +14,11 @@
 .table-wrap::-webkit-scrollbar {
     display: none;
 }
+
+.single-mark-wrap{
+  text-align: left;
+}
+
+/*.save-mark-btn {*/
+  /*margin-top: 20px !important;*/
+/*}*/
