@@ -25,7 +25,7 @@ const router = (
     <Route path="/" component={App}>
       <IndexRoute component={HomePage}/>
       <Route path="/login" component={LoginPage}></Route>
-      <Route path="/users" component={UserGrid}></Route>
+      <Route path="/users" component={UserGrid} onEnter={requireAuth}></Route>
       <Route path="/user/:userId" component={ManageUser}></Route>
       <Route path="/add-user" component={ManageUser}></Route>
       <Route path="/topics" component={TopicPage}></Route>
@@ -34,6 +34,15 @@ const router = (
   </Router>
 </Provider>
 );
+
+function requireAuth(nextState, replace) {
+  if (!sessionStorage.username) {
+    replace({
+      pathname: '/login',
+      state: { nextPathname: nextState.location.pathname }
+    })
+  }
+}
 
 ReactDOM.render(
   router,

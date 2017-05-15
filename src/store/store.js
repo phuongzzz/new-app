@@ -15,7 +15,8 @@ import cvs from '../sample-data/cvs';
 const defaultState = {
   users,
   topics,
-  cvs
+  cvs,
+  session: sessionStorage.username
 };
 
 const store = createStore(rootReducer, defaultState, applyMiddleware(thunk, logger()));

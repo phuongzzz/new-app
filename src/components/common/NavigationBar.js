@@ -3,6 +3,11 @@ import './navigation-bar.css';
 import { Link } from 'react-router';
 
 const NavigationBar = React.createClass({
+
+  handleLogout() {
+    this.props.logoutUser();
+  },
+
   render() {
     return (
       <nav className="navbar navbar-inverse navbar-embossed" role="navigation">
@@ -26,6 +31,12 @@ const NavigationBar = React.createClass({
             </li>
             <li><Link to="/users">Users</Link></li>
           </ul>
+          {(Object.keys(this.props.session).length !== 0) ?
+            <button className="btn btn-danger navbar-right log-btn"
+              onClick={this.handleLogout}>Logout</button>
+              :
+            <Link to="/login" className="btn btn-primary navbar-right log-btn">Login</Link>
+          }
         </div>
       </nav>
     );

@@ -7,7 +7,7 @@ class Main extends Component {
   render() {
     return (
       <div className="App">
-        <NavigationBar/>
+        <NavigationBar {...this.props}/>
         {React.cloneElement(this.props.children, this.props)}
       </div>
     );

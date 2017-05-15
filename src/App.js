@@ -9,7 +9,8 @@ function mapStateToProps(state) {
   return {
     users: state.users,
     topics: state.topics,
-    cvs: state.cvs
+    cvs: state.cvs,
+    session: state.session
     //MORE FROM STATE
   }
 }

@@ -1,3 +1,6 @@
+import { browserHistory } from 'react-router';
+import toastr from 'toastr';
+
 export function addUser(username, name, phonenumber) {
   console.log("add user running");
   return {
@@ -18,7 +21,7 @@ export function removeUser(userId) {
 export function loginSuccess() {
   console.log("Login an roi");
   return {
-    type: 'LOGIN_IN_SUCCESS'
+    type: 'LOGIN_SUCCESS'
   }
 }
 
@@ -34,9 +37,21 @@ export function logInUser(username, password) {
     if (username === 'admin' && password === 'admin') {
       sessionStorage.setItem('username', username);
       dispatch(loginSuccess());
+      browserHistory.push("/");
+      toastr.success("Login successfully");
     }
     else {
       dispatch(loginFailed());
+      toastr.error('Error when login', 'Check your credentials');
     }
+  }
+}
+
+export function logoutUser() {
+  console.log("logout chay roi");
+  sessionStorage.removeItem('username');
+  browserHistory.push("/");
+  return {
+    type:'LOG_OUT'
   }
 }
