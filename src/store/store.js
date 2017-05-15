@@ -12,6 +12,10 @@ import topics from '../sample-data/topics';
 import cvs from '../sample-data/cvs';
 import reports from '../sample-data/reports';
 import students from '../sample-data/students';
+import marks from '../sample-data/marks';
+import registered_topics from '../sample-data/registered_topics';
+import assigns from '../sample-data/assigns';
+
 
 //create default state
 const defaultState = {
@@ -20,6 +24,9 @@ const defaultState = {
   cvs,
   reports,
   students,
+  marks,
+  registered_topics,
+  assigns,
   session: sessionStorage.username
 };
 
