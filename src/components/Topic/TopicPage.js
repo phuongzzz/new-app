@@ -9,7 +9,7 @@ const TopicPage = React.createClass({
         <h1>This is topic page</h1>
         <div className="row">
           <h4>Available Topics</h4>
-          <div className="topics col-md-10 col-md-offset-1">
+          <div className="topics col-md-10 col-md-offset-1 topic-wrap">
             {this.props.topics.map((topic, i) => <Topic {...this.props} key={i} i={i} topic={topic} />)}
           </div>
         </div>

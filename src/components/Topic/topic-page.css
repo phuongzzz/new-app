@@ -13,3 +13,12 @@
   /*background-color: #fff;*/
   /*box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.2);*/
 }
+
+.topic-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.topic-wrap {
+  /*padding-left: 0px;*/
+  /*padding-right: 0px;*/
+}
