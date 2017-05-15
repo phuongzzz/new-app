@@ -10,7 +10,6 @@ function users (state = [], action) {
     default:
       return state;
   }
-  return state;
 }
 
 export default users;

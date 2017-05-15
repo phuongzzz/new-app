@@ -14,6 +14,7 @@ import HomePage from './components/Home/HomePage';
 import TopicPage from './components/Topic/TopicPage';
 import SingleTopic from './components/Topic/SingleTopic';
 import ManageUser from './components/User/ManageUser';
+import LoginPage from './components/Login/LoginPage';
 
 import store, { history } from './store/store';
 window.store = store;
@@ -23,6 +24,7 @@ const router = (
   <Router history={history}>
     <Route path="/" component={App}>
       <IndexRoute component={HomePage}/>
+      <Route path="/login" component={LoginPage}></Route>
       <Route path="/users" component={UserGrid}></Route>
       <Route path="/user/:userId" component={ManageUser}></Route>
       <Route path="/add-user" component={ManageUser}></Route>

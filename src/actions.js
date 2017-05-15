@@ -14,3 +14,29 @@ export function removeUser(userId) {
     userId
   }
 }
+
+export function loginSuccess() {
+  console.log("Login an roi");
+  return {
+    type: 'LOGIN_IN_SUCCESS'
+  }
+}
+
+export function loginFailed() {
+  console.log("login fail");
+  return {
+    type: 'LOGIN_FAIL'
+  }
+}
+
+export function logInUser(username, password) {
+  return function (dispatch) {
+    if (username === 'admin' && password === 'admin') {
+      sessionStorage.setItem('user', username);
+      dispatch(loginSuccess());
+    }
+    else {
+      dispatch(loginFailed());
+    }
+  }
+}
