@@ -25,8 +25,15 @@
 }
 
 .cv_list{
-    padding-top:20px;
+    /*padding-top:20px;*/
     transition: all ease .25s;
+    border: 1px dotted rgba(52, 73, 94, .2);
+    margin-bottom: 30px;
+    border-radius: 5px;
+
+  /*-we-webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.2);*/
+  /*-moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.2);*/
+  /*box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.2);*/
 }
 
 .cv_list:hover{

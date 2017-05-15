@@ -1,0 +1,55 @@
+.cv-details{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 0 40px !important;
+}
+
+.cv-ava-img{
+    width: 60% !important;
+    padding-top: 20px;
+}
+
+.cv-info{
+    padding-top: 20px !important;
+}
+
+.cv-person-name{
+    font-size:30px;
+    text-transform: uppercase;
+}
+
+.cv-education{
+    padding-top: 20px;
+    text-align: left;
+}
+
+.cv-education-label >ul >li{
+    text-align: left;
+}
+
+.cv-contact-label{
+    text-align: left;
+}
+
+.cv-more-info-label{
+    text-align: left;
+}
+
+.cv-skill-label{
+    text-align: left;
+}
+
+.cv-skill-list{
+    width: 300px;
+}
+
+.cv-destination-label{
+    text-align: left;
+}
+
+.title{
+    text-align: left;
+}

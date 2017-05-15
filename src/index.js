@@ -22,6 +22,7 @@ import SingleMark from './components/Mark/SingleMark';
 import AssignPage from './components/Assign/AssignPage';
 import ListCVPage from './components/CV/ListCVPage';
 import NotFound from './components/common/NotFound';
+import SingleCVPage from './components/CV/SingleCVPage';
 
 import store, { history } from './store/store';
 window.store = store;
@@ -43,6 +44,7 @@ const router = (
       <Route path="/mark/:markId" component={SingleMark}></Route>
       <Route path="/assigns" component={AssignPage}></Route>
       <Route path="/listcv" component={ListCVPage}></Route>
+      <Route path="/cv/:cvId" component={SingleCVPage}></Route>
       <Route path="*" component={NotFound}></Route>
     </Route>
   </Router>

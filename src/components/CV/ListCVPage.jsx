@@ -23,9 +23,9 @@ const ListCVPage = React.createClass({
                     </div>
                     <div className="panel-body cv_action">
                       <span>
-                        <Link to={`/cv/${cv.id}`}><button type="button" className="btn btn-info"><span className="fa fa-eye"></span> View</button></Link>
-                        <button type="button" className="btn btn-primary"><span className="fa fa-download"></span> Download</button>
-                        <button type="button" className="btn btn-success"><span className="fa fa-check-circle-o"></span> Approve
+                        <Link to={`/cv/${cv.id}`}><button type="button" className="btn btn-info"> View</button></Link>
+                        <button type="button" className="btn btn-inverse">Download</button>
+                        <button type="button" className="btn btn-success">Approve
                           </button>
                       </span>
                     </div>
