@@ -15,6 +15,8 @@ import TopicPage from './components/Topic/TopicPage';
 import SingleTopic from './components/Topic/SingleTopic';
 import ManageUser from './components/User/ManageUser';
 import LoginPage from './components/Login/LoginPage';
+import ReportPage from './components/Report/ReportPage';
+import SingleReport from './components/Report/SingleReport';
 
 import store, { history } from './store/store';
 window.store = store;
@@ -30,6 +32,8 @@ const router = (
       <Route path="/add-user" component={ManageUser}></Route>
       <Route path="/topics" component={TopicPage} onEnter={requireAuth}></Route>
       <Route path="/topic/:topicId" component={SingleTopic}></Route>
+      <Route path="/reports" component={ReportPage}></Route>
+      <Route path="/report/:reportId" component={SingleReport}></Route>
     </Route>
   </Router>
 </Provider>

@@ -10,12 +10,16 @@ import rootReducer from '../reducers/index';
 import users from '../sample-data/users';
 import topics from '../sample-data/topics';
 import cvs from '../sample-data/cvs';
+import reports from '../sample-data/reports';
+import students from '../sample-data/students';
 
 //create default state
 const defaultState = {
   users,
   topics,
   cvs,
+  reports,
+  students,
   session: sessionStorage.username
 };
 

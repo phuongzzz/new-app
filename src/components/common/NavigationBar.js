@@ -30,6 +30,7 @@ const NavigationBar = React.createClass({
               </ul>
             </li>
             <li><Link to="/users">Users</Link></li>
+            <li><Link to="/reports">Reports</Link></li>
           </ul>
           {(Object.keys(this.props.session).length !== 0) ?
             <button className="btn btn-danger navbar-right log-btn"

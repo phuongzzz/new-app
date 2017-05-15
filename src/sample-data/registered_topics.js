@@ -4,7 +4,7 @@ module.exports = [
         "name": "Le Thi Mai",
         "class": "LTU12A",
         "title": "Ruby on Rails",
-        "compare": "100%",
+        "compare": "30%",
         "company": "Framgia"
 
     },
@@ -13,15 +13,15 @@ module.exports = [
         "name": "Tran Huu Nam Phuong",
         "class": "LTU12A",
         "title": "Python",
-        "compare": "100%",
+        "compare": "72%",
         "company": "Framgia"
     },
     {
         "id": "3",
-        "name": "Nguyen Phu Cuong",
-        "class": "LTU12A",
+        "name": "Le Thi Huong",
+        "class": "LTU11A",
         "title": "PHP",
-        "compare": "100%",
+        "compare": "80%",
         "company": "Vnist"
     }
 ]
