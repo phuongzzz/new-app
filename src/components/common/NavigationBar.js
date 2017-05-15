@@ -42,6 +42,7 @@ const NavigationBar = React.createClass({
             </li>
 
             <li><Link to="/users">Users</Link></li>
+            <li><Link to="/listcv">List CV</Link></li>
 
           </ul>
           {(Object.keys(this.props.session).length !== 0) ?
