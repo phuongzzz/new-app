@@ -28,7 +28,7 @@ const router = (
       <Route path="/users" component={UserGrid} onEnter={requireAuth}></Route>
       <Route path="/user/:userId" component={ManageUser}></Route>
       <Route path="/add-user" component={ManageUser}></Route>
-      <Route path="/topics" component={TopicPage}></Route>
+      <Route path="/topics" component={TopicPage} onEnter={requireAuth}></Route>
       <Route path="/topic/:topicId" component={SingleTopic}></Route>
     </Route>
   </Router>
