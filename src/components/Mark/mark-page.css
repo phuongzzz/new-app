@@ -1,0 +1,16 @@
+.mark-table {
+    margin-top: 60px;
+    border: 2px solid #B2DFDB;
+    border-radius: 2px;
+}
+.thead-mark{
+    background-color:#B2DFDB;
+}
+.table-wrap {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.table-wrap::-webkit-scrollbar {
+    display: none;
+}

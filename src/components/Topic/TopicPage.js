@@ -6,8 +6,7 @@ const TopicPage = React.createClass({
     return(
       <div>
         <h1>This is topic page</h1>
-        {this.props.topics.map((topic, i) => <Topic {...this.props} key={i} i={i} topic={topic} />)}
-      </div>
+        {this.props.topics.map((topic, i) => <Topic {...this.props} key={i} i={i} topic={topic} />)} </div>
     );
   }
 });

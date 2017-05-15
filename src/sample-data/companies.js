@@ -24,5 +24,57 @@ module.exports =  [
       "created_at": "2017-03-22 00:00:00",
       "updated_at": "2017-03-24 07:43:18",
       "is_accept": 1
+    },
+    {
+        "id": 3,
+        "name": "FRAMGIA",
+        "description": "framgia",
+        "foundedyear": "0000-00-00",
+        "address": "Tang 9 Labory-Tran Khac Tran",
+        "phone": 489288272,
+        "email": "info@framgia",
+        "accept": 0,
+        "created_at": "2017-03-22 00:00:00",
+        "updated_at": "2017-03-24 07:43:18",
+        "is_accept": 1
+    },
+    {
+        "id": 4,
+        "name": "BIGTREE",
+        "description": "bigtree",
+        "foundedyear": "0000-00-00",
+        "address": "213 Doi Can- Ba Dinh-HaNoi",
+        "phone": 489288272,
+        "email": "info@btree.vn",
+        "accept": 0,
+        "created_at": "2017-03-22 00:00:00",
+        "updated_at": "2017-03-24 07:43:18",
+        "is_accept": 1
+    },
+    {
+        "id": 5,
+        "name": "VNPT",
+        "description": "vnpt",
+        "foundedyear": "0000-00-00",
+        "address": "3-Cau Giay",
+        "phone": 489288272,
+        "email": "info@vnpt.vn",
+        "accept": 0,
+        "created_at": "2017-03-22 00:00:00",
+        "updated_at": "2017-03-24 07:43:18",
+        "is_accept": 1
+    },
+    {
+        "id": 6,
+        "name": "VN EXSPORT",
+        "description": "vn exsport",
+        "foundedyear": "0000-00-00",
+        "address": "92-Hoang Hoa Tham-Ba Dinh-Ha Noi",
+        "phone": 489288272,
+        "email": "info@framgia",
+        "accept": 0,
+        "created_at": "2017-03-22 00:00:00",
+        "updated_at": "2017-03-24 07:43:18",
+        "is_accept": 1
     }
   ]

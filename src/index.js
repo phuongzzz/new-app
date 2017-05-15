@@ -13,6 +13,11 @@ import UserGrid from './components/User/UserGrid';
 import HomePage from './components/Home/HomePage';
 import TopicPage from './components/Topic/TopicPage';
 import AddUser from './components/User/AddUser';
+import MarkPage from './components/Mark/MarkPage';
+import ReportPage from './components/Report/ReportPage';
+import SingleReport from './components/Report/SingleReport';
+import SingleMark from './components/Mark/SingleMark';
+import AssginPage from './components/Assign/AssignPage';
 
 import store, { history } from './store/store';
 window.store = store;
@@ -26,6 +31,13 @@ const router = (
       <Route path="/user/:userId" component={SingleUser}></Route>
       <Route path="/add-user" component={AddUser}></Route>
       <Route path="/topics" component={TopicPage}></Route>
+      <Route path="/marks" component={MarkPage}></Route>
+      <Route path="/reports" component={ReportPage}></Route>
+      <Route path="/report/:reportId" component={SingleReport}></Route>
+      <Route path="/mark/:markId" component={SingleMark}></Route>
+      <Route path="/assigns" component={AssginPage}></Route>
+
+
     </Route>
   </Router>
 </Provider>

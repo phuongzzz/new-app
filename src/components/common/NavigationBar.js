@@ -25,6 +25,9 @@ const NavigationBar = React.createClass({
               </ul>
             </li>
             <li><Link to="/users">Users</Link></li>
+            <li><Link to="/marks">Marks</Link></li>
+            <li><Link to="/reports">Reports</Link></li>
+            <li><Link to="/assigns">Assign</Link></li>
           </ul>
         </div>
       </nav>
