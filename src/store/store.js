@@ -2,6 +2,7 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 import logger from 'redux-logger';
+import thunk from 'redux-thunk';
 
 import rootReducer from '../reducers/index';
 
@@ -17,7 +18,7 @@ const defaultState = {
   cvs
 };
 
-const store = createStore(rootReducer, defaultState, applyMiddleware(logger()));
+const store = createStore(rootReducer, defaultState, applyMiddleware(thunk, logger()));
 
 export const history = syncHistoryWithStore(browserHistory, store);
 

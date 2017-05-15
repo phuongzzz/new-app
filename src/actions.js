@@ -32,7 +32,7 @@ export function loginFailed() {
 export function logInUser(username, password) {
   return function (dispatch) {
     if (username === 'admin' && password === 'admin') {
-      sessionStorage.setItem('user', username);
+      sessionStorage.setItem('username', username);
       dispatch(loginSuccess());
     }
     else {
