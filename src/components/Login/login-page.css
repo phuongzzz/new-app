@@ -12,6 +12,7 @@
   background-color: rgba(255,255,255, 0.5);
   min-height: 473px;
   padding: 123px 149px 33px 306px;
+  border-radius: 5px;
 }
 .login-icon {
   left: 200px;
