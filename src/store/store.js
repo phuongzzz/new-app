@@ -15,6 +15,11 @@ import students from '../sample-data/students';
 import marks from '../sample-data/marks';
 import registered_topics from '../sample-data/registered_topics';
 import assigns from '../sample-data/assigns';
+import classes from '../sample-data/classes';
+import companies from '../sample-data/companies';
+import company_respondings from '../sample-data/company_respondings';
+import class_respondings from '../sample-data/class_respondings';
+import status_internships from '../sample-data/status_internships';
 
 
 //create default state
@@ -27,6 +32,11 @@ const defaultState = {
   marks,
   registered_topics,
   assigns,
+  classes,
+  companies,
+  class_respondings,
+  company_respondings,
+  status_internships,
   session: sessionStorage.username
 };
 

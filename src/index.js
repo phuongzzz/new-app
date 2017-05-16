@@ -22,6 +22,10 @@ import SingleMark from './components/Mark/SingleMark';
 import AssignPage from './components/Assign/AssignPage';
 import ListCVPage from './components/CV/ListCVPage';
 import SingleCVPage from './components/CV/SingleCVPage';
+import RespondingPage from './components/Responding/RespondingPage';
+import SingleClassResponding from './components/Responding/SingleClassResponding';
+import SingleCompanyResponding from './components/Responding/SingleCompanyResponding';
+import StatusPage from './components/StatusPage/StatusPage';
 import NotFound from './components/common/NotFound';
 
 import store, { history } from './store/store';
@@ -45,6 +49,10 @@ const router = (
       <Route path="/assigns" component={AssignPage}></Route>
       <Route path="/listcv" component={ListCVPage}></Route>
       <Route path="/cv/:cvId" component={SingleCVPage}></Route>
+      <Route path="/respondings" component={RespondingPage}></Route>
+      <Route path="/classe/:className" component={SingleClassResponding}></Route>
+      <Route path="/company/:companyName" component={SingleCompanyResponding}></Route>
+      <Route path="/status-internships" component={StatusPage}></Route>
       <Route path="*" component={NotFound}></Route>
     </Route>
   </Router>

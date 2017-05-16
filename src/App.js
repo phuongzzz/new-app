@@ -15,7 +15,12 @@ function mapStateToProps(state) {
     marks: state.marks,
     registered_topics: state.registered_topics,
     assigns: state.assigns,
-    session: state.session
+    session: state.session,
+    companies: state.companies,
+    classes: state.classes,
+    class_respondings: state.class_respondings,
+    company_respondings: state.company_respondings,
+    status_internships: state.status_internships
     //MORE FROM STATE
   }
 }
