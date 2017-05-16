@@ -25,3 +25,7 @@
  body {
    /*background-color: #E9EBEE;*/
  }
+
+ .content-wrapper {
+   height: 100vh;
+ }
