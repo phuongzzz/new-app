@@ -18,7 +18,7 @@ module.exports =
             "mssv": 20147892,
             "class": "LTU14",
             "username": "mai",
-            "email": "phuongphuong@gmail.com",
+            "email": "mai@gmail.com",
             "name": "phuongzzz",
             "phonenumber": 1234567890,
             "dateofbirth": "0000-00-00",

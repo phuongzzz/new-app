@@ -2,7 +2,6 @@ import React from 'react';
 import './mark-page.css';
 import {Link} from 'react-router';
 
-// import { printJS } from 'print.js/';
 
 
 const MarkPage = React.createClass({

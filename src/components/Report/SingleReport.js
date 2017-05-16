@@ -1,6 +1,5 @@
 import React from 'react';
 import './report-page.css';
-import {Link} from 'react-router';
 
 const SingleReport = React.createClass({
     render() {
@@ -54,7 +53,7 @@ const SingleReport = React.createClass({
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><Link to={`/report/${report.id}`}>{report.id}</Link></td>
+                                    <td>{report.id}</td>
                                     <td>{report.student_id}</td>
                                     <td>{report.name}</td>
                                     <td>{report.link}</td>

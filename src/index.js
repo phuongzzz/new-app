@@ -21,6 +21,10 @@ import MarkPage from './components/Mark/MarkPage';
 import SingleMark from './components/Mark/SingleMark';
 import AssignPage from './components/Assign/AssignPage';
 import ListCVPage from './components/CV/ListCVPage';
+import RespondingPage from './components/Responding/RespondingPage';
+import SingleClassResponding from './components/Responding/SingleClassResponding';
+import SingleCompanyResponding from './components/Responding/SingleCompanyResponding';
+import StatusPage from './components/StatusPage/StatusPage';
 
 import store, { history } from './store/store';
 window.store = store;
@@ -42,6 +46,10 @@ const router = (
       <Route path="/mark/:markId" component={SingleMark}></Route>
       <Route path="/assigns" component={AssignPage}></Route>
       <Route path="/listcv" component={ListCVPage}></Route>
+      <Route path="/companies" component={RespondingPage}></Route>
+      <Route path="/classe/:className" component={SingleClassResponding}></Route>
+      <Route path="/company/:companyName" component={SingleCompanyResponding}></Route>
+      <Route path="/status_internships" component={StatusPage}></Route>
     </Route>
   </Router>
 </Provider>

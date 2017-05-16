@@ -15,19 +15,29 @@ import students from '../sample-data/students';
 import marks from '../sample-data/marks';
 import registered_topics from '../sample-data/registered_topics';
 import assigns from '../sample-data/assigns';
+import companies from '../sample-data/companies';
+import company_respondings from '../sample-data/company_respondings';
+import class_respondings from '../sample-data/class_respondings';
+import classes from '../sample-data/classes';
+import  status_internships from '../sample-data/status_internships';
 
 
 //create default state
 const defaultState = {
-  users,
-  topics,
-  cvs,
-  reports,
-  students,
-  marks,
-  registered_topics,
-  assigns,
-  session: sessionStorage.username
+    users,
+    topics,
+    cvs,
+    companies,
+    classes,
+    reports,
+    students,
+    marks,
+    registered_topics,
+    assigns,
+    company_respondings,
+    class_respondings,
+    status_internships,
+    session: sessionStorage.username
 };
 
 const store = createStore(rootReducer, defaultState, applyMiddleware(thunk, logger()));
