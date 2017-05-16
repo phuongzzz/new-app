@@ -3,6 +3,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
+import {persistStore, autoRehydrate} from 'redux-persist';
 
 import rootReducer from '../reducers/index';
 
@@ -40,7 +41,12 @@ const defaultState = {
   session: sessionStorage.username
 };
 
-const store = createStore(rootReducer, defaultState, applyMiddleware(thunk, logger()));
+const store = createStore(rootReducer, defaultState, compose(
+  applyMiddleware(thunk, logger())),
+  autoRehydrate()
+);
+
+persistStore(store);
 
 export const history = syncHistoryWithStore(browserHistory, store);
 
