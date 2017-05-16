@@ -5,6 +5,7 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 
 import rootReducer from '../reducers/index';
+import { loadState, saveState } from './localStorage';
 
 //import data
 import users from '../sample-data/users';
@@ -21,6 +22,9 @@ import company_respondings from '../sample-data/company_respondings';
 import class_respondings from '../sample-data/class_respondings';
 import status_internships from '../sample-data/status_internships';
 
+
+
+// const defaultState = loadState();
 
 //create default state
 const defaultState = {
