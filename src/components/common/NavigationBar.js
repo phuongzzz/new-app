@@ -10,7 +10,7 @@ const NavigationBar = React.createClass({
 
   render() {
     return (
-      <nav className="navbar navbar-inverse navbar-embossed" role="navigation">
+      <nav className="navbar navbar-inverse navbar-embossed navbar-fixed-top" role="navigation">
         <div className="navbar-header">
           <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
             <span className="sr-only">Toggle navigation</span>

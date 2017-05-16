@@ -14,7 +14,7 @@ class Main extends Component {
           <RouteTransition
             pathname={this.props.location.pathname}
             atEnter={{ opacity: 0.0 }}
-            atLeave={{ opacity: 0.4 }}
+            atLeave={{ opacity: 0.3 }}
             atActive={{ opacity: 1 }}
           >
             {React.cloneElement(this.props.children, this.props)}
