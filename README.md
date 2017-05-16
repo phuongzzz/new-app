@@ -4,7 +4,7 @@
 Latest stable live app:
 
 
-[phuong-app.herokuapp.com](phuong-app.herokuapp.com)
+```phuong-app.herokuapp.com```
 
 Run in local:
 
@@ -24,5 +24,7 @@ Development:
 * Push this branch to your repository
 * Create pull request with this project's ```master``` branch with ***less than 15 files per commit***
 * Wait for merge :D
+
+***Remember: pull from this repository's master branch before working***
 
 Thanks for your contributions! :D
