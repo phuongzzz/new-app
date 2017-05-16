@@ -48,6 +48,11 @@ export function logInUser(username, password) {
           dispatch(loginFailed());
           toastr.error('Error when login', 'Check your credentials');
         }
+        break;
+      default:
+        dispatch(loginFailed());
+        toastr.error('Error when login', 'Check your credentials');
+        break;
     }
   }
 }
