@@ -77,7 +77,7 @@ const SingleCVPage = React.createClass({
             <div className="col-md-5 cv-more-info-label">
               <p className="cv-label-title"><b>MORE INFORMATION</b></p>
               <span>
-                <p>
+                <p className="long-text">
                   {cv.hobby}
                 </p>
               </span>
@@ -114,7 +114,7 @@ const SingleCVPage = React.createClass({
             <div className="col-md-5 cv-destination-label">
               <p className="cv-label-title"><b>DESTINATION</b></p>
               <span>
-                <p>
+                <p className="long-text">
                   {cv.intent}
                 </p>
               </span>

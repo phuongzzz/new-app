@@ -57,10 +57,13 @@
     text-align: left;
 }
 
-.cv-label-title, p{
+.cv-label-title p{
     text-align: left;
 }
 
 .cv-left-part{
     padding-left: 30px;
+}
+.long-text {
+  text-align: left;
 }
