@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="174a176b-386e-46f2-9b10-26ad06223b07" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/CV/SingleCVPage.jsx" afterPath="$PROJECT_DIR$/src/components/CV/SingleCVPage.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,27 +22,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/actions.js">
+      <file leaf-file-name="ListCVPage.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/CV/ListCVPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="780">
+              <caret line="26" column="75" lean-forward="true" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
               <folding>
-                <marker date="1494904520472" expanded="true" signature="594:631" ph="{...}" />
-                <marker date="1494904520472" expanded="true" signature="625:631" ph="{...}" />
-                <marker date="1494904520472" expanded="true" signature="1002:1139" ph="{...}" />
-                <marker date="1494904520472" expanded="true" signature="1113:1137" ph="{&quot;type&quot;: 'LOG_OUT'...}" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -48,18 +37,30 @@
       <file leaf-file-name="SingleCVPage.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/CV/SingleCVPage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="390">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SingleCVPage.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SingleCVPage.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/CV/SingleCVPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="557">
+              <caret line="129" column="12" lean-forward="false" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -86,7 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/Home/home.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/sample-data/users.js" />
         <option value="$PROJECT_DIR$/src/components/User/SingleUser.js" />
@@ -137,6 +137,7 @@
         <option value="$PROJECT_DIR$/src/components/common/not-found.css" />
         <option value="$PROJECT_DIR$/src/components/Login/login-page.css" />
         <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/components/CV/SingleCVPage.jsx" />
       </list>
     </option>
   </component>
@@ -272,7 +273,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="log&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/Login/LoginPage.js&#10;index&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/index.js&#10;mark&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/Mark/MarkPage.js&#10;sing&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/Mark/SingleMark.js&#10;Ma&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/ManageUser.js&#10;Single&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/SingleUser.js&#10;user&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/ManageUser.js&#10;Mark&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/Mark/MarkPage.js&#10;navi&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/common/NavigationBar.js&#10;pack&#9;FILE&#9;file:///home/phuong/Documents/new-app/package.json&#10;ndex&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/reducers/index.js&#10;App&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/App.js&#10;store&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/store/store.js&#10;na&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/common/NavigationBar.js&#10;Ap&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/App.js&#10;navigation&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/common/NavigationBar.js&#10;inde&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/index.js&#10;action&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/actions.js&#10;nav&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/common/NavigationBar.js&#10;session&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/reducers/session.js&#10;sessi&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/reducers/session.js&#10;single&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/SingleUser.js&#10;User&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/ManageUser.js&#10;topic&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/sample-data/topics.js&#10;topics.js&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/sample-data/topics.js&#10;navigati&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/common/NavigationBar.js&#10;usergr&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/UserGrid.js&#10;add&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/AddUser.js&#10;index.js&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/index.js" />
+    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/index.js&#10;log&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/Login/LoginPage.js&#10;mark&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/Mark/MarkPage.js&#10;sing&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/Mark/SingleMark.js&#10;Ma&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/ManageUser.js&#10;Single&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/SingleUser.js&#10;user&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/ManageUser.js&#10;Mark&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/Mark/MarkPage.js&#10;navi&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/common/NavigationBar.js&#10;pack&#9;FILE&#9;file:///home/phuong/Documents/new-app/package.json&#10;ndex&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/reducers/index.js&#10;App&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/App.js&#10;store&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/store/store.js&#10;na&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/common/NavigationBar.js&#10;Ap&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/App.js&#10;navigation&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/common/NavigationBar.js&#10;inde&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/index.js&#10;action&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/actions.js&#10;nav&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/common/NavigationBar.js&#10;session&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/reducers/session.js&#10;sessi&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/reducers/session.js&#10;single&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/SingleUser.js&#10;User&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/ManageUser.js&#10;topic&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/sample-data/topics.js&#10;topics.js&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/sample-data/topics.js&#10;navigati&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/common/NavigationBar.js&#10;usergr&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/UserGrid.js&#10;add&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/components/User/AddUser.js&#10;index.js&#9;FILE&#9;file:///home/phuong/Documents/new-app/src/index.js" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -397,7 +398,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56824000" />
+    <option name="totallyTimeSpent" value="57377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1368" height="746" extended-state="6" />
@@ -509,12 +510,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <marker date="1494904520472" expanded="true" signature="594:631" ph="{...}" />
-            <marker date="1494904520472" expanded="true" signature="625:631" ph="{...}" />
-            <marker date="1494904520472" expanded="true" signature="1002:1139" ph="{...}" />
-            <marker date="1494904520472" expanded="true" signature="1113:1137" ph="{&quot;type&quot;: 'LOG_OUT'...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -639,13 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CV/ListCVPage.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-182">
-          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -798,16 +787,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/CV/SingleCVPage.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="390">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CV/SingleCVPage.jsx">
+    <entry file="file://$PROJECT_DIR$/src/components/CV/ListCVPage.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="780">
+          <caret line="26" column="75" lean-forward="true" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -816,9 +805,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="23" column="54" lean-forward="false" selection-start-line="23" selection-start-column="54" selection-end-line="23" selection-end-column="54" />
-          <folding />
+        <state relative-caret-position="330">
+          <caret line="46" column="25" lean-forward="false" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CV/SingleCVPage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="129" column="12" lean-forward="false" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -44,7 +44,7 @@ const router = (
       <Route path="/mark/:markId" component={SingleMark}></Route>
       <Route path="/assigns" component={AssignPage}></Route>
       <Route path="/listcv" component={ListCVPage}></Route>
-      <Route path="/cv/:cdId" component={SingleCVPage}></Route>
+      <Route path="/cv/:cvId" component={SingleCVPage}></Route>
       <Route path="*" component={NotFound}></Route>
     </Route>
   </Router>

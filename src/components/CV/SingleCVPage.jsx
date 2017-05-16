@@ -1,11 +1,11 @@
 import React from "react";
-import {Icon} from 'react-fa';
 import './SingleCVPage.css';
 import ava from '../../../public/dist/img/avatar.png';
 
 const SingleCVPage = React.createClass({
   render() {
     const { cvId } = this.props.params;
+    console.log(cvId);
     const i = this.props.cvs.findIndex((cv) =>
     cv.id === parseInt(cvId, 10));
     //GET HIM!!!
@@ -16,11 +16,11 @@ const SingleCVPage = React.createClass({
           <div className="row">
             <div className="col-md-7 cv-ava-label">
               <img src={ava} className="cv-ava-img" alt=""/>
-                <p className="cv-person-name "><b>{cv.name}</b></p>
-                <p className="cv-position">
-                  <span><b>Position:</b></span>
-                  <span>{cv.position}</span>
-                </p>
+              <p className="cv-person-name "><b>{cv.name}</b></p>
+              <p className="cv-position">
+                <span><b>Position:</b></span>
+                <span>{cv.position}</span>
+              </p>
             </div>
             <div className="col-md-5 cv-contact-label">
               <p className="cv-label-title"><b>CONTACT</b></p>
@@ -122,12 +122,12 @@ const SingleCVPage = React.createClass({
           </div>
         </div>
         {/*end cv details*/}
-          <div className="col-md-8 col-md-offset-2">
-            <div className="col-md-1 col-md-offset-10">
-              <button type="button" className="btn btn-success">Approve</button>
-            </div>
+        <div className="col-md-8 col-md-offset-2">
+          <div className="col-md-1 col-md-offset-10">
+            <button type="button" className="btn btn-success">Approve</button>
           </div>
         </div>
+      </div>
     )
   }
 });
