@@ -34,15 +34,20 @@ export function loginFailed() {
 
 export function logInUser(username, password) {
   return function (dispatch) {
-    if (username === 'admin' && password === 'admin') {
-      sessionStorage.setItem('username', username);
-      dispatch(loginSuccess());
-      browserHistory.push("/");
-      toastr.success("Login successfully");
-    }
-    else {
-      dispatch(loginFailed());
-      toastr.error('Error when login', 'Check your credentials');
+    switch (username) {
+      case 'admin':
+      case 'phuongzzz':
+      case 'phuong':
+        if (password === 'admin') {
+          sessionStorage.setItem('username', username);
+          dispatch(loginSuccess());
+          browserHistory.push("/");
+          toastr.success("Login successfully");
+        }
+        else {
+          dispatch(loginFailed());
+          toastr.error('Error when login', 'Check your credentials');
+        }
     }
   }
 }

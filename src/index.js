@@ -37,11 +37,11 @@ const router = (
     <Route path="/" component={App}>
       <IndexRoute component={HomePage}/>
       <Route path="/login" component={LoginPage}></Route>
-      <Route path="/users" component={UserGrid} onEnter={requireAuth}></Route>
-      <Route path="/user/:userId" component={ManageUser}></Route>
-      <Route path="/add-user" component={ManageUser}></Route>
+      <Route path="/users" component={UserGrid} onEnter={requireAdmin}></Route>
+      <Route path="/user/:userId" component={ManageUser} onEnter={requireAdmin}></Route>
+      <Route path="/add-user" component={ManageUser} onEnter={requireAdmin}></Route>
       <Route path="/topics" component={TopicPage} onEnter={requireAuth}></Route>
-      <Route path="/topic/:topicId" component={SingleTopic}></Route>
+      <Route path="/topic/:topicId" component={SingleTopic} onEnter={requireAuth}></Route>
       <Route path="/reports" component={ReportPage}></Route>
       <Route path="/report/:reportId" component={SingleReport}></Route>
       <Route path="/marks" component={MarkPage}></Route>
@@ -61,6 +61,15 @@ const router = (
 
 function requireAuth(nextState, replace) {
   if (!sessionStorage.username) {
+    replace({
+      pathname: '/login',
+      state: { nextPathname: nextState.location.pathname }
+    })
+  }
+}
+
+function requireAdmin(nextState, replace) {
+  if (sessionStorage.username !== 'admin') {
     replace({
       pathname: '/login',
       state: { nextPathname: nextState.location.pathname }
