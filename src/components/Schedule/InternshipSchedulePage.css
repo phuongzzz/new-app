@@ -1,0 +1,26 @@
+.cuong-card{
+    float: left;
+    width: 33.3%;
+    padding: 0 15px;
+    box-shadow: none;
+
+}
+
+.card-progress{
+    border-bottom: solid 1px;
+    border-radius: 4px 4px 0 0;
+}
+
+.card-title{
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0 0 20px;
+    color: #4b5658;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.topic-name{
+    text-align: left;
+}

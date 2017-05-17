@@ -26,7 +26,7 @@ const NavigationBar = React.createClass({
               <ul className="dropdown-menu">
                 <li><Link to="/topics">Register Topic</Link></li>
                 <li className="divider"></li>
-                <li><a href="#">Internship Schedule</a></li>
+                <li><Link to="/schedule" >Internship Schedule</Link></li>
               </ul>
             </li>
 
