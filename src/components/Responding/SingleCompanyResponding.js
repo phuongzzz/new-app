@@ -12,6 +12,14 @@ const SingleClassResponding = React.createClass({
     this.setState({ showResponse: !this.state.showResponse });
   },
 
+  handleCancel(e) {
+    e.preventDefault();
+    if(confirm("Are you sure?")) {
+      this.setState({ showResponse: !this.state.showResponse });
+      toastr.error("Cancelled adding response for student");
+    }
+  },
+
   handleSubmit(e) {
     //GET THE LAST COMPANY_RESPONSE_ID
     var last_company_response_id = parseInt(
@@ -62,7 +70,7 @@ const SingleClassResponding = React.createClass({
                     <input type="submit" hidden/>
                     <div className="phuong-btn-group">
                       <input type="submit" className="btn btn-success" value="Save"/>
-                      <button className="btn btn-danger">Cancel</button>
+                      <button className="btn btn-danger" onClick={this.handleCancel}>Cancel</button>
                     </div>
                   </form>
                 </div>
