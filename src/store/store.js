@@ -22,8 +22,6 @@ import company_respondings from '../sample-data/company_respondings';
 import class_respondings from '../sample-data/class_respondings';
 import status_internships from '../sample-data/status_internships';
 
-
-
 // const defaultState = loadState();
 
 //create default state
@@ -44,9 +42,18 @@ const defaultState = {
   session: sessionStorage.username
 };
 
-const store = createStore(rootReducer, defaultState, applyMiddleware(thunk, logger()),
-);
+// saveState(defaultState);
+
+const persisted_state = loadState();
+
+const store = createStore(rootReducer, persisted_state, applyMiddleware(thunk, logger()));
+
+store.subscribe(() => {
+  saveState(store.getState());
+})
 
 export const history = syncHistoryWithStore(browserHistory, store);
 
 export default store;
+
+window.defaultState = defaultState;
