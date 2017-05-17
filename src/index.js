@@ -22,6 +22,7 @@ import SingleMark from './components/Mark/SingleMark';
 import AssignPage from './components/Assign/AssignPage';
 import ListCVPage from './components/CV/ListCVPage';
 import SingleCVPage from './components/CV/SingleCVPage';
+import AddCVPage from './components/CV/AddCVPage';
 import RespondingPage from './components/Responding/RespondingPage';
 import InternshipSchedulePage from './components/Schedule/InternshipSchedulePage';
 import SingleClassResponding from './components/Responding/SingleClassResponding';
@@ -51,6 +52,7 @@ const router = (
       <Route path="/listcv" component={ListCVPage}></Route>
       <Route path="/schedule" component={InternshipSchedulePage}></Route>
       <Route path="/cv/:cvId" component={SingleCVPage}></Route>
+      <Route path="/addnewcv" components={AddCVPage}></Route>
       <Route path="/respondings" component={RespondingPage}></Route>
       <Route path="/classe/:className" component={SingleClassResponding}></Route>
       <Route path="/company/:companyName" component={SingleCompanyResponding}></Route>

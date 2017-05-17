@@ -41,3 +41,7 @@
     background-color: transparent;
     border: none !important;
 }
+
+.add-cv-btn{
+    float: left;
+}
