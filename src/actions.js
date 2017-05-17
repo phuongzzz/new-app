@@ -88,3 +88,15 @@ export function addNewCompanyResponse(id, company, mssv, student, responding) {
     responding
   }
 }
+
+export function addNewClassResponse(id, company, mssv, student, responding, class_name) {
+  return {
+    type: 'ADD_CLASS_RESPONSE',
+    id,
+    company,
+    student,
+    mssv,
+    responding,
+    class_name
+  }
+}
