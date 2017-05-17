@@ -1,5 +1,5 @@
 import React from 'react';
-import { browserHistory } from 'react-router';
+import { hashHistory } from 'react-router';
 import toastr from 'toastr';
 
 const ManageUser = React.createClass({
@@ -12,7 +12,7 @@ const ManageUser = React.createClass({
     const phonenumber = this.refs.phonenumber.value;
     this.props.addUser(username, name, phonenumber);
     console.log(username, name, phonenumber);
-    browserHistory.push('/users');
+    hashHistory.push('/users');
     toastr.success("Done");
   },
 
