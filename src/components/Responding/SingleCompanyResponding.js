@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import './responding-page.css';
 
 const SingleClassResponding = React.createClass({
@@ -39,6 +40,9 @@ const SingleClassResponding = React.createClass({
                         )}
                         </tbody>
                     </table>
+                    <div className="col-md-2 col-md-offset-10">
+                      <Link to="/addcompanyresponse"><button className="btn btn-primary add-response">Add New</button></Link>
+                    </div>
                 </div>
             </div>
         )
