@@ -17,7 +17,7 @@ const LoginPage = React.createClass({
           <div className="col-md-8 col-md-offset-2">
             <div className="login-screen">
               <div className="login-icon">
-                <img src={'http://designmodo.github.io/Flat-UI/img/icons/svg/book.svg'} alt="Welcome to Mail App" />
+                <img src={'https://designmodo.github.io/Flat-UI/img/icons/svg/book.svg'} alt="Welcome to Mail App" />
                 <h4>Welcome to <small>SIE Internship</small></h4>
               </div>
 
