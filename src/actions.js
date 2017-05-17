@@ -77,3 +77,14 @@ export function logoutUser() {
     type:'LOG_OUT'
   }
 }
+
+export function addNewCompanyResponse(id, company, mssv, student, responding) {
+  return {
+    type: 'ADD_COMPANY_RESPONSE',
+    id,
+    company,
+    mssv,
+    student,
+    responding
+  }
+}

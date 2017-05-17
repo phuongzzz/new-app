@@ -17,7 +17,10 @@
   margin-top: 50px;
 }
 
-.phuong-response {
+.phuong-left-align {
   text-align: left;
+}
+.phuong-btn-group {
+  text-align: center;
 }
 
