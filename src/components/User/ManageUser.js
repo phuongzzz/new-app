@@ -7,43 +7,41 @@ const ManageUser = React.createClass({
   handleSubmit(e) {
     e.preventDefault();
     console.log(this.refs);
-    const username = this.refs.username.value;
-    const name = this.refs.name.value;
-    const phonenumber = this.refs.phonenumber.value;
-    this.props.addUser(username, name, phonenumber);
-    console.log(username, name, phonenumber);
+    const email = this.refs.email.value;
+    const userId = parseInt(this.refs.userId.value, 10);
+    this.props.changeUser(email, userId);
     hashHistory.push('/users');
     toastr.success("Done");
   },
 
+  confirmDelete(e) {
+    e.preventDefault();
+    if(confirm("Are you sure you want to delete your user?")) {
+      this.props.removeUser(parseInt(this.refs.userId.value),10);
+      hashHistory.push("/users");
+      toastr.success("Delete done");
+    } else {
+      toastr.error("Action cancelled");
+    }
+  },
 
   render() {
-    var user = {};
     const { userId } = this.props.params;
-    if (userId) {
-      const i = this.props.users.findIndex((user) =>
-      user.id === parseInt(userId, 10));
-      //GET HIM!!!
-      user = this.props.users[i];
-    }
-    else {
-      user = {};
-      // console.log(user);
-    }
+    const i = this.props.users.findIndex((user) =>
+    user.id === parseInt(userId, 10));
+    const user = this.props.users[i];
 
     return (
       <div className="row">
         <div className="col-md-8 col-md-offset-2">
           <h2>Manage User</h2>
-          <form ref="addUserForm" className="form-group" onSubmit={this.handleSubmit}>
-            <label>UserName</label>
-            <input type="text" ref="username" placeholder="User Name" className="form-control" defaultValue={user.username}/>
-            <label>Name</label>
-            <input type="text" ref="name" placeholder="Name" className="form-control" defaultValue={user.name}/>
-            <label>Phone Number</label>
-            <input type="text" ref="phonenumber" placeholder="Phone Number" className="form-control" defaultValue={user.phonenumber}/>
+          <form ref="changeUserForm" className="form-group" onSubmit={this.handleSubmit}>
+            <label>Email</label>
+            <input type="email" ref="email" placeholder="User Email" className="form-control" defaultValue={user.email}/>
+            <input type="number" ref="userId" hidden defaultValue={user.id}/>
             <input type="submit" hidden/>
             <input type="submit" className="btn btn-success" value="Save"/>
+            <button className="btn btn-danger" onClick={this.confirmDelete}>Delete this user</button>
           </form>
         </div>
       </div>

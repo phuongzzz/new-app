@@ -15,7 +15,8 @@ import company_respondings from './company_respondings';
 import class_respondings from './class_respondings';
 import status_internships from './status_insternships';
 import schedules from './schedules';
+import groupnames from './groupnames';
 
-const rootReducer = combineReducers({users, schedules, topics, cvs, session, reports, students, marks, registered_topics, assigns, companies, classes, company_respondings, class_respondings, status_internships, routing: routerReducer});
+const rootReducer = combineReducers({users, schedules, topics, cvs, session, reports, students, marks, registered_topics, assigns, companies, classes, company_respondings, class_respondings, status_internships, groupnames, routing: routerReducer});
 
 export default rootReducer;

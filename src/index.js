@@ -8,7 +8,7 @@ import '../node_modules/toastr/build/toastr.min.css';
 import './index.css';
 
 import App from './App';
-import SingleUser from './components/User/SingleUser';
+import AddNewUser from './components/User/AddNewUser';
 import UserGrid from './components/User/UserGrid';
 import HomePage from './components/Home/HomePage';
 import TopicPage from './components/Topic/TopicPage';
@@ -40,7 +40,7 @@ const router = (
       <Route path="/login" component={LoginPage}></Route>
       <Route path="/users" component={UserGrid} onEnter={requireAdmin}></Route>
       <Route path="/user/:userId" component={ManageUser} onEnter={requireAdmin}></Route>
-      <Route path="/add-user" component={ManageUser} onEnter={requireAdmin}></Route>
+      <Route path="/add-user" component={AddNewUser} onEnter={requireAdmin}></Route>
       <Route path="/topics" component={TopicPage} onEnter={requireAuth}></Route>
       <Route path="/topic/:topicId" component={SingleTopic} onEnter={requireAuth}></Route>
       <Route path="/reports" component={ReportPage}></Route>

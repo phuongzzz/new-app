@@ -22,6 +22,7 @@ import company_respondings from '../sample-data/company_respondings';
 import class_respondings from '../sample-data/class_respondings';
 import status_internships from '../sample-data/status_internships';
 import schedules from '../sample-data/schedules';
+import groupnames from '../sample-data/groupnames';
 
 // const defaultState = loadState();
 
@@ -41,6 +42,7 @@ const defaultState = {
   class_respondings,
   company_respondings,
   status_internships,
+  groupnames,
   session: sessionStorage.username
 };
 

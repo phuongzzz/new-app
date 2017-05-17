@@ -1,13 +1,25 @@
 import { hashHistory } from 'react-router';
 import toastr from 'toastr';
 
-export function addUser(username, name, phonenumber) {
-  console.log("add user running");
+export function addUser(userId, name, username, email, password, phonenumber, role) {
+  console.log("add user action fired");
   return {
     type: 'ADD_USER',
-    username,
+    userId,
     name,
-    phonenumber
+    username,
+    email,
+    password,
+    phonenumber,
+    role
+  }
+}
+
+export function changeUser(email, userId) {
+  return {
+    type: 'CHANGE_USER',
+    email,
+    userId
   }
 }
 
