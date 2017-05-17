@@ -1,6 +1,6 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
-import { browserHistory } from 'react-router';
+import { hashHistory } from 'react-router';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 
@@ -52,7 +52,7 @@ store.subscribe(() => {
   saveState(store.getState());
 })
 
-export const history = syncHistoryWithStore(browserHistory, store);
+export const history = syncHistoryWithStore(hashHistory, store);
 
 export default store;
 

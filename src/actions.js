@@ -1,4 +1,4 @@
-import { browserHistory } from 'react-router';
+import { hashHistory } from 'react-router';
 import toastr from 'toastr';
 
 export function addUser(username, name, phonenumber) {
@@ -41,7 +41,7 @@ export function logInUser(username, password) {
         if (password === 'admin') {
           sessionStorage.setItem('username', username);
           dispatch(loginSuccess());
-          browserHistory.push("/");
+          hashHistory.push("/");
           toastr.success("Login successfully");
         }
         else {
@@ -60,7 +60,7 @@ export function logInUser(username, password) {
 export function logoutUser() {
   console.log("logout chay roi");
   sessionStorage.removeItem('username');
-  browserHistory.push("/");
+  hashHistory.push("/");
   return {
     type:'LOG_OUT'
   }
