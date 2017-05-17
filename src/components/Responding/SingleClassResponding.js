@@ -13,7 +13,7 @@ const SingleClassResponding = React.createClass({
         return(
             <div className="row-responding">
                 <div className="col-md-10 col-md-offset-1">
-                    <table className="table company-table-respon table-hover table-sm table-striped table-fixed ">
+                    <table className="table table-bordered company-table-respon table-hover table-sm table-striped table-fixed ">
                         <thead>
                         <tr>
                             <th className="text-center">ID</th>
@@ -31,7 +31,7 @@ const SingleClassResponding = React.createClass({
                                 <td>{class_respon.company}</td>
                                 <td>{class_respon.student}</td>
                                 <td>{class_respon.mssv}</td>
-                                <td>{class_respon.responding}</td>
+                                <td className="phuong-response">{class_respon.responding}</td>
                                 <td>{class_respon.class_name}</td>
                             </tr>
                         )}

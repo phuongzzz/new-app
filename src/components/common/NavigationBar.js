@@ -43,7 +43,7 @@ const NavigationBar = React.createClass({
 
             <li><Link to="/users">Users</Link></li>
             <li><Link to="/listcv">List CV</Link></li>
-            <li><Link to="/respondings">Response</Link></li>
+            <li><Link to="/respondings">Forum</Link></li>
             <li><Link to="/status-internships">Internship Status</Link></li>
 
 
