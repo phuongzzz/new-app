@@ -26,6 +26,7 @@ import AddCVPage from './components/CV/AddCVPage';
 import RespondingPage from './components/Responding/RespondingPage';
 import InternshipSchedulePage from './components/Schedule/InternshipSchedulePage';
 import SingleClassResponding from './components/Responding/SingleClassResponding';
+import AddCompanyRespondingPage from './components/Responding/AddCompanyRespondingPage';
 import SingleCompanyResponding from './components/Responding/SingleCompanyResponding';
 import StatusPage from './components/StatusPage/StatusPage';
 import NotFound from './components/common/NotFound';
@@ -56,6 +57,7 @@ const router = (
       <Route path="/respondings" component={RespondingPage}></Route>
       <Route path="/classe/:className" component={SingleClassResponding}></Route>
       <Route path="/company/:companyName" component={SingleCompanyResponding}></Route>
+      <Route path="/addcompanyresponse" component={AddCompanyRespondingPage}></Route>
       <Route path="/status-internships" component={StatusPage}></Route>
       <Route path="*" component={NotFound}></Route>
     </Route>
