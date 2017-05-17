@@ -52,7 +52,7 @@ store.subscribe(() => {
   saveState(store.getState());
 })
 
-export const history = syncHistoryWithStore(hashHistory, store);
+// export const history = syncHistoryWithStore(hashHistory, store);
 
 export default store;
 

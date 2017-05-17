@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import jQuery from 'jquery';
-import { Router, Route, IndexRoute } from 'react-router';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 
 import '../node_modules/toastr/build/toastr.min.css';
@@ -33,7 +33,7 @@ window.store = store;
 
 const router = (
 <Provider store={store}>
-  <Router history={history}>
+  <Router history={hashHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={HomePage}/>
       <Route path="/login" component={LoginPage}></Route>
