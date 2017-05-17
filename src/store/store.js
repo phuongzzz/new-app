@@ -21,6 +21,7 @@ import companies from '../sample-data/companies';
 import company_respondings from '../sample-data/company_respondings';
 import class_respondings from '../sample-data/class_respondings';
 import status_internships from '../sample-data/status_internships';
+import schedules from '../sample-data/schedules';
 
 // const defaultState = loadState();
 
@@ -29,6 +30,7 @@ const defaultState = {
   users,
   topics,
   cvs,
+  schedules,
   reports,
   students,
   marks,

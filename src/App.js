@@ -20,7 +20,8 @@ function mapStateToProps(state) {
     classes: state.classes,
     class_respondings: state.class_respondings,
     company_respondings: state.company_respondings,
-    status_internships: state.status_internships
+    status_internships: state.status_internships,
+      schedules: state.schedules,
     //MORE FROM STATE
   }
 }
