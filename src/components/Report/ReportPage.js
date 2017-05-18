@@ -109,7 +109,7 @@ const ReportPage = React.createClass({
               )}
               </tbody>
             </table> :
-            <div className="report-search-error">Sorry but....we can't find <b>"{this.state.search}"</b> :( </div>
+            <div className="report-search-error mark-search-error">Sorry but....we can't find <b>"{this.state.search}"</b> :( </div>
           }
         </div>
       </div>

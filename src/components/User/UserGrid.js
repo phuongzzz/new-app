@@ -39,7 +39,7 @@ const UserGrid = React.createClass({
               <div className="row row-eq-height">
                 {filteredUsers.map((user, i) => <User {...this.props} key={i} i={i} user={user} />)}
               </div> :
-              <div className="row text-center">No user has name like <b>"{this.state.search}"</b> found, my friend :(</div>
+              <div className="row text-center mark-search-error">No user has name like <b>"{this.state.search}"</b> found, my friend :(</div>
             }
 
           </div>
