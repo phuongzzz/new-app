@@ -1,18 +1,18 @@
 .mark-table {
-    margin-top: 60px;
-    border: 2px solid #B2DFDB;
-    border-radius: 2px;
+  margin-top: 60px;
+  border: 2px solid #B2DFDB;
+  border-radius: 2px;
 }
 .thead-mark{
-    background-color:#B2DFDB;
+  background-color:#B2DFDB;
 }
 .table-wrap {
-    height: 400px;
-    overflow-y: scroll;
+  height: 400px;
+  overflow-y: scroll;
 }
 
 .table-wrap::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .single-mark-wrap{
@@ -20,5 +20,15 @@
 }
 
 /*.save-mark-btn {*/
-  /*margin-top: 20px !important;*/
+/*margin-top: 20px !important;*/
 /*}*/
+
+.mark-search-error {
+  font-weight: bold;
+  margin-top: 40px;
+  background-color: rgba(231, 76, 60,1);
+  color: white;
+  border-radius: 6px;
+  padding: 15px;
+}
+
