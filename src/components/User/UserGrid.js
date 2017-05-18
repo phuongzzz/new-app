@@ -6,7 +6,7 @@ import './user-grid.css';
 const UserGrid = React.createClass({
   getInitialState() {
     return {
-        search: '',
+      search: '',
     }
   },
 
