@@ -112,3 +112,13 @@ export function addNewCV(id, name, position, dateofbirth, gender,
     majorskill_level, otherskill, otherskill_level, destination
   }
 }
+
+export function addNewReport(id, student_id, name, link) {
+  return {
+    type: 'ADD_REPORT',
+    id,
+    student_id,
+    name,
+    link
+  }
+}
