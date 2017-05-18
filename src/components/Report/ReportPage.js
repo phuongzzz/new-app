@@ -86,28 +86,31 @@ const ReportPage = React.createClass({
               </div>
             </div>
           }
-          <table className="table report-table table-hover">
-            <thead className="thead-report">
-            <tr>
-              <th className="text-center">ID</th>
-              <th className="text-center">Mssv</th>
-              <th className="text-center">Student</th>
-              <th className="text-center">Link Report</th>
-              <th className="text-center">Comment</th>
-            </tr>
-            </thead>
-            <tbody>
-            {filteredReports.map((report, i) =>
-              <tr key={i}>
-                <td><Link to={`/report/${report.id}`}>{report.id}</Link></td>
-                <td>{report.student_id}</td>
-                <td>{report.name}</td>
-                <td>{report.link}</td>
-                <td>{report.comment}</td>
+          {filteredReports.length !== 0 ?
+            <table className="table report-table table-hover">
+              <thead className="thead-report">
+              <tr>
+                <th className="text-center">ID</th>
+                <th className="text-center">Mssv</th>
+                <th className="text-center">Student</th>
+                <th className="text-center">Link Report</th>
+                <th className="text-center">Comment</th>
               </tr>
-            )}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+              {filteredReports.map((report, i) =>
+                <tr key={i}>
+                  <td><Link to={`/report/${report.id}`}>{report.id}</Link></td>
+                  <td>{report.student_id}</td>
+                  <td>{report.name}</td>
+                  <td>{report.link}</td>
+                  <td>{report.comment}</td>
+                </tr>
+              )}
+              </tbody>
+            </table> :
+            <div className="report-search-error">Sorry but....we can't find <b>"{this.state.search}"</b> :( </div>
+          }
         </div>
       </div>
 
