@@ -5,6 +5,17 @@ import toastr from 'toastr';
 
 const AddCVPage = React.createClass({
 
+  getInitialState() {
+    return {
+      majorskill: {
+        width: '90%'
+      },
+      otherskill: {
+        width: '40%'
+      }
+    }
+  },
+
   handleSubmit(e) {
     e.preventDefault();
     console.log(this.refs);
@@ -17,29 +28,39 @@ const AddCVPage = React.createClass({
     // toastr.success("Done");
   },
 
+  handleMajorChange(e) {
+    e.preventDefault();
+    if (e.target.value > 100) {
+      toastr.error("wrong number of Major change");
+    }
+    var skill_progress = e.target.value + "%";
+    let newMajorSkill = this.state.majorskill;
+    newMajorSkill.width = skill_progress;
+    this.setState({majorskill: newMajorSkill});
+  },
+
+  handleOtherChange(e) {
+    e.preventDefault();
+    if (e.target.value > 100) {
+      toastr.error("wrong number");
+    }
+    var skill_progress = e.target.value + "%";
+    let newOtherSkill = this.state.otherskill;
+    newOtherSkill.width = skill_progress;
+    this.setState({otherskill: newOtherSkill});
+  },
+
 
   render() {
-    // var user = {};
-    // const { userId } = this.props.params;
-    // if (userId) {
-    //   const i = this.props.users.findIndex((user) =>
-    //   user.id === parseInt(userId, 10));
-    //   GET HIM!!!
-      // user = this.props.users[i];
-    // }
-    // else {
-    //   user = {};
-      // console.log(user);
-    // }
 
     return (
       <div className="container">
           <div className="col-md-8 col-md-offset-2 cv-details">
-            <form ref="addUserForm" className="form-group" onSubmit={this.handleSubmit}>
+            <form ref="addCVForm" className="form-group addCVForm" onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="col-md-7 cv-ava-label">
                 <img src={'https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/16265197_1637576813218714_1150448365707028569_n.jpg?oh=563c3cdb8d9daf93495a5b595fe8ac2f&oe=59766BB6'} className="cv-ava-img" alt=""/>
-                <input type="text" ref="student-name" placeholder="Insert You Name Here" className="form-control student-name"/>
+                <input type="text" ref="name" placeholder="Insert You Name Here" className="form-control student-name phuong-center-input"/>
                 <p className="cv-position">
                   <span><b>Position:</b></span>
                   <span><input type="text" ref="student-position" placeholder="Insert Your Internship Position Here" className="form-control student-position"/></span>
@@ -133,7 +154,7 @@ const AddCVPage = React.createClass({
               </div>
               <div className="col-md-5 cv-more-info-label">
                 <p className="cv-label-title"><b>MORE INFORMATION</b></p>
-                <textarea className="cv-textarea" cols="28" rows="16" placeholder="Tell us more about yourself"></textarea>
+                <textarea className="cv-textarea form-control" cols="28" rows="16" placeholder="Tell us more about yourself"></textarea>
               </div>
             </div>
             {/*end row 2*/}
@@ -143,22 +164,26 @@ const AddCVPage = React.createClass({
                 <p className="cv-label-title"><b>SKILL</b></p>
                 <ul className="list-unstyled">
                   <li>
-                    <p><input type="text" ref="student_major_skill" placeholder="Major Skill" className="form-control student-skill"/></p>
+                    <p><input type="text" ref="majorskill" placeholder="Major Skill" className="form-control student-skill"/></p>
+                    <input className="form-control" name="majorskill" type="number" ref="major-skill-indicator" placeholder="Rate your major skill (out of 100)" onChange={this.handleMajorChange}/>
+                    <br/>
                     <div className="progress cv-skill-list">
-                      <div className="progress-bar" role="progressbar"></div>
+                      <div className="progress-bar" style={{...this.state.majorskill}} role="progressbar"></div>
                     </div>
                   </li>
                   <li>
                     <p><input type="text" ref="student_other_skill" placeholder="Other Skill" className="form-control student-skill"/></p>
+                    <input className="form-control" type="number" ref="other-skill-indicator" placeholder="Rate your other skill (out of 100)" onChange={this.handleOtherChange}/>
+                    <br/>
                     <div className="progress cv-skill-list">
-                      <div className="progress-bar" role="progressbar"></div>
+                      <div className="progress-bar" style={{...this.state.otherskill}} role="progressbar"></div>
                     </div>
                   </li>
                 </ul>
               </div>
               <div className="col-md-5 cv-destination-label">
                 <p className="cv-label-title"><b>DESTINATION</b></p>
-                <textarea className="cv-textarea" cols="28" rows="6" placeholder="Tell us more about yourself"></textarea>
+                <textarea className="cv-textarea form-control" cols="28" rows="6" placeholder="Tell us more about your destination"></textarea>
               </div>
 
             </div>
