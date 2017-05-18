@@ -23,7 +23,7 @@ const SingleClassResponding = React.createClass({
   handleSubmit(e) {
     var last_class_response_id = parseInt(
       this.props.class_respondings[this.props.class_respondings.length - 1].id, 10);
-    var next_class_response_id = last_class_response_id++;
+    var next_class_response_id = ++last_class_response_id;
 
     const id = next_class_response_id;
     const company = this.refs.company.value;

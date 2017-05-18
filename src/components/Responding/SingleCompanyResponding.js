@@ -25,7 +25,7 @@ const SingleClassResponding = React.createClass({
     var last_company_response_id = parseInt(
       this.props.company_respondings[this.props.company_respondings.length - 1].id, 10);
     //CALCULATE NEXT COMPANY_RESPONSE_ID
-    var next_company_response_id = last_company_response_id++;
+    var next_company_response_id = ++last_company_response_id;
 
     const id = next_company_response_id;
     const company = this.refs.company.value;
