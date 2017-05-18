@@ -100,3 +100,15 @@ export function addNewClassResponse(id, company, mssv, student, responding, clas
     class_name
   }
 }
+
+export function addNewCV(id, name, position, dateofbirth, gender,
+  phone, email, address, year_start, year_stop, grade, school, major,
+  cpa, more_information, majorskill, majorskill_level, otherskill,
+  otherskill_level, desitination) {
+  return {
+    type: 'ADD_CV',
+    id, name, position, dateofbirth, gender, phone, email, address,
+    year_start, year_stop, grade, school, major, cpa, more_information, majorskill,
+    majorskill_level, otherskill, otherskill_level, desitination
+  }
+}

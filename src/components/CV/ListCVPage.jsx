@@ -21,8 +21,7 @@ const ListCVPage = React.createClass({
                 <div className="col-md-8">
                   <div className="panel panel-headline">
                     <div className="panel-heading">
-                      <span><a href=""><b>{cv.name}</b></a></span>
-                      <span className="date_add_cv"><i className="lnr lnr-clock"></i> {cv.created_at}</span>
+                      <span><b>{cv.name}</b></span>
                     </div>
                     <div className="panel-body cv_action">
                       <span>
