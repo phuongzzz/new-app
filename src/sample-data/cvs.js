@@ -22,6 +22,8 @@ module.exports = [
     "cpa": 3.0499999999999998,
     "majorskill": "java",
     "otherskill": "c",
+    "majorskill_level": 92,
+    "otherskill_level": 34,
     "created_at": "2017-03-22 00:00:00",
     "updated_at": "2017-03-22 00:00:00"
   },
@@ -48,6 +50,8 @@ module.exports = [
     "cpa": 2.57,
     "majorskill": "java",
     "otherskill": "c",
+    "majorskill_level": 10,
+    "otherskill_level": 95,
     "created_at": "2017-03-22 00:00:00",
     "updated_at": "2017-03-22 00:00:00"
   },
@@ -74,6 +78,8 @@ module.exports = [
     "cpa": 3.00,
     "majorskill": "java",
     "otherskill": "c",
+    "majorskill_level": 50,
+    "otherskill_level": 12,
     "created_at": "2017-03-22 00:00:00",
     "updated_at": "2017-03-22 00:00:00"
   },
@@ -100,6 +106,8 @@ module.exports = [
     "cpa": 3.57,
     "majorskill": "java",
     "otherskill": "c",
+    "majorskill_level": 23,
+    "otherskill_level": 43,
     "created_at": "2017-03-22 00:00:00",
     "updated_at": "2017-03-22 00:00:00"
   }

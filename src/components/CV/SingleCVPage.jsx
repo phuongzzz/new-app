@@ -4,20 +4,22 @@ import './SingleCVPage.css';
 const SingleCVPage = React.createClass({
   render() {
 
-    var major_skill = {
-      width: '90%'
-    }
-
-    var other_skill = {
-      width: '40%'
-    }
-
     const { cvId } = this.props.params;
     console.log(cvId);
     const i = this.props.cvs.findIndex((cv) =>
     cv.id === parseInt(cvId, 10));
     //GET HIM!!!
     const cv = this.props.cvs[i];
+
+    var major_skill = {
+      width: cv.majorskill_level + "%"
+    }
+
+    var other_skill = {
+      width: cv.otherskill_level + "%"
+    }
+
+
     return (
       <div className="container">
         <div className="col-md-8 col-md-offset-2 cv-details">
