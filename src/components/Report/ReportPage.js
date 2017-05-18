@@ -4,9 +4,15 @@ import './report-page.css';
 import toastr from 'toastr';
 
 const ReportPage = React.createClass({
-
   getInitialState: function() {
-    return { showResponse: false };
+    return {
+      showResponse: false,
+      search: ''
+    };
+  },
+
+  updateSearch(event) {
+    this.setState({search: event.target.value});
   },
 
   onClick: function() {
@@ -42,11 +48,24 @@ const ReportPage = React.createClass({
   },
 
   render(){
+    let filteredReports = this.props.reports.filter(
+      (report) => {
+        return report.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+      }
+    );
+
     return (
       <div className="row">
         <div className="col-md-10 col-md-offset-1">
           <h4>List Reports</h4>
-          <button onClick={this.onClick} className="btn btn-success">Add new report</button>
+          <div className="row">
+            <div className="col-md-4 col-md-offset-4">
+              <button onClick={this.onClick} className="btn btn-success">Add new report</button>
+              <input type="text" className="form-control phuong-inline-input" placeholder="Search by username..."
+                     value={this.state.search}
+                     onChange={this.updateSearch}/>
+            </div>
+          </div>
           {
             this.state.showResponse &&
             <div className="row">
@@ -78,7 +97,7 @@ const ReportPage = React.createClass({
             </tr>
             </thead>
             <tbody>
-            {this.props.reports.map((report, i) =>
+            {filteredReports.map((report, i) =>
               <tr key={i}>
                 <td><Link to={`/report/${report.id}`}>{report.id}</Link></td>
                 <td>{report.student_id}</td>
