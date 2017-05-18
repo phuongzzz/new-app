@@ -36,23 +36,23 @@ const SingleCVPage = React.createClass({
               <p className="cv-label-title"><b>CONTACT</b></p>
               <ul className="list-unstyled">
                 <li>
-                  <span><i className="fa fa-calendar"> {cv.dateofbirth}</i></span>
+                  <span><i>Date of birth:</i> {cv.dateofbirth}</span>
                 </li>
                 <br/>
                 <li>
-                  <span><i className="fa fa-user"> {cv.gender}</i></span>
+                  <span><i>Gender:</i> {cv.gender}</span>
                 </li>
                 <br/>
                 <li>
-                  <span><i className="fa fa-phone"> {cv.phone}</i></span>
+                  <span><i>Phone number:</i> {cv.phone}</span>
                 </li>
                 <br/>
                 <li>
-                  <span><i className="fa fa-envelope"> {cv.email}</i></span>
+                  <span><i>Email:</i> {cv.email}</span>
                 </li>
                 <br/>
                 <li>
-                  <span><i className="fa fa-map-marker"> {cv.address}</i></span>
+                  <span><i>Address:</i> {cv.address}</span>
                 </li>
               </ul>
             </div>
@@ -88,7 +88,7 @@ const SingleCVPage = React.createClass({
               <p className="cv-label-title"><b>MORE INFORMATION</b></p>
               <span>
                 <p className="long-text">
-                  {cv.hobby}
+                  {cv.more_information}
                 </p>
               </span>
             </div>
@@ -125,7 +125,7 @@ const SingleCVPage = React.createClass({
               <p className="cv-label-title"><b>DESTINATION</b></p>
               <span>
                 <p className="long-text">
-                  {cv.intent}
+                  {cv.destination}
                 </p>
               </span>
             </div>

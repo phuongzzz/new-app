@@ -43,7 +43,7 @@ const defaultState = {
   company_respondings,
   status_internships,
   groupnames,
-  session: sessionStorage.username
+  session: {}
 };
 
 // saveState(defaultState);

@@ -21,7 +21,7 @@ function cvs (state = [], action) {
         majorskill_level: action.majorskill_level,
         otherskill: action.otherskill,
         otherskill_level: action.otherskill_level,
-        desitination: action.destination
+        destination: action.destination
       }
       return state.concat(newCV);
     default:
