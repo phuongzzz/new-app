@@ -5,6 +5,9 @@ Latest stable live app:
 
 
 ```sie-intern.herokuapp.com```
+test:
+  username: admin
+  password: admin
 
 Run in local:
 
