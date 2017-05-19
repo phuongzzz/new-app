@@ -64,7 +64,7 @@ const router = (
 );
 
 function requireAuth(nextState, replace) {
-  if (!sessionStorage.username) {
+  if (!sessionStorage.role) {
     replace({
       pathname: '/login',
       state: { nextPathname: nextState.location.pathname }
@@ -73,7 +73,7 @@ function requireAuth(nextState, replace) {
 }
 
 function requireAdmin(nextState, replace) {
-  if (sessionStorage.username !== 'admin') {
+  if (sessionStorage.role !== 'admin') {
     replace({
       pathname: '/login',
       state: { nextPathname: nextState.location.pathname }

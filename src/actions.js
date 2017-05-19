@@ -31,7 +31,6 @@ export function removeUser(userId) {
 }
 
 export function loginSuccess() {
-  console.log("Login an roi");
   return {
     type: 'LOGIN_SUCCESS'
   }
@@ -48,9 +47,76 @@ export function logInUser(username, password) {
   return function (dispatch) {
     switch (username) {
       case 'admin':
-      case 'phuongzzz':
-      case 'phuong':
         if (password === 'admin') {
+          sessionStorage.setItem('role', 'admin');
+          sessionStorage.setItem('username', username);
+          dispatch(loginSuccess());
+          hashHistory.push("/");
+          toastr.success("Login successfully");
+        }
+        else {
+          dispatch(loginFailed());
+          toastr.error('Error when login', 'Check your credentials');
+        }
+        break;
+      case 'phuongzzz':
+        if (password === 'phuongzzz') {
+          sessionStorage.setItem('role', 'student');
+          sessionStorage.setItem('username', username);
+          dispatch(loginSuccess());
+          hashHistory.push("/");
+          toastr.success("Login successfully");
+        }
+        else {
+          dispatch(loginFailed());
+          toastr.error('Error when login', 'Check your credentials');
+        }
+        break;
+      case 'huonggiang':
+        if (password === 'huonggiang') {
+          sessionStorage.setItem('role', 'teacher_manager');
+          sessionStorage.setItem('username', username);
+          dispatch(loginSuccess());
+          hashHistory.push("/");
+          toastr.success("Login successfully");
+        }
+        else {
+          dispatch(loginFailed());
+          toastr.error('Error when login', 'Check your credentials');
+        }
+        break;
+
+      case 'banhmai':
+        if (password === 'banhmai') {
+          sessionStorage.setItem('role', 'teacher_instructor');
+          sessionStorage.setItem('username', username);
+          dispatch(loginSuccess());
+          hashHistory.push("/");
+          toastr.success("Login successfully");
+        }
+        else {
+          dispatch(loginFailed());
+          toastr.error('Error when login', 'Check your credentials');
+        }
+        break;
+
+      case 'leha':
+        if (password === 'leha') {
+          sessionStorage.setItem('role', 'company_agent');
+          sessionStorage.setItem('username', username);
+          dispatch(loginSuccess());
+          hashHistory.push("/");
+          toastr.success("Login successfully");
+        }
+        else {
+          dispatch(loginFailed());
+          toastr.error('Error when login', 'Check your credentials');
+        }
+        break;
+
+      case 'phuongthao':
+        if (password === 'phuongthao') {
+          sessionStorage.setItem('role', 'company_instructor');
           sessionStorage.setItem('username', username);
           dispatch(loginSuccess());
           hashHistory.push("/");
@@ -72,6 +138,7 @@ export function logInUser(username, password) {
 export function logoutUser() {
   console.log("logout chay roi");
   sessionStorage.removeItem('username');
+  sessionStorage.removeItem('role');
   hashHistory.push("/");
   return {
     type:'LOG_OUT'
@@ -102,9 +169,9 @@ export function addNewClassResponse(id, company, mssv, student, responding, clas
 }
 
 export function addNewCV(id, name, position, dateofbirth, gender,
-  phone, email, address, year_start, year_stop, grade, school, major,
-  cpa, more_information, majorskill, majorskill_level, otherskill,
-  otherskill_level, destination) {
+                         phone, email, address, year_start, year_stop, grade, school, major,
+                         cpa, more_information, majorskill, majorskill_level, otherskill,
+                         otherskill_level, destination) {
   return {
     type: 'ADD_CV',
     id, name, position, dateofbirth, gender, phone, email, address,

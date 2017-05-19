@@ -7,7 +7,7 @@ const HomePage = React.createClass ({
       return (
         <div className="jumbotron banner">
           <div className="banner-wrapper">
-            <h2>Welcome, {this.props.session}</h2>
+            <h2>Welcome, {sessionStorage.getItem('username')}</h2>
           </div>
         </div>
       )
