@@ -18,6 +18,7 @@ const NavigationBar = React.createClass({
           <Link className="navbar-brand" to="/">SIE Internship</Link>
         </div>
         <div className="collapse navbar-collapse" id="navbar-collapse-01">
+          {(Object.keys(this.props.session).length !== 0) &&
           <ul className="nav navbar-nav navbar-left">
             <li><a href="#fakelink">Notifications</a></li>
             <li className="dropdown">
@@ -26,11 +27,9 @@ const NavigationBar = React.createClass({
               <ul className="dropdown-menu">
                 <li><Link to="/topics">Register Topic</Link></li>
                 <li className="divider"></li>
-                <li><Link to="/schedule" >Internship Schedule</Link></li>
+                <li><Link to="/schedule">Internship Schedule</Link></li>
               </ul>
             </li>
-
-
             <li className="dropdown">
               <a href="#" className="dropdown-toggle" data-toggle="dropdown">Curriculum<b className="caret"></b></a>
               <span className="dropdown-arrow"></span>
@@ -40,18 +39,16 @@ const NavigationBar = React.createClass({
                 <li><Link to="/assigns">Assigns</Link></li>
               </ul>
             </li>
-
             <li><Link to="/users">Users</Link></li>
             <li><Link to="/listcv">List CV</Link></li>
             <li><Link to="/respondings">Forum</Link></li>
             <li><Link to="/status-internships">Internship Status</Link></li>
-
-
           </ul>
+          }
           {(Object.keys(this.props.session).length !== 0) ?
             <button className="btn btn-danger navbar-right log-btn"
-              onClick={this.handleLogout}>Logout</button>
-              :
+                    onClick={this.handleLogout}>Logout</button>
+            :
             <Link to="/login" className="btn btn-primary navbar-right log-btn">Login</Link>
           }
         </div>
