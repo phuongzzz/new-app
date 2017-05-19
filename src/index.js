@@ -81,6 +81,51 @@ function requireAdmin(nextState, replace) {
   }
 }
 
+function requireStudent(nextState, replace) {
+  if (sessionStorage.role !== 'student') {
+    replace({
+      pathname: '/login',
+      state: { nextPathname: nextState.location.pathname }
+    })
+  }
+}
+
+function requireTeacherManager(nextState, replace) {
+  if (sessionStorage.role !== 'teacher_manager') {
+    replace({
+      pathname: '/login',
+      state: { nextPathname: nextState.location.pathname }
+    })
+  }
+}
+
+function requireTeacherInstructor(nextState, replace) {
+  if (sessionStorage.role !== 'teacher_instructor') {
+    replace({
+      pathname: '/login',
+      state: { nextPathname: nextState.location.pathname }
+    })
+  }
+}
+
+function requireCompanyAgent(nextState, replace) {
+  if (sessionStorage.role !== 'company_agent') {
+    replace({
+      pathname: '/login',
+      state: { nextPathname: nextState.location.pathname }
+    })
+  }
+}
+
+function requireCompanyInstructor(nextState, replace) {
+  if (sessionStorage.role !== 'company_instructor') {
+    replace({
+      pathname: '/login',
+      state: { nextPathname: nextState.location.pathname }
+    })
+  }
+}
+
 ReactDOM.render(
   router,
   document.getElementById('root')
