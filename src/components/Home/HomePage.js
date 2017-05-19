@@ -1,5 +1,6 @@
 import React from "react";
 import './home.css';
+import HomeNotLoggedIn from './HomeNotLoggedIn';
 
 const HomePage = React.createClass ({
   render() {
@@ -13,11 +14,7 @@ const HomePage = React.createClass ({
       )
     } else {
       return (
-        <div className="jumbotron banner">
-          <div className="banner-wrapper">
-            <h2>Welcome</h2>
-          </div>
-        </div>
+        <HomeNotLoggedIn/>
       )
     }
   }

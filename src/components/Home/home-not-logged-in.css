@@ -1,0 +1,35 @@
+.not-logged-in-wrapper {
+  height: 100vh;
+  background-color: #34495E;
+}
+.slogan-wrapper {
+  margin-top: 40px;
+  color: white;
+  text-align: center;
+}
+
+.slogan-wrapper h2 {
+  padding-top: 25vh;
+  font-family: "Lato Semibold";
+}
+
+.slogan-wrapper h4 {
+  display: inline-block;
+  font-weight: 500;
+}
+
+.phuong-simple-btn {
+  display: inline-block;
+  color: rgba(26, 188, 156,1.0);
+  /*text-decoration: underline;*/
+  font-family: "Lato Heavy";
+  font-weight: bolder;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1.5em;
+  transition: all ease .3s;
+}
+
+.phuong-simple-btn:hover {
+  color: rgba(22, 160, 133,1.0);
+}
