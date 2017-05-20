@@ -33,6 +33,15 @@ import NotFound from './components/common/NotFound';
 import store, { history } from './store/store';
 window.store = store;
 
+window.initState(window.defaultState);
+
+var refresh = window.localStorage.getItem('refresh');
+// console.log(refresh);
+if (refresh===null){
+  window.location.reload();
+  window.localStorage.setItem('refresh', "1");
+}
+
 const router = (
 <Provider store={store}>
   <Router history={hashHistory}>
