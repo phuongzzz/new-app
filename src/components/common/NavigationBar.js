@@ -27,27 +27,19 @@ const NavigationBar = React.createClass({
               <ul className="dropdown-menu">
                 <li><Link to="/topics">Register Topic</Link></li>
                 <li className="divider"></li>
-                {sessionStorage.getItem('role') === 'company_agent' || 'company_instructor' &&
-                  !<li><Link to="/schedule">Internship Schedule</Link></li>
-                }
+                  <li><Link to="/schedule">Internship Schedule</Link></li>
               </ul>
             </li>
             <li className="dropdown">
-              {sessionStorage.getItem('role') === 'company_agent' || 'company_instructor' &&
-                !<a href="#" className="dropdown-toggle" data-toggle="dropdown">Curriculum<b className="caret"></b></a>
-              }
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown">Curriculum<b className="caret"></b></a>
               <span className="dropdown-arrow"></span>
               <ul className="dropdown-menu">
                   <li><Link to="/reports">Reports</Link></li>
                   <li> < Link to="/marks">Marks</Link></li>
-                {sessionStorage.getItem('role') === 'student' &&
-                !<li><Link to="/assigns">Assigns</Link></li>
-                }
+                <li><Link to="/assigns">Assigns</Link></li>
               </ul>
             </li>
-            {sessionStorage.getItem('role') === 'admin' &&
             <li><Link to="/users">Users</Link></li>
-            }
             <li><Link to="/listcv">List CV</Link></li>
             <li><Link to="/respondings">Forum</Link></li>
             <li><Link to="/status-internships">Internship Status</Link></li>

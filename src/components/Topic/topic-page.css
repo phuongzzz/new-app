@@ -5,6 +5,7 @@
 }
 .registered-topics {
   height: 300px;
+  overflow-y: scroll;
 }
 
 .topics, .registered-topics {
@@ -15,7 +16,7 @@
 }
 
 .topic-wrap::-webkit-scrollbar {
-  display: none;
+  /*display: none;*/
 }
 
 .topic-wrap {

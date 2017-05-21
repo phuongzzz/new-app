@@ -1,6 +1,35 @@
 import { hashHistory } from 'react-router';
 import toastr from 'toastr';
 
+export function addTopic(topic) {
+  return {
+    type: 'ADD_TOPIC',
+    topic
+  }
+}
+
+export function removeTopic(topic_id) {
+  return {
+    type: 'REMOVE_TOPIC',
+    topic_id
+  }
+}
+
+export function addToRegisteredTopic(topic) {
+  // console.log(topic);
+  return {
+    type: 'ADD_TO_REGISTER',
+    topic
+  }
+}
+
+export function removeRegisteredTopic(topic_id) {
+  return {
+    type: 'REMOVE_FROM_REGISTER',
+    topic_id
+  }
+}
+
 export function addUser(userId, name, username, email, password, phonenumber, role) {
   console.log("add user action fired");
   return {

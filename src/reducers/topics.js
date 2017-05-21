@@ -1,5 +1,12 @@
 function topics (state = [], action) {
-  return state;
+  switch (action.type) {
+    case 'ADD_TOPIC':
+      return state.concat(action.topic);
+    case 'REMOVE_TOPIC':
+      return state.filter(topic => topic.topic_id !== action.topic_id);
+    default:
+      return state;
+  }
 }
 
 export default topics;

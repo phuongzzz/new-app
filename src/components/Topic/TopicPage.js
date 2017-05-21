@@ -1,5 +1,6 @@
 import React from 'react';
 import Topic from './Topic';
+import RegisteredTopic from './RegisteredTopic';
 import './topic-page.css';
 
 const TopicPage = React.createClass({
@@ -17,7 +18,11 @@ const TopicPage = React.createClass({
         <div className="row">
           <h4>Registered Topics</h4>
           <div className="registered-topics col-md-10 col-md-offset-1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis dolore eos similique. Accusamus, amet asperiores blanditiis cupiditate eos nam nisi quae ratione rem ullam veritatis voluptatibus? Accusamus iure laudantium repellat!</p>
+            {this.props.registered_topics.length !== 0 ?
+            this.props.registered_topics.map((registered_topic, i) =>
+              <RegisteredTopic {...this.props} key={i} i={i} registered_topic={registered_topic} />) :
+              <div>You haven't registered any topic yet :( </div>
+            }
           </div>
         </div>
       </div>
