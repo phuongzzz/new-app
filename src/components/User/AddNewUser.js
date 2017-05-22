@@ -4,24 +4,50 @@ import toastr from 'toastr';
 
 const AddNewUser = React.createClass({
 
+  getInitialState() {
+    return {
+      errors: {}
+    }
+  },
+
+  formIsValid() {
+    var formIsValid = true;
+    this.state.errors = {};
+
+    if(this.refs.name.value.length < 3) {
+      toastr.error("name must be exist");
+      formIsValid = false;
+    }
+
+    // this.setState({
+    //   errors: this.state.errors
+    // });
+    return formIsValid;
+
+  },
+
+
   handleSubmit(e) {
     e.preventDefault();
-    // console.log(this.refs);
-    //GET THE LAST USER:
-    var lastUser = this.props.users[this.props.users.length - 1];
-    //GET HIS INDEX
-    var lastUserIndex = parseInt(lastUser.id, 10);
-    var userId = lastUserIndex += 1;
-    var groupnames = this.refs.groupnames;
-    const name = this.refs.name.value;
-    const username = this.refs.username.value;
-    const email = this.refs.email.value;
-    const password = this.refs.password.value;
-    const phonenumber = this.refs.phonenumber.value;
-    const role = groupnames.options[groupnames.selectedIndex].value;
-    this.props.addUser(userId, name, username, email, password, phonenumber, role);
-    hashHistory.push("/users");
-    toastr.success("Done");
+
+    if(!this.formIsValid()) {
+      return;
+    }
+    else {
+      var lastUser = this.props.users[this.props.users.length - 1];
+      var lastUserIndex = parseInt(lastUser.id, 10);
+      var userId = lastUserIndex += 1;
+      var groupnames = this.refs.groupnames;
+      const name = this.refs.name.value;
+      const username = this.refs.username.value;
+      const email = this.refs.email.value;
+      const password = this.refs.password.value;
+      const phonenumber = this.refs.phonenumber.value;
+      const role = groupnames.options[groupnames.selectedIndex].value;
+      // this.props.addUser(userId, name, username, email, password, phonenumber, role);
+      hashHistory.push("/users");
+      toastr.success("Done");
+    }
   },
 
 
