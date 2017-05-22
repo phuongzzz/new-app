@@ -1,6 +1,13 @@
 import { hashHistory } from 'react-router';
 import toastr from 'toastr';
 
+export function addNewTopic(topic) {
+  return {
+    type: 'ADD_NEW_TOPIC',
+    topic
+  }
+}
+
 export function addTopic(topic) {
   return {
     type: 'ADD_TOPIC',

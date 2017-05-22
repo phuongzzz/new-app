@@ -1,5 +1,6 @@
 function topics (state = [], action) {
   switch (action.type) {
+    case 'ADD_NEW_TOPIC':
     case 'ADD_TOPIC':
       return state.concat(action.topic);
     case 'REMOVE_TOPIC':

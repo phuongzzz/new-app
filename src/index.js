@@ -13,6 +13,7 @@ import UserGrid from './components/User/UserGrid';
 import HomePage from './components/Home/HomePage';
 import TopicPage from './components/Topic/TopicPage';
 import SingleTopic from './components/Topic/SingleTopic';
+import CreateNewTopic from './components/Topic/CreateNewTopic';
 import ManageUser from './components/User/ManageUser';
 import LoginPage from './components/Login/LoginPage';
 import ReportPage from './components/Report/ReportPage';
@@ -53,6 +54,7 @@ const router = (
       <Route path="/add-user" component={AddNewUser} onEnter={requireAdmin}></Route>
       <Route path="/topics" component={TopicPage} onEnter={requireAuth}></Route>
       <Route path="/topic/:topicId" component={SingleTopic} onEnter={requireAuth}></Route>
+      <Route path="/create-topic" component={CreateNewTopic}></Route>
       <Route path="/reports" component={ReportPage}></Route>
       <Route path="/report/:reportId" component={SingleReport}></Route>
       <Route path="/marks" component={MarkPage}></Route>

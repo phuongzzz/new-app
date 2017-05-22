@@ -2,6 +2,7 @@ import React from 'react';
 import Topic from './Topic';
 import RegisteredTopic from './RegisteredTopic';
 import './topic-page.css';
+import { Link } from 'react-router';
 
 const TopicPage = React.createClass({
 
@@ -26,7 +27,11 @@ const TopicPage = React.createClass({
     return(
       <div>
         <h1>Topics</h1>
-
+        <div className="row new-btn-row">
+          <div className="container">
+            <Link to="/create-topic" className="btn btn-success">Create new topic</Link>
+          </div>
+        </div>
         <div className="row">
           <div className="col-md-4 col-md-offset-4">
             <input type="text" className="form-control" placeholder="Search topics by title (programing language)..."
@@ -41,7 +46,7 @@ const TopicPage = React.createClass({
             {filteredTopics.length !== 0 ?
               filteredTopics.map((topic, i) =>
                 <Topic {...this.props} key={i} i={i} topic={topic} />) :
-                <div>Nothing found</div>
+              <div>Nothing found</div>
             }
           </div>
         </div>
@@ -50,8 +55,8 @@ const TopicPage = React.createClass({
           <h4>Registered Topics</h4>
           <div className="registered-topics col-md-10 col-md-offset-1">
             {this.props.registered_topics.length !== 0 ?
-            this.props.registered_topics.map((registered_topic, i) =>
-              <RegisteredTopic {...this.props} key={i} i={i} registered_topic={registered_topic} />) :
+              this.props.registered_topics.map((registered_topic, i) =>
+                <RegisteredTopic {...this.props} key={i} i={i} registered_topic={registered_topic} />) :
               <div>You haven't registered any topic yet :( </div>
             }
           </div>

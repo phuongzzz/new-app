@@ -108,9 +108,10 @@
 .addCVForm input, .addCVForm textarea  {
   border: none;
   transition: none !important;
+  text-align: center;
 }
 
-.addCVForm input:focus, .addCVForm textarea:focus  {
+.addCVForm input:focus, .addCVForm input:hover, .addCVForm textarea:hover .addCVForm textarea:focus  {
   border: 2px solid #1abc9c;
   border-radius: 6px;
 }
