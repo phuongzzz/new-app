@@ -7,7 +7,7 @@ const HomeNotLoggedIn = React.createClass({
     return(
       <div className="not-logged-in-wrapper">
         <div className="slogan-wrapper">
-          <h2>SIE Internhip Manager System</h2>
+          <h2>SIE Internship Manager System</h2>
           <h4>To getting started, press</h4>
           <Link to="/login" className="phuong-simple-btn">Login</Link><br/>
           <h4>Don't have an account?</h4>
