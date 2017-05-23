@@ -50,7 +50,9 @@ const SingleClassResponding = React.createClass({
       <div className="row-responding">
         <div className="col-md-10 col-md-offset-1">
           <h3 className="text-center">Responses of {className}</h3>
+          {sessionStorage.getItem('role') === 'student' &&
           <button onClick={this.onClick} className="btn btn-success">Add new response</button>
+          }
           {
             this.state.showResponse &&
             <div className="row">

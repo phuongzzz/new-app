@@ -10,7 +10,11 @@ const ListCVPage = React.createClass({
         <div className="row">
           <h3 className="title">List CV</h3>
           <div className="row">
-            <Link to="/addnewcv"><button className="btn btn-success add-cv-btn">Add new</button></Link>
+            {(sessionStorage.getItem('role') === 'student') &&
+            <Link to="/addnewcv">
+              <button className="btn btn-success add-cv-btn">Add new</button>
+            </Link>
+            }
           </div>
           {this.props.cvs.map((cv, i) =>
             <div className="col-md-6" key={i}>
