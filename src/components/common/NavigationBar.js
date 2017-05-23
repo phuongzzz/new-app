@@ -9,6 +9,9 @@ const NavigationBar = React.createClass({
   },
 
   render() {
+
+    var role = sessionStorage.getItem('role');
+    // alert(typeof role);
     return (
       <nav className="navbar navbar-inverse navbar-embossed navbar-fixed-top" role="navigation">
         <div className="navbar-header">
@@ -39,7 +42,9 @@ const NavigationBar = React.createClass({
                 <li><Link to="/assigns">Assigns</Link></li>
               </ul>
             </li>
-            <li><Link to="/users">Users</Link></li>
+            { (role === 'admin' || role === 'teacher_manager') &&
+              <li><Link to="/users">Users</Link></li>
+            }
             <li><Link to="/listcv">List CV</Link></li>
             <li><Link to="/respondings">Forum</Link></li>
             <li><Link to="/status-internships">Internship Status</Link></li>
