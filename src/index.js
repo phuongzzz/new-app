@@ -34,6 +34,8 @@ import NotFound from './components/common/NotFound';
 import store, { history } from './store/store';
 window.store = store;
 
+// window.localStorage.clear();
+window.sessionStorage.clear();
 window.initState(window.defaultState);
 
 var refresh = window.localStorage.getItem('refresh');
