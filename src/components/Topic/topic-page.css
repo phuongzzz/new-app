@@ -22,8 +22,14 @@
 .topic-wrap {
   /*padding-left: 0px;*/
   /*padding-right: 0px;*/
+  text-align: left;
 }
 
 .new-btn-row {
   text-align: left;
 }
+
+.topic-wrap table thead th:last-child {
+  text-align: center;
+}
+

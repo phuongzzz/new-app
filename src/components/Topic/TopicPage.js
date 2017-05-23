@@ -3,6 +3,7 @@ import Topic from './Topic';
 import RegisteredTopic from './RegisteredTopic';
 import './topic-page.css';
 import { Link } from 'react-router';
+import toastr from 'toastr';
 
 const TopicPage = React.createClass({
 
@@ -16,7 +17,23 @@ const TopicPage = React.createClass({
     this.setState({search: event.target.value});
   },
 
+  handleRegister(event) {
+    event.preventDefault();
+    // alert("Click ok" + this.props.topic.topic_id);
+    if (this.props.registered_topics.length <= 2) {
+      console.log(this.props.registered_topics.length);
+      this.props.removeTopic(this.props.topic.topic_id);
+      this.props.addToRegisteredTopic(this.props.topic);
+      toastr.success("Register " + this.props.topic.title + " done");
+    }
+    else {
+      toastr.error("More than 3 topics? Are you a genius? ", {timeOut: 5000});
+    }
+  },
+
   render() {
+
+    var role = sessionStorage.getItem('role');
 
     let filteredTopics = this.props.topics.filter(
       (topic) => {
@@ -43,11 +60,47 @@ const TopicPage = React.createClass({
         <div className="row">
           <h4>Available Topics</h4>
           <div className="topics col-md-10 col-md-offset-1 topic-wrap">
-            {filteredTopics.length !== 0 ?
-              filteredTopics.map((topic, i) =>
-                <Topic {...this.props} key={i} i={i} topic={topic} />) :
-              <div>Nothing found</div>
-            }
+            <table className="table table-hover table-striped">
+              <thead className="">
+              <tr>
+                <th>Topic title</th>
+                <th>Description</th>
+                <th>Company Name</th>
+                <th>Max No.interns</th>
+                <th>No. registered</th>
+                <th>Actions</th>
+              </tr>
+              </thead>
+              <tbody>
+              {filteredTopics.length !== 0 ?
+                filteredTopics.map((topic, i) =>
+                  <tr key={i}>
+                    <td><Link to={`/topic/${topic.topic_id}`}>{topic.title}</Link></td>
+                    <td>{(topic.description.length > 20) ?
+                      topic.description.slice(0, 20) + "..." :
+                      topic.description}</td>
+                    <td>{topic.company_name}</td>
+                    <td>{topic.max}</td>
+                    <td>{topic.no_intern}</td>
+                    {((role === 'student') || (role === 'teacher_manager')) ?
+                      <td>
+                        {(role === 'student') &&
+                        <input type="button" className="btn btn-success reg-btn" value="Register"
+                           onClick={this.handleRegister}/>
+                        }
+                        {(role === 'teacher_manager') &&
+                        <input type="button" className="btn btn-primary reg-btn" value="Approve"/>
+                        }
+                      </td> :
+                      <td>
+                        <p>Not authorized</p>
+                      </td>
+                    }
+                  </tr>
+                ) : <tr>Nothing found</tr>
+              }
+              </tbody>
+            </table>
           </div>
         </div>
         <hr/>
