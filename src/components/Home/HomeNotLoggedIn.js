@@ -11,7 +11,7 @@ const HomeNotLoggedIn = React.createClass({
           <h4>To getting started, press</h4>
           <Link to="/login" className="phuong-simple-btn">Login</Link><br/>
           <h4>Don't have an account?</h4>
-          <Link to="/" className="phuong-simple-btn">Contact</Link>
+          <Link to="/contact" className="phuong-simple-btn">Contact</Link>
           <h4>to administrator</h4>
         </div>
       </div>

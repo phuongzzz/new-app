@@ -29,6 +29,7 @@ import InternshipSchedulePage from './components/Schedule/InternshipSchedulePage
 import SingleClassResponding from './components/Responding/SingleClassResponding';
 import SingleCompanyResponding from './components/Responding/SingleCompanyResponding';
 import StatusPage from './components/StatusPage/StatusPage';
+import ContactForm from './components/ContactForm/ContactForm';
 import NotFound from './components/common/NotFound';
 
 import store, { history } from './store/store';
@@ -70,6 +71,7 @@ const router = (
       <Route path="/classe/:className" component={SingleClassResponding}></Route>
       <Route path="/company/:companyName" component={SingleCompanyResponding}></Route>
       <Route path="/status-internships" component={StatusPage}></Route>
+      <Route path="/contact" component={ContactForm}></Route>
       <Route path="*" component={NotFound}></Route>
     </Route>
   </Router>
