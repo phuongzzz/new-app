@@ -61,7 +61,11 @@ const MarkPage = React.createClass({
                 <tbody>
                 {filteredMarks.map((mark, i) =>
                   <tr key={i}>
-                    <td><Link to={`/mark/${mark.id}`}>{mark.id}</Link></td>
+                    {((sessionStorage.getItem('role') === 'teacher_manager') ||
+                    (sessionStorage.getItem('role') === 'teacher_instructor')) ?
+                      <td><Link to={`/mark/${mark.id}`}>{mark.id}</Link></td> :
+                      <td>{mark.id}</td>
+                    }
                     <td>{mark.name}</td>
                     <td>{mark.class}</td>
                     <td>{mark.CSTT}</td>
