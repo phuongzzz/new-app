@@ -4,6 +4,7 @@ import RegisteredTopic from './RegisteredTopic';
 import './topic-page.css';
 import { Link } from 'react-router';
 import toastr from 'toastr';
+import _ from 'lodash';
 
 const TopicPage = React.createClass({
 
@@ -17,13 +18,13 @@ const TopicPage = React.createClass({
     this.setState({search: event.target.value});
   },
 
-  handleRegister(event) {
-    event.preventDefault();
+  handleRegister(topic_id) {
+    // event.preventDefault();
     // alert("Click ok" + this.props.topic.topic_id);
     if (this.props.registered_topics.length <= 2) {
-      console.log(this.props.registered_topics.length);
-      this.props.removeTopic(this.props.topic.topic_id);
-      this.props.addToRegisteredTopic(this.props.topic);
+      var topicToAdd = _.find(this.props.topics, {topic_id: topic_id});
+      this.props.removeTopic(topic_id);
+      this.props.addToRegisteredTopic(topicToAdd);
       toastr.success("Register " + this.props.topic.title + " done");
     }
     else {
@@ -86,7 +87,7 @@ const TopicPage = React.createClass({
                       <td>
                         {(role === 'student') &&
                         <input type="button" className="btn btn-success reg-btn" value="Register"
-                           onClick={this.handleRegister}/>
+                           onClick={this.handleRegister.bind(this, topic.topic_id)}/>
                         }
                         {(role === 'teacher_manager') &&
                         <input type="button" className="btn btn-primary reg-btn" value="Approve"/>
