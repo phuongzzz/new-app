@@ -30,8 +30,8 @@ import SingleClassResponding from './components/Responding/SingleClassResponding
 import SingleCompanyResponding from './components/Responding/SingleCompanyResponding';
 import StatusPage from './components/StatusPage/StatusPage';
 import ContactForm from './components/ContactForm/ContactForm';
+import Notifications from './components/Notifications/Notifications';
 import NotFound from './components/common/NotFound';
-
 import store, { history } from './store/store';
 window.store = store;
 
@@ -72,6 +72,7 @@ const router = (
       <Route path="/company/:companyName" component={SingleCompanyResponding}></Route>
       <Route path="/status-internships" component={StatusPage}></Route>
       <Route path="/contact" component={ContactForm}></Route>
+      <Route path="/notifications" component={Notifications}></Route>
       <Route path="*" component={NotFound}></Route>
     </Route>
   </Router>

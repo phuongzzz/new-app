@@ -44,7 +44,7 @@ const AddNewUser = React.createClass({
       const password = this.refs.password.value;
       const phonenumber = this.refs.phonenumber.value;
       const role = groupnames.options[groupnames.selectedIndex].value;
-      // this.props.addUser(userId, name, username, email, password, phonenumber, role);
+      this.props.addUser(userId, name, username, email, password, phonenumber, role);
       hashHistory.push("/users");
       toastr.success("Done");
     }

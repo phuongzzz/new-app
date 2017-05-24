@@ -36,7 +36,7 @@ const NavigationBar = React.createClass({
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
-              <li><a href="#fakelink">Notifications</a></li>
+              <li><Link to="/notifications">Notifications</Link></li>
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Curriculum<b className="caret"></b></a>
                 <span className="dropdown-arrow"></span>
@@ -64,7 +64,7 @@ const NavigationBar = React.createClass({
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
-              <li><a href="#fakelink">Notifications</a></li>
+              <li><Link to="/notifications">Notifications</Link></li>
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Internship <b className="caret"></b></a>
                 <span className="dropdown-arrow"></span>
@@ -105,7 +105,7 @@ const NavigationBar = React.createClass({
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
-              <li><a href="#fakelink">Notifications</a></li>
+              <li><Link to="/notifications">Notifications</Link></li>
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Internship <b className="caret"></b></a>
                 <span className="dropdown-arrow"></span>
@@ -145,7 +145,7 @@ const NavigationBar = React.createClass({
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
-              <li><a href="#fakelink">Notifications</a></li>
+              <li><Link to="/notifications">Notifications</Link></li>
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Internship <b className="caret"></b></a>
                 <span className="dropdown-arrow"></span>
@@ -186,7 +186,7 @@ const NavigationBar = React.createClass({
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
-              <li><a href="#fakelink">Notifications</a></li>
+              <li><Link to="/notifications">Notifications</Link></li>
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Internship <b className="caret"></b></a>
                 <span className="dropdown-arrow"></span>
@@ -213,7 +213,7 @@ const NavigationBar = React.createClass({
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
             <ul className="nav navbar-nav navbar-left">
-              <li><a href="#fakelink">Notifications</a></li>
+              <li><Link to="/notifications">Notifications</Link></li>
               <li className="dropdown">
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Internship <b className="caret"></b></a>
                 <span className="dropdown-arrow"></span>

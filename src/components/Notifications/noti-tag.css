@@ -1,0 +1,19 @@
+.noti-tag {
+  background-color: white;
+  color: black;
+  margin-top: 15px;
+  border-radius: 9px;
+  border: 2px solid #2ecc71;
+}
+.noti-tag h4 {
+  margin-top: 0;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: #2ecc71;
+  padding: 10px;
+  color: white;
+}
+
+.noti-content {
+  /*border: 1px solid b;*/
+}
