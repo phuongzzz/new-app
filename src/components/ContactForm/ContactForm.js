@@ -16,40 +16,35 @@ const ContactForm = React.createClass({
 
   handleSubmit(e) {
     e.preventDefault();
-    var name = this.refs.name.value;
+    var from = this.refs.name.value;
     var email = this.refs.email.value;
     var message = this.refs.message.value;
     // alert(typeof name);
     // alert(typeof name);
     // toastr.success("done");
-    if ((name.length === 0) || (email.length === 0)) {
+    if ((from.length === 0) || (email.length === 0)) {
       toastr.error("Double check your name or email, or both :)");
     }
-    else if(_.parseInt(name) || _.parseInt(email)){
+    else if(_.parseInt(from) || _.parseInt(email)){
       toastr.error("Double check your name or email, or both :)");
     }
     else {
       var all_notifications = this.props.notifications;
-      var admin_notifications_object = _.find(all_notifications, {username: "admin"});
-      var admin_notifies = admin_notifications_object.notifies;
-      var last_notifies_id = parseInt(admin_notifies[admin_notifies.length - 1].notification_id, 10);
+      // var admin_notifications = _.filter(all_notifications, {username: "admin"});
+      var last_notifies_id = parseInt(all_notifications[all_notifications.length]);
       var notification_id = ++last_notifies_id;
       var notification_obj = {
+        username: "admin",
+        type: 'ADD_NEW_REQUEST',
         notification_id,
-        name,
+        from,
         email,
         message
       }
-
       this.props.pushNotificationToAdmin(notification_obj);
-
-      // console.log(this.props.notifications.length);
-      // hashHistory.push("/");
+      hashHistory.push("/");
       toastr.success("Your request has been sent, admin will email you soon :)")
     }
-    // else {
-    //   toastr.success("done");
-    // }
   },
 
   render() {

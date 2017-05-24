@@ -8,10 +8,12 @@ const NotificationTag = React.createClass({
     const {noti} = this.props;
     return(
       <div className="noti-wrapper">
-        <p><span className="noti-name">{noti.name}</span>&nbsp;
+        <p><span className="noti-name">{noti.from}</span>&nbsp;
           wants to be a member, his (her) email is&nbsp;
           <span className="noti-email">{noti.email}</span>&nbsp;
-          <span className="noti-create"><Link to="/add-user">Create</Link> now!</span>
+          { (noti.type === 'ADD_NEW_REQUEST') &&
+            <span className="noti-create"><Link to="/add-user">Create</Link> now!</span>
+          }
         </p>
         {
           noti.message.length !== 0 && <p><span className="noti-message">Message: </span>"{noti.message}"</p>

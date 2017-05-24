@@ -95,7 +95,7 @@ export function logInUser(username, password) {
           sessionStorage.setItem('role', 'admin');
           sessionStorage.setItem('username', username);
           dispatch(loginSuccess());
-          hashHistory.push("/");
+          hashHistory.push("/notifications");
           toastr.success("Login successfully");
         }
         else {

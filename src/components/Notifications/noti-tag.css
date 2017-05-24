@@ -27,3 +27,7 @@
 .noti-name, .noti-email, .noti-message {
   font-weight: bolder;
 }
+
+.noti-create {
+  font-weight: bolder !important;
+}
