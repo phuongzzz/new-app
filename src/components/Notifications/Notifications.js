@@ -11,7 +11,11 @@ const Notifications = React.createClass({
     return (
       <div className="container">
         <h6 className="noti-header">Your Notifications</h6>
-        {current_user_notification_reverse.map((noti, i) => <NotificationTag key={i} noti={noti}/>)}
+        {(current_user_notification_reverse.length !== 0) ?
+          current_user_notification_reverse.map((noti, i) => <NotificationTag key={i} noti={noti}/>)
+          :
+          <p>No notifications</p>
+        }
       </div>
     )
   }
