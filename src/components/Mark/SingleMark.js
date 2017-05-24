@@ -5,14 +5,14 @@ const SingleMark = React.createClass({
 
   handleSubmit(e) {
     e.preventDefault();
-    var cstt = this.refs.cstt.value;
-    var timechecking = this.refs.timechecking.value;
-    var report = this.refs.report.value;
-    var demo = this.refs.demo.value;
-    var material = this.refs.material.value;
-    var gpa = this.refs.gpa.value;
-    var result = this.refs.result.value;
-    console.log(report + demo);
+//    var cstt = this.refs.cstt.value;
+//    var timechecking = this.refs.timechecking.value;
+//    var report = this.refs.report.value;
+//    var demo = this.refs.demo.value;
+//    var material = this.refs.material.value;
+//    var gpa = this.refs.gpa.value;
+//    var result = this.refs.result.value;
+//    console.log(report + demo);
   },
 
   render(){
