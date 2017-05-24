@@ -9,7 +9,9 @@ const NotificationTag = React.createClass({
     return(
       <div className="noti-wrapper">
         <p><span className="noti-name">{noti.from}</span>&nbsp;
-          wants to be a member, his (her) email is&nbsp;
+          {(noti.type === 'ADD_NEW_REQUEST') &&
+          <span>wants to be a member, his (her) email is&nbsp;</span>
+          }
           <span className="noti-email">{noti.email}</span>&nbsp;
           { (noti.type === 'ADD_NEW_REQUEST') &&
             <span className="noti-create"><Link to="/add-user">Create</Link> now!</span>
