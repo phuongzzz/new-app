@@ -29,7 +29,22 @@ const ContactForm = React.createClass({
       toastr.error("Double check your name or email, or both :)");
     }
     else {
-      hashHistory.push("/");
+      var all_notifications = this.props.notifications;
+      var admin_notifications_object = _.find(all_notifications, {username: "admin"});
+      var admin_notifies = admin_notifications_object.notifies;
+      var last_notifies_id = parseInt(admin_notifies[admin_notifies.length - 1].notification_id, 10);
+      var notification_id = ++last_notifies_id;
+      var notification_obj = {
+        notification_id,
+        name,
+        email,
+        message
+      }
+
+      this.props.pushNotificationToAdmin(notification_obj);
+
+      // console.log(this.props.notifications.length);
+      // hashHistory.push("/");
       toastr.success("Your request has been sent, admin will email you soon :)")
     }
     // else {

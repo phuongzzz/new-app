@@ -10,8 +10,9 @@ const Notifications = React.createClass({
     console.log(current_user_notifications);
     // alert(typeof current_user_notifications);
     return (
-      <div>
-      {current_user_notifications.notifies.map((noti, i) => <NotificationTag key={i} noti={noti}/>)}
+      <div className="container">
+        <h6 className="noti-header">Your Notifications</h6>
+        {current_user_notifications.notifies.map((noti, i) => <NotificationTag key={i} noti={noti}/>)}
       </div>
     )
   }

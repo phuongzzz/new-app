@@ -233,3 +233,10 @@ export function addNewReport(id, student_id, name, link) {
     link
   }
 }
+
+export function pushNotificationToAdmin(noti_obj) {
+  return {
+    type: 'PUSH_NOTI_ADMIN',
+    noti_obj
+  }
+}

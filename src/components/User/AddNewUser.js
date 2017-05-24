@@ -66,7 +66,7 @@ const AddNewUser = React.createClass({
     return (
       <div className="row">
         <div className="col-md-8 col-md-offset-2">
-          <h2>Manage User</h2>
+          <h2>Add User</h2>
           <form ref="addNewUserForm" className="form-group" onSubmit={this.handleSubmit}>
             <label>Name</label>
             <input type="text" ref="name" placeholder="Enter User's Name" className="form-control" />
