@@ -34,7 +34,7 @@ module.exports =
       "gender": 1,
       "lock": 0,
       "status": 1,
-      "role": "admin"
+      "role": "student"
     },
     {
       "id": 112,
