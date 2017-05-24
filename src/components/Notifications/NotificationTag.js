@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 const NotificationTag = React.createClass({
   render() {
-    var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+    // var utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
     const {noti} = this.props;
     return(
       <div className="noti-wrapper">

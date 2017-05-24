@@ -4,7 +4,7 @@ import './user.css';
 
 const User = React.createClass({
   render() {
-    const {user, i} = this.props;
+    const {user} = this.props;
     return (
       <div className="col-md-3">
         <div className="card">

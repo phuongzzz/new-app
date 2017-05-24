@@ -4,8 +4,9 @@ function session (state = {}, action) {
       return sessionStorage.role
     case 'LOG_OUT':
       return {}
+    default:
+      return state;
   }
-  return state;
 }
 
 export default session;

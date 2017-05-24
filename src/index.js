@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import jQuery from 'jquery';
+// import jQuery from 'jquery';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 
@@ -32,7 +32,7 @@ import StatusPage from './components/StatusPage/StatusPage';
 import ContactForm from './components/ContactForm/ContactForm';
 import Notifications from './components/Notifications/Notifications';
 import NotFound from './components/common/NotFound';
-import store, { history } from './store/store';
+import store from './store/store';
 window.store = store;
 
 // window.localStorage.clear();
@@ -97,50 +97,50 @@ function requireAdmin(nextState, replace) {
   }
 }
 
-function requireStudent(nextState, replace) {
-  if (sessionStorage.role !== 'student') {
-    replace({
-      pathname: '/login',
-      state: { nextPathname: nextState.location.pathname }
-    })
-  }
-}
-
-function requireTeacherManager(nextState, replace) {
-  if (sessionStorage.role !== 'teacher_manager') {
-    replace({
-      pathname: '/login',
-      state: { nextPathname: nextState.location.pathname }
-    })
-  }
-}
-
-function requireTeacherInstructor(nextState, replace) {
-  if (sessionStorage.role !== 'teacher_instructor') {
-    replace({
-      pathname: '/login',
-      state: { nextPathname: nextState.location.pathname }
-    })
-  }
-}
-
-function requireCompanyAgent(nextState, replace) {
-  if (sessionStorage.role !== 'company_agent') {
-    replace({
-      pathname: '/login',
-      state: { nextPathname: nextState.location.pathname }
-    })
-  }
-}
-
-function requireCompanyInstructor(nextState, replace) {
-  if (sessionStorage.role !== 'company_instructor') {
-    replace({
-      pathname: '/login',
-      state: { nextPathname: nextState.location.pathname }
-    })
-  }
-}
+//function requireStudent(nextState, replace) {
+//  if (sessionStorage.role !== 'student') {
+//    replace({
+//      pathname: '/login',
+//      state: { nextPathname: nextState.location.pathname }
+//    })
+//  }
+//}
+//
+//function requireTeacherManager(nextState, replace) {
+//  if (sessionStorage.role !== 'teacher_manager') {
+//    replace({
+//      pathname: '/login',
+//      state: { nextPathname: nextState.location.pathname }
+//    })
+//  }
+//}
+//
+//function requireTeacherInstructor(nextState, replace) {
+//  if (sessionStorage.role !== 'teacher_instructor') {
+//    replace({
+//      pathname: '/login',
+//      state: { nextPathname: nextState.location.pathname }
+//    })
+//  }
+//}
+//
+//function requireCompanyAgent(nextState, replace) {
+//  if (sessionStorage.role !== 'company_agent') {
+//    replace({
+//      pathname: '/login',
+//      state: { nextPathname: nextState.location.pathname }
+//    })
+//  }
+//}
+//
+//function requireCompanyInstructor(nextState, replace) {
+//  if (sessionStorage.role !== 'company_instructor') {
+//    replace({
+//      pathname: '/login',
+//      state: { nextPathname: nextState.location.pathname }
+//    })
+//  }
+//}
 
 ReactDOM.render(
   router,

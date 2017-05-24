@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+// import { Link } from 'react-router';
 import toastr from 'toastr';
 import _ from 'lodash';
 
@@ -30,7 +30,7 @@ const RegisteredTopic = React.createClass({
 
   render() {
 
-    const {registered_topic, i} = this.props;
+    const {registered_topic} = this.props;
 
     return (
       <div className="topic-box row">

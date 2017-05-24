@@ -31,7 +31,7 @@ const ContactForm = React.createClass({
     else {
       var all_notifications = this.props.notifications;
       // var admin_notifications = _.filter(all_notifications, {username: "admin"});
-      var last_notifies_id = parseInt(all_notifications[all_notifications.length]);
+      var last_notifies_id = parseInt(all_notifications[all_notifications.length], 10);
       var notification_id = ++last_notifies_id;
       var notification_obj = {
         username: "admin",

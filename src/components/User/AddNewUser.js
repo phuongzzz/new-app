@@ -12,7 +12,6 @@ const AddNewUser = React.createClass({
 
   formIsValid() {
     var formIsValid = true;
-    this.state.errors = {};
 
     if(this.refs.name.value.length < 3) {
       toastr.error("name must be exist");

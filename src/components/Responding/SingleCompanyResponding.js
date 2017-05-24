@@ -41,8 +41,8 @@ const SingleClassResponding = React.createClass({
 
   render(){
     const {companyName} = this.props.params;
-    const companyIndex = this.props.company_respondings.findIndex((company_responding)=>
-    company_responding.company === parseInt(companyName,10));
+    // const companyIndex = this.props.company_respondings.findIndex((company_responding)=>
+    // company_responding.company === parseInt(companyName,10));
 
     const company_filters = this.props.company_respondings.filter(
       company_respoding => company_respoding.company === companyName);

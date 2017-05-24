@@ -1,5 +1,5 @@
 import React from 'react';
-import Topic from './Topic';
+// import Topic from './Topic';
 import RegisteredTopic from './RegisteredTopic';
 import './topic-page.css';
 import { Link } from 'react-router';

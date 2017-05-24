@@ -40,8 +40,8 @@ const SingleClassResponding = React.createClass({
 
   render(){
     const { className } = this.props.params;
-    const classIndex = this.props.class_respondings.findIndex((class_responding) =>
-    class_responding.class_name === parseInt(className,10));
+    // const classIndex = this.props.class_respondings.findIndex((class_responding) =>
+    // class_responding.class_name === parseInt(className,10));
 
     const class_filters = this.props.class_respondings.filter(
       class_responding => class_responding.class_name === className);
