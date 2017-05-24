@@ -25,7 +25,7 @@ const TopicPage = React.createClass({
       var topicToAdd = _.find(this.props.topics, {topic_id: topic_id});
       this.props.removeTopic(topic_id);
       this.props.addToRegisteredTopic(topicToAdd);
-      toastr.success("Register " + this.props.topic.title + " done");
+      toastr.success("Register " + topicToAdd.title + " done");
     }
     else {
       toastr.error("More than 3 topics? Are you a genius? ", {timeOut: 5000});
