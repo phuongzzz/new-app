@@ -47,8 +47,11 @@ const TopicPage = React.createClass({
         <h1>Topics</h1>
         <div className="row new-btn-row">
           <div className="container">
-            {(sessionStorage.getItem('role') === 'company_instructor') &&
-            !<Link to="/create-topic" className="btn btn-success">Create new topic</Link>
+            {
+              ( (sessionStorage.getItem('role') === 'company_instructor') ||
+                (sessionStorage.getItem('role') === 'company_agent')
+              ) &&
+            <Link to="/create-topic" className="btn btn-success">Create new topic</Link>
             }
           </div>
         </div>

@@ -1,8 +1,14 @@
 import React from 'react';
 import './single-topic.css';
-
+import { hashHistory } from 'react-router';
 
 const SingleTopic = React.createClass({
+
+  handleBack(e) {
+    e.preventDefault();
+    hashHistory.push("/topics");
+  },
+
   render() {
     const { topicId } = this.props.params;
     const i = this.props.topics.findIndex((topic) =>
@@ -44,7 +50,8 @@ const SingleTopic = React.createClass({
           </div>
 
           <div className="content-box ">
-            <button className="btn btn-success">Apply Job</button>
+            <button className="btn btn-success"
+            onClick={this.handleBack}>Back to topics</button>
           </div>
 
         </div>
