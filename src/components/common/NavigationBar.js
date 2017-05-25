@@ -149,8 +149,6 @@ const NavigationBar = React.createClass({
                 <span className="dropdown-arrow"></span>
                 <ul className="dropdown-menu">
                   <li><Link to="/topics">Register Topic</Link></li>
-                  <li className="divider"></li>
-                  <li><Link to="/schedule">Internship Schedule</Link></li>
                 </ul>
               </li>
               <li className="dropdown">
