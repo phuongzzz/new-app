@@ -74,7 +74,7 @@ const AddNewUser = React.createClass({
             <label>Email</label>
             <input type="email" ref="email" placeholder="Enter User's Email" className="form-control"/>
             <label>Password</label>
-            <input type="text" ref="password" placeholder="Enter User's Password" className="form-control"/>
+            <input type="password" ref="password" placeholder="Enter User's Password" className="form-control"/>
             <label>Phone number</label>
             <input type="text" ref="phonenumber" placeholder="Enter User's Number" className="form-control"/>
             <label>Role</label>
