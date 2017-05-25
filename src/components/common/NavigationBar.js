@@ -110,9 +110,7 @@ const NavigationBar = React.createClass({
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">Internship <b className="caret"></b></a>
                 <span className="dropdown-arrow"></span>
                 <ul className="dropdown-menu">
-                  <li><Link to="/topics">Register Topic</Link></li>
-                  <li className="divider"></li>
-                  <li><Link to="/schedule">Internship Schedule</Link></li>
+                  <li><Link to="/topics">Approve Topic</Link></li>
                 </ul>
               </li>
               <li className="dropdown">
