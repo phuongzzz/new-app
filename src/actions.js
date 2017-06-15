@@ -87,109 +87,22 @@ export function loginFailed() {
   }
 }
 
-export function logInUser(username, password) {
+export function logInUser(username, role) {
   return function (dispatch) {
-    switch (username) {
-      case 'admin':
-        if (password === 'admin') {
-          sessionStorage.setItem('role', 'admin');
-          sessionStorage.setItem('username', username);
-          dispatch(loginSuccess());
-          hashHistory.push("/notifications");
-          toastr.success("Login successfully");
-        }
-        else {
-          dispatch(loginFailed());
-          toastr.error('Error when login', 'Check your credentials');
-        }
-        break;
-      case 'phuongzzz':
-        if (password === 'phuongzzz') {
-          sessionStorage.setItem('role', 'student');
-          sessionStorage.setItem('username', username);
-          dispatch(loginSuccess());
-          hashHistory.push("/");
-          toastr.success("Login successfully");
-        }
-        else {
-          dispatch(loginFailed());
-          toastr.error('Error when login', 'Check your credentials');
-        }
-        break;
-      case 'huonggiang':
-        if (password === 'huonggiang') {
-          sessionStorage.setItem('role', 'teacher_manager');
-          sessionStorage.setItem('username', username);
-          dispatch(loginSuccess());
-          hashHistory.push("/");
-          toastr.success("Login successfully");
-        }
-        else {
-          dispatch(loginFailed());
-          toastr.error('Error when login', 'Check your credentials');
-        }
-        break;
-
-      case 'banhmai':
-        if (password === 'banhmai') {
-          sessionStorage.setItem('role', 'teacher_instructor');
-          sessionStorage.setItem('username', username);
-          dispatch(loginSuccess());
-          hashHistory.push("/");
-          toastr.success("Login successfully");
-        }
-        else {
-          dispatch(loginFailed());
-          toastr.error('Error when login', 'Check your credentials');
-        }
-        break;
-
-      case 'leha':
-        if (password === 'leha') {
-          sessionStorage.setItem('role', 'company_agent');
-          sessionStorage.setItem('username', username);
-          dispatch(loginSuccess());
-          hashHistory.push("/");
-          toastr.success("Login successfully");
-        }
-        else {
-          dispatch(loginFailed());
-          toastr.error('Error when login', 'Check your credentials');
-        }
-        break;
-
-      case 'phuongthao':
-        if (password === 'phuongthao') {
-          sessionStorage.setItem('role', 'company_instructor');
-          sessionStorage.setItem('username', username);
-          dispatch(loginSuccess());
-          hashHistory.push("/");
-          toastr.success("Login successfully");
-        }
-        else {
-          dispatch(loginFailed());
-          toastr.error('Error when login', 'Check your credentials');
-        }
-        break;
-      default:
-        if(password === 'phuongphuong') {
-          sessionStorage.setItem('role', 'company_instructor');
-          sessionStorage.setItem('username', username);
-          dispatch(loginSuccess());
-          hashHistory.push("/");
-          toastr.success("Login successfully");
-        }
-        else {
-          dispatch(loginFailed());
-          toastr.error('Error when login', 'Check your credentials');
-        }
-        break;
+    sessionStorage.setItem('role', role);
+    sessionStorage.setItem('username', username);
+    dispatch(loginSuccess());
+    if (username === 'admin') {
+      hashHistory.push("/notifications");
     }
+    else {
+      hashHistory.push("/");
+    }
+    toastr.success("Login successfully");
   }
 }
 
 export function logoutUser() {
-  console.log("logout chay roi");
   sessionStorage.removeItem('username');
   sessionStorage.removeItem('role');
   hashHistory.push("/");

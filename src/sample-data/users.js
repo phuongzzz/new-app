@@ -3,6 +3,7 @@ module.exports =
     {
       "id": 82,
       "username": "admin",
+      "password": "admin",
       "email": "ltu@gmail.com",
       "name": "ltu",
       "phonenumber": 123456789,
@@ -22,11 +23,12 @@ module.exports =
       "gender": 1,
       "lock": 0,
       "status": 1,
-      "role": "students"
+      "role": "student"
     },
     {
       "id": 7,
       "username": "phuongzzz",
+      "password": "phuongzzz",
       "email": "phuongphuong@gmail.com",
       "name": "phuongzzz",
       "phonenumber": 1234567890,
@@ -39,6 +41,7 @@ module.exports =
     {
       "id": 112,
       "username": "banhmai",
+      "password": "banhmai",
       "email": "btqm@gmail.com",
       "name": "Bành Thị Quỳnh Mai",
       "phonenumber": 123456789,
@@ -46,11 +49,12 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "teacher_instructions"
+      "role": "teacher_instructor"
     },
     {
       "id": 102,
       "username": "huonggiang",
+      "password": "huonggiang",
       "email": "vthg@gmail.com",
       "name": "Vũ Thị Hương GIang",
       "phonenumber": 123456789,
@@ -58,11 +62,12 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "teacher_managers"
+      "role": "teacher_manager"
     },
     {
       "id": 122,
       "username": "leha",
+      "password": "leha",
       "email": "halt@gmail.com",
       "name": "Trần Lê Hải",
       "phonenumber": 123456789,
@@ -70,11 +75,12 @@ module.exports =
       "gender": 1,
       "lock": 0,
       "status": 1,
-      "role": "company's agents"
+      "role": "company_agent"
     },
     {
       "id": 132,
       "username": "phuongthao",
+      "password": "phuongthao",
       "email": "thaopt@gmail.com",
       "name": "Phạm Thị Thảo",
       "phonenumber": 123456789,
@@ -82,7 +88,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "company's instructors"
+      "role": "company_instructor"
     },
     {
       "id": 2,
@@ -94,7 +100,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "students"
+      "role": "student"
     },
     {
       "id": 4,
@@ -106,7 +112,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "students"
+      "role": "student"
     },
     {
       "id": 9,
@@ -118,7 +124,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "teacher_managers"
+      "role": "teacher_manager"
     },
     {
       "id": 8,
@@ -130,7 +136,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "teacher_instructions"
+      "role": "teacher_instructor"
     },
     {
       "id": 10,
@@ -142,7 +148,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "company's instructors"
+      "role": "company_instructor"
 
     },
     {
@@ -155,7 +161,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "teacher_instructions"
+      "role": "teacher_instructor"
     },
     {
       "id": 6,
@@ -167,7 +173,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "students"
+      "role": "student"
     },
     {
       "id": 3,
@@ -179,7 +185,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "students"
+      "role": "student"
     },
     {
       "id": 5,
@@ -191,7 +197,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "students"
+      "role": "student"
     },
     {
       "id": 11,
@@ -203,7 +209,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "students"
+      "role": "student"
     },
     {
       "id": 19,
@@ -215,7 +221,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "students"
+      "role": "student"
     },
     {
       "id": 23,
@@ -227,7 +233,7 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "students"
+      "role": "student"
     },
     {
       "id": 240,
@@ -239,6 +245,6 @@ module.exports =
       "gender": 0,
       "lock": 0,
       "status": 1,
-      "role": "students"
+      "role": "student"
     },
   ]

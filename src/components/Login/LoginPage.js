@@ -1,13 +1,34 @@
 import React from 'react';
 import './login-page.css';
+import _ from 'lodash';
+import toastr from 'toastr';
 
 const LoginPage = React.createClass({
+
+  checkLogin(username, password) {
+    const usersList = this.props.users;
+    let foundUser = _.find(usersList, {username});
+
+    if ("undefined" === typeof foundUser){
+      toastr.error("User "+ username + " not found!");
+    }
+    else if ((foundUser.username === username) && (foundUser.password === password)) {
+      // toastr.success("username: " + username + " " + "password: " + password);
+      let role = foundUser.role;
+      // toastr.success(typeof role);
+      this.props.logInUser(username, role);
+    }
+    else {
+      toastr.error("Wrong password, " + username + " :)");
+    }
+  },
 
   handleSubmit(e) {
     e.preventDefault();
     const username = this.refs.username.value;
     const password = this.refs.password.value;
-    this.props.logInUser(username, password);
+    // this.props.logInUser(username, password);
+    this.checkLogin(username, password);
   },
 
   render() {

@@ -1,10 +1,10 @@
 module.exports =  [
-    "students",
+    "student",
     "admin",
-    "teacher's managers",
-    "teacher's instructors",
-    "company's agents",
-    "company's instructors"
+    "teacher_manager",
+    "teacher_instructor",
+    "company_agent",
+    "company_instructor"
 ]
 
 
