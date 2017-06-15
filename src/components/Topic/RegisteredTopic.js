@@ -54,11 +54,13 @@ const RegisteredTopic = React.createClass({
         </div>
 
         <div className="col-md-1 col-md-offset-1">
-          {sessionStorage.getItem('role') === 'teacher_manager' ?
+          {(sessionStorage.getItem('role') === 'teacher_manager') &&
             <input type="button" className="btn btn-success" value="Approve"
-              onClick={this.handleApprove}/> :
-            <input type="button" className="btn btn-danger reg-btn" value="Unregister"
-              onClick={this.handleUnregister}/>
+              onClick={this.handleApprove}/>
+          }
+          {(sessionStorage.getItem('role') === 'student') &&
+          <input type="button" className="btn btn-danger reg-btn" value="Unregister"
+                 onClick={this.handleUnregister}/>
           }
         </div>
       </div>
