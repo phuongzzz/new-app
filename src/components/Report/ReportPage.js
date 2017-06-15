@@ -60,7 +60,9 @@ const ReportPage = React.createClass({
           <h4>List Reports</h4>
           <div className="row">
             <div className="col-md-4 col-md-offset-4">
-              <button onClick={this.onClick} className="btn btn-success">Add new report</button>
+              {sessionStorage.getItem('role') === 'student' &&
+                <button onClick={this.onClick} className="btn btn-success">Add new report</button>
+              }
               <input type="text" className="form-control phuong-inline-input" placeholder="Search by username..."
                      value={this.state.search}
                      onChange={this.updateSearch}/>
