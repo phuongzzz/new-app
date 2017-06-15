@@ -15,8 +15,9 @@ const LoginPage = React.createClass({
     else if ((foundUser.username === username) && (foundUser.password === password)) {
       // toastr.success("username: " + username + " " + "password: " + password);
       let role = foundUser.role;
+      let name = foundUser.name;
       // toastr.success(typeof role);
-      this.props.logInUser(username, role);
+      this.props.logInUser(username, role, name);
     }
     else {
       toastr.error("Wrong password, " + username + " :)");

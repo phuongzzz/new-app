@@ -247,4 +247,31 @@ module.exports =
       "status": 1,
       "role": "student"
     },
+    {
+      "id": 300,
+      "username": "giangvth@soict.hust.edu.vn",
+      "password": "giangvth",
+      "email": "giangvth@soict.hust.edu.vn",
+      "name": "Vu Thi Huong Giang",
+      "phonenumber": 123456789,
+      "dateofbirth": "0000-00-00",
+      "gender": 1,
+      "lock": 0,
+      "status": 1,
+      "role": "admin"
+    },
+    {
+      "id": 301,
+      "username": "maibtq@soict.hust.edu.vn",
+      "password": "maibtq",
+      "email": "maibtq@soict.hust.edu.vn",
+      "name": "Banh Thi Quynh Mai",
+      "phonenumber": 123456789,
+      "dateofbirth": "0000-00-00",
+      "gender": 1,
+      "lock": 0,
+      "status": 1,
+      "role": "admin"
+    },
+
   ]

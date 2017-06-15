@@ -93,10 +93,11 @@ export function loginFailed() {
   }
 }
 
-export function logInUser(username, role) {
+export function logInUser(username, role, name) {
   return function (dispatch) {
     sessionStorage.setItem('role', role);
     sessionStorage.setItem('username', username);
+    sessionStorage.setItem('name', name);
     dispatch(loginSuccess());
     if (username === 'admin') {
       hashHistory.push("/notifications");
