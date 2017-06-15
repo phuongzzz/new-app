@@ -8,6 +8,12 @@ export function addToAssignedTopic(topic) {
   }
 }
 
+export function fixMark(mark) {
+  return {
+    type: 'CHANGE_MARK',
+    mark
+  }
+}
 
 export function addNewTopic(topic) {
   return {

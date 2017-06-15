@@ -1,24 +1,29 @@
 import React from 'react';
 import './mark-page.css';
+import { hashHistory } from 'react-router';
 
 const SingleMark = React.createClass({
 
   handleSubmit(e) {
     e.preventDefault();
-//    var cstt = this.refs.cstt.value;
-//    var timechecking = this.refs.timechecking.value;
-//    var report = this.refs.report.value;
-//    var demo = this.refs.demo.value;
-//    var material = this.refs.material.value;
-//    var gpa = this.refs.gpa.value;
-//    var result = this.refs.result.value;
-//    console.log(report + demo);
+    var markId = Number(this.props.params.markId);
+   var cstt = Number(this.refs.cstt.value);
+   var timechecking = Number(this.refs.timechecking.value);
+   var report = Number(this.refs.report.value);
+   var demo = Number(this.refs.demo.value);
+   var material = Number(this.refs.material.value);
+   var gpa = Number(this.refs.gpa.value);
+   var result = this.refs.result.value;
+   var mark = {markId, cstt, timechecking, report, demo, material, gpa, result};
+   // alert(typeof markId);
+   this.props.fixMark(mark);
+   hashHistory.push("/marks");
   },
 
   render(){
     const { markId } = this.props.params;
     const i = this.props.marks.findIndex((mark) =>
-    mark.id === parseInt(markId, 10));
+      mark.id === parseInt(markId, 10));
     const mark = this.props.marks[i];
 
     return (
