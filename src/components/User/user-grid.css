@@ -6,3 +6,7 @@
 .search-box {
   margin-bottom: 30px;
 }
+
+.phuong-flex {
+  display: flex;
+}

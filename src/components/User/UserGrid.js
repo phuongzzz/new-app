@@ -33,7 +33,7 @@ const UserGrid = React.createClass({
                    onChange={this.updateSearch}/>
           </div>
         </div>
-        <div className="row">
+        <div className="row phuong-flex">
           <div className="col-md-8 col-md-offset-2">
             {filteredUsers.length !== 0 ?
               <div className="row row-eq-height">
