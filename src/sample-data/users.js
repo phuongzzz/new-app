@@ -69,7 +69,7 @@ module.exports =
       "username": "leha",
       "password": "leha",
       "email": "halt@gmail.com",
-      "name": "Trần Lê Hải",
+      "name": "Le Ha",
       "phonenumber": 123456789,
       "dateofbirth": "0000-00-00",
       "gender": 1,
