@@ -42,7 +42,6 @@ const LoginPage = React.createClass({
                 <img src={'https://designmodo.github.io/Flat-UI/img/icons/svg/book.svg'} alt="Welcome to Mail App" />
                 <h4>Welcome to <small>SIE Internship</small></h4>
               </div>
-
               <form className="login-form" ref="login-form" onSubmit={this.handleSubmit}>
                 <div className="form-group">
                   <input ref="username" type="text" className="form-control login-field"  placeholder="Enter your name" id="login-name" />
@@ -57,6 +56,9 @@ const LoginPage = React.createClass({
                 <input type="submit" className="btn btn-primary btn-lg btn-block" href="#" value="Login"></input>
                 <input type="submit" hidden ></input>
               </form>
+              <p>New to Account?
+                &nbsp;
+                <a href="#">Create an account</a></p>
             </div>
           </div>
         </div>
