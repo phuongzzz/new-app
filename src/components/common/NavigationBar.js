@@ -46,9 +46,19 @@ const NavigationBar = React.createClass({
                 </ul>
               </li>
               <li><Link to="/users">Users</Link></li>
+              <li className="dropdown navbar-right log-btn">
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown">{name}<b className="caret"></b></a>
+                <span className="dropdown-arrow"></span>
+                <ul className="dropdown-menu mai-dropdow">
+                  <li>
+                    <Link to="/login" className="mai-logout" onClick={this.handleLogout}>
+                      Logout
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className=" navbar-right user-image user-image-admin"></li>
             </ul>
-            <button className="btn btn-danger navbar-right log-btn"
-                    onClick={this.handleLogout}>Logout, {name}</button>
           </div>
         </nav>
       );
@@ -92,13 +102,13 @@ const NavigationBar = React.createClass({
                 <span className="dropdown-arrow"></span>
                 <ul className="dropdown-menu mai-dropdow">
                   <li>
-                    <Link to="#">
-                      <a className="mai-logout" onClick={this.handleLogout}>Logout</a>
+                    <Link to="/login" className="mai-logout" onClick={this.handleLogout}>
+                     Logout
                     </Link>
                   </li>
                 </ul>
               </li>
-              <li className=" navbar-right user-image"></li>
+              <li className=" navbar-right user-image user-image-student"></li>
             </ul>
           </div>
         </nav>
@@ -135,9 +145,19 @@ const NavigationBar = React.createClass({
               <li><Link to="/listcv">List CV</Link></li>
               <li><Link to="/respondings">Forum</Link></li>
               <li><Link to="/status-internships">Internship Status</Link></li>
+              <li className="dropdown navbar-right log-btn">
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown">{name}<b className="caret"></b></a>
+                <span className="dropdown-arrow"></span>
+                <ul className="dropdown-menu mai-dropdow">
+                  <li>
+                    <Link to="/login" className="mai-logout" onClick={this.handleLogout}>
+                      Logout
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className=" navbar-right user-image user-image-teacher"></li>
             </ul>
-            <button className="btn btn-danger navbar-right log-btn"
-                    onClick={this.handleLogout}>Logout, {name}</button>
           </div>
         </nav>
       );
@@ -174,9 +194,19 @@ const NavigationBar = React.createClass({
               <li><Link to="/listcv">List CV</Link></li>
               <li><Link to="/respondings">Forum</Link></li>
               <li><Link to="/status-internships">Internship Status</Link></li>
+              <li className="dropdown navbar-right log-btn">
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown">{name}<b className="caret"></b></a>
+                <span className="dropdown-arrow"></span>
+                <ul className="dropdown-menu mai-dropdow">
+                  <li>
+                    <Link to="/login" className="mai-logout" onClick={this.handleLogout}>
+                      Logout
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className=" navbar-right user-image user-image-teacher"></li>
             </ul>
-            <button className="btn btn-danger navbar-right log-btn"
-                    onClick={this.handleLogout}>Logout, {name}</button>
           </div>
         </nav>
       );
@@ -201,9 +231,19 @@ const NavigationBar = React.createClass({
                   <li><Link to="/topics">Register Topic</Link></li>
                 </ul>
               </li>
+              <li className="dropdown navbar-right log-btn">
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown">{name}<b className="caret"></b></a>
+                <span className="dropdown-arrow"></span>
+                <ul className="dropdown-menu mai-dropdow">
+                  <li>
+                    <Link to="/login" className="mai-logout" onClick={this.handleLogout}>
+                      Logout
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className=" navbar-right user-image user-image-company1"></li>
             </ul>
-            <button className="btn btn-danger navbar-right log-btn"
-                    onClick={this.handleLogout}>Logout, {name}</button>
           </div>
         </nav>
       );
@@ -237,9 +277,19 @@ const NavigationBar = React.createClass({
               </li>
               <li><Link to="/listcv">List CV</Link></li>
               <li><Link to="/respondings">Forum</Link></li>
+              <li className="dropdown navbar-right log-btn">
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown">{name}<b className="caret"></b></a>
+                <span className="dropdown-arrow"></span>
+                <ul className="dropdown-menu mai-dropdow">
+                  <li>
+                    <Link to="/login" className="mai-logout" onClick={this.handleLogout}>
+                      Logout
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className=" navbar-right user-image user-image-company2"></li>
             </ul>
-            <button className="btn btn-danger navbar-right log-btn"
-                    onClick={this.handleLogout}>Logout, {name}</button>
           </div>
         </nav>
       );

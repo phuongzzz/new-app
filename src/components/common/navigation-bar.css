@@ -14,15 +14,31 @@
   margin-top: 53px;
 }
 
+
 .user-image {
   background-image: url("https://newcdn.iconfinder.com/data/icons/ios-7-icons/50/user_female2-128.png");
   height: 4rem;
   width: 4rem;
   margin-top: 10px;
-  margin-left: 170px;
   background: #a1a1e5;
   border: solid 2px #00f9a6;
   border-radius: 50%;
+}
+
+.user-image-student {
+  margin-left: 170px;
+}
+.user-image-admin {
+  margin-left: 650px;
+}
+.user-image-teacher {
+  margin-left: 100px;
+}
+.user-image-company1 {
+  margin-left: 700px;
+}
+.user-image-company2 {
+  margin-left: 300px;
 }
 
 a > .mai-logout {
