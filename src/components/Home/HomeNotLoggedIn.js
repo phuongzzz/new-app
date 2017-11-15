@@ -19,7 +19,7 @@ const HomeNotLoggedIn = React.createClass({
             <form className="home-hero-signup js-signup-form">
              <dl className="form-group mt-0">
                <dt className="input-label">
-                 <label className="form-label f5" for="user[login]">UserName</label>
+                 <label className="form-label f5">UserName</label>
                </dt>
                <dd>
                  <input type="text" name="user[login]" id="user[login]" className="form-control form-control-lg input-block"
@@ -28,7 +28,7 @@ const HomeNotLoggedIn = React.createClass({
              </dl>
               <dl className="form-group mt-0 mai-form">
                 <dt className="input-label">
-                  <label className="form-label f5" for="user[email]">Email</label>
+                  <label className="form-label f5">Email</label>
                 </dt>
                 <dd>
                   <input type="email" name="user[email]" id="user[email]" className="form-control form-control-lg input-block"
