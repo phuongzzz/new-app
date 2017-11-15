@@ -7,5 +7,15 @@
 }
 
 .log-btn {
-  margin-top: 6px;
+    margin-top: 6px;
+    margin-right: 30px;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.navbar-inverse .navbar-collapse {
+    border-color: #24292e;
+    border-width: 2px;
+    background-color: rgba(0, 0, 0, 0.9)!important;
 }

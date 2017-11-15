@@ -21,7 +21,7 @@ const NavigationBar = React.createClass({
             <Link className="navbar-brand" to="/">SIE Internship</Link>
           </div>
           <div className="collapse navbar-collapse" id="navbar-collapse-01">
-            <Link to="/login" className="btn btn-primary navbar-right log-btn">Login</Link>
+            <Link to="/login" className="navbar-right log-btn">Login</Link>
           </div>
         </nav>
       );
