@@ -9,7 +9,7 @@ class Main extends Component {
   render() {
     return (
       <div className="App">
-        <NavigationBar {...this.props}/>
+        <NavigationBar {...this.props} />
         <div className="content-wrapper">
           <RouteTransition
             pathname={this.props.location.pathname}
@@ -20,7 +20,7 @@ class Main extends Component {
             {React.cloneElement(this.props.children, this.props)}
           </RouteTransition>
         </div>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
     );
   }

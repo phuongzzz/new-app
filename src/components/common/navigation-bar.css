@@ -46,7 +46,7 @@ a > .mai-logout {
   background-color: transparent;
   font-weight: 200;
   font-size: 16px;
-  font-family: Exo;
+  /* font-family: Exo; */
 }
 
 .log-btn {
@@ -55,7 +55,7 @@ a > .mai-logout {
   font-size: 2rem;
   color: #ffffff;
   font-weight: 600;
-  font-family: Exo;
+  /* font-family: Exo; */
 }
 
 .navbar-inverse .navbar-collapse {
