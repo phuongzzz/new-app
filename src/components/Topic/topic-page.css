@@ -55,3 +55,14 @@
 .topic-wrap table thead th:last-child {
   text-align: left;
 }
+
+.phuong-pencil {
+  color: #1abc9c;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease .3s;
+}
+
+.phuong-pencil:hover {
+  color: #16a085;
+}

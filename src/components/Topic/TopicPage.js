@@ -67,49 +67,51 @@ const TopicPage = React.createClass({
 
         <div className="row">
           <div className="col-md-10 col-md-offset-1 ">
-            <table className="table table-hover table-striped table-bordered">
-              <thead className="">
-                <tr>
-                  <th>Topic title</th>
-                  <th>Description</th>
-                  <th>Company Name</th>
-                  <th>Max No.interns</th>
-                  <th>No. registered</th>
-                  <th>Register</th>
-                </tr>
-              </thead>
-              <tbody>
-                {filteredTopics.length !== 0 ?
-                  filteredTopics.map((topic, i) =>
-                    <tr key={i}>
-                      <td><Link to={`/topic/${topic.topic_id}`}>{topic.title}</Link></td>
-                      <td>{(topic.description.length > 20) ?
-                        topic.description.slice(0, 20) + "..." :
-                        topic.description}</td>
-                      <td>{topic.company_name}</td>
-                      <td>{topic.max}</td>
-                      <td>{topic.no_intern}</td>
-                      {((role === 'student') || (role === 'teacher_manager')) ?
-                        <td>
-                          {(role === 'student') &&
-                            <i className="fa fa-pencil-square-o"
-                              onClick={this.handleRegister.bind(this, topic.topic_id)}>
-                            </i>
+            <div className="topics">
+              <table className="table table-hover table-striped table-bordered">
+                <thead className="">
+                  <tr>
+                    <th>Topic title</th>
+                    <th>Description</th>
+                    <th>Company Name</th>
+                    <th>Max No.interns</th>
+                    <th>No. registered</th>
+                    <th>Register</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {filteredTopics.length !== 0 ?
+                    filteredTopics.map((topic, i) =>
+                      <tr key={i}>
+                        <td><Link to={`/topic/${topic.topic_id}`}>{topic.title}</Link></td>
+                        <td>{(topic.description.length > 20) ?
+                          topic.description.slice(0, 20) + "..." :
+                          topic.description}</td>
+                        <td>{topic.company_name}</td>
+                        <td>{topic.max}</td>
+                        <td>{topic.no_intern}</td>
+                        {((role === 'student') || (role === 'teacher_manager')) ?
+                          <td>
+                            {(role === 'student') &&
+                              <i className="fa fa-pencil-square-o phuong-pencil"
+                                onClick={this.handleRegister.bind(this, topic.topic_id)}>
+                              </i>
 
-                          }
-                          {(role === 'teacher_manager') &&
-                            <input type="button" className="btn btn-mini btn-primary reg-btn" value="Approve" />
-                          }
-                        </td> :
-                        <td>
-                          <p>Not authorized</p>
-                        </td>
-                      }
-                    </tr>
-                  ) : <tr>Nothing found</tr>
-                }
-              </tbody>
-            </table>
+                            }
+                            {(role === 'teacher_manager') &&
+                              <input type="button" className="btn btn-mini btn-primary reg-btn" value="Approve" />
+                            }
+                          </td> :
+                          <td>
+                            <p>Not authorized</p>
+                          </td>
+                        }
+                      </tr>
+                    ) : <tr>Nothing found</tr>
+                  }
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
         <hr />
