@@ -17,9 +17,15 @@ const HomeNotLoggedIn = React.createClass({
     const password = this.refs.password.value;
     const phonenumber = "not specified";
     const role = "student";
-    this.props.addUser(userId, name, username, email, password, phonenumber, role);
-    hashHistory.push("/login");
-    toastr.success("Register done, you can try to login");
+
+    const validEmail = /\d{8}@student.hust.edu.vn/;
+    if (validEmail.test(email)) {
+      this.props.addUser(userId, name, username, email, password, phonenumber, role);
+      hashHistory.push("/login");
+      toastr.success("Register done, you can try to login");
+    } else {
+      toastr.error("Wrong email, please double check your email");
+    }
   },
 
   render() {
