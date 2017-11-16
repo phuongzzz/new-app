@@ -13,7 +13,9 @@ const HomeLoggedIn = React.createClass({
           <h6 className="profile-title panel-title">Hi, {currentUser.name}! Here are your brief information</h6>
           <div className="row user-profile">
             <div className="col-md-3 col-lg-3" >
-              <img className="img-circle img-responsive" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="User Pic"/>
+              <img className="img-circle img-responsive" src="https://www.w3schools.com/howto/img_avatar.png" alt="User Pic"/>
+              <h4 className="role-text">{currentUser.name}</h4>
+              <p className="role-text">{currentUser.role}</p>
             </div>
             <div className="col-md-9 col-lg-9">
               <div className="profile-info">
