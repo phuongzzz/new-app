@@ -52,7 +52,6 @@ export function removeRegisteredTopic(topic_id) {
 }
 
 export function addUser(userId, name, username, email, password, phonenumber, role) {
-  console.log("add user action fired");
   return {
     type: 'ADD_USER',
     userId,
@@ -64,6 +63,13 @@ export function addUser(userId, name, username, email, password, phonenumber, ro
     role
   }
 }
+
+// export function registerUser(userId, username, email, password, role) {
+//   console.log("won't go home without you");
+//   return {
+//     type: 'TEST'
+//   }
+// }
 
 export function changeUser(email, userId) {
   return {
@@ -114,7 +120,7 @@ export function logoutUser() {
   sessionStorage.removeItem('role');
   hashHistory.push("/");
   return {
-    type:'LOG_OUT'
+    type: 'LOG_OUT'
   }
 }
 
@@ -142,9 +148,9 @@ export function addNewClassResponse(id, company, mssv, student, responding, clas
 }
 
 export function addNewCV(id, name, position, dateofbirth, gender,
-                         phone, email, address, year_start, year_stop, grade, school, major,
-                         cpa, more_information, majorskill, majorskill_level, otherskill,
-                         otherskill_level, destination) {
+  phone, email, address, year_start, year_stop, grade, school, major,
+  cpa, more_information, majorskill, majorskill_level, otherskill,
+  otherskill_level, destination) {
   return {
     type: 'ADD_CV',
     id, name, position, dateofbirth, gender, phone, email, address,
