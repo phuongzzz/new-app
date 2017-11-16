@@ -24,6 +24,10 @@
   color: #395693;
 }
 
+.color-a:hover {
+  cursor: pointer;
+}
+
 .mai-document {
   color: darkred;
 }
@@ -62,4 +66,3 @@
 .phuong-btn-group {
   text-align: center;
 }
-
