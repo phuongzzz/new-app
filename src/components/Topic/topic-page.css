@@ -3,25 +3,21 @@
   overflow-y: scroll;
   padding: 20px;
 }
+
 .registered-topics {
   height: 300px;
   overflow-y: scroll;
 }
 
 .topics, .registered-topics {
-  border: 2px solid rgba(26, 188, 156,1.0);
+  /* border: 2px solid rgba(26, 188, 156,1.0); */
   border-radius: 5px;
-  /*background-color: #fff;*/
-  /*box-shadow: 0px 0px 23px -5px rgba(0,0,0,0.2);*/
 }
 
 .topic-wrap::-webkit-scrollbar {
-  /*display: none;*/
 }
 
 .topic-wrap {
-  /*padding-left: 0px;*/
-  /*padding-right: 0px;*/
   text-align: left;
 }
 
@@ -57,6 +53,5 @@
 }
 
 .topic-wrap table thead th:last-child {
-  text-align: center;
+  text-align: left;
 }
-

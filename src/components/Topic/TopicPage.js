@@ -1,5 +1,4 @@
 import React from 'react';
-// import Topic from './Topic';
 import RegisteredTopic from './RegisteredTopic';
 import './topic-page.css';
 import { Link } from 'react-router';
@@ -15,39 +14,36 @@ const TopicPage = React.createClass({
   },
 
   updateSearch(event) {
-    this.setState({search: event.target.value});
+    this.setState({ search: event.target.value });
   },
 
   handleRegister(topic_id) {
-    // event.preventDefault();
-    // alert("Click ok" + this.props.topic.topic_id);
     if (this.props.registered_topics.length <= 2) {
-      var topicToAdd = _.find(this.props.topics, {topic_id: topic_id});
+      var topicToAdd = _.find(this.props.topics, { topic_id: topic_id });
       this.props.removeTopic(topic_id);
       this.props.addToRegisteredTopic(topicToAdd);
       toastr.success("Register " + topicToAdd.title + " done");
     }
     else {
-      toastr.error("More than 3 topics? Are you a genius? ", {timeOut: 5000});
+      toastr.error("More than 3 topics? Are you a genius? ", { timeOut: 5000 });
     }
   },
 
   render() {
-
     var role = sessionStorage.getItem('role');
-
     let filteredTopics = this.props.topics.filter(
       (topic) => {
         return topic.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
       }
     );
 
-    return(
+    return (
       <div>
         <div className="row new-btn-row">
           <div className="container">
-            { (sessionStorage.getItem('role') === 'company_agent') &&
-            <Link to="/create-topic" className="btn btn-success">Create new topic</Link>
+            {
+              (sessionStorage.getItem('role') === 'company_agent') &&
+              <Link to="/create-topic" className="btn btn-success">Create new topic</Link>
             }
           </div>
         </div>
@@ -56,65 +52,67 @@ const TopicPage = React.createClass({
             <h4>Available Topics</h4>
           </div>
           <div className="col-md-5 col-md-offset-1">
-           <div className="row span12">
-            <div className="col-md-4 col-md-offset-3 mai-col">
-              <input type="text" className="form-control mai-form-control search-box" placeholder="Search topics by title (programing language)..."
-                     value={this.state.search}
-                     onChange={this.updateSearch}/>
+            <div className="row span12">
+              <div className="col-md-4 col-md-offset-3 mai-col">
+                <input type="text" className="form-control mai-form-control search-box" placeholder="Search topics by title (programing language)..."
+                  value={this.state.search}
+                  onChange={this.updateSearch} />
+              </div>
+              <div className="col-md-1 mai-search">
+                <i className="fa fa-search mai-fa-search"></i>
+              </div>
             </div>
-            <div className="col-md-1 mai-search">
-              <i className="fa fa-search mai-fa-search"></i>
-            </div>
-           </div>
           </div>
         </div>
 
         <div className="row">
-          <div className="topics col-md-10 col-md-offset-1 topic-wrap">
-            <table className="table table-hover table-striped">
+          <div className="col-md-10 col-md-offset-1 ">
+            <table className="table table-hover table-striped table-bordered">
               <thead className="">
-              <tr>
-                <th>Topic title</th>
-                <th>Description</th>
-                <th>Company Name</th>
-                <th>Max No.interns</th>
-                <th>No. registered</th>
-                <th>Actions</th>
-              </tr>
+                <tr>
+                  <th>Topic title</th>
+                  <th>Description</th>
+                  <th>Company Name</th>
+                  <th>Max No.interns</th>
+                  <th>No. registered</th>
+                  <th>Register</th>
+                </tr>
               </thead>
               <tbody>
-              {filteredTopics.length !== 0 ?
-                filteredTopics.map((topic, i) =>
-                  <tr key={i}>
-                    <td><Link to={`/topic/${topic.topic_id}`}>{topic.title}</Link></td>
-                    <td>{(topic.description.length > 20) ?
-                      topic.description.slice(0, 20) + "..." :
-                      topic.description}</td>
-                    <td>{topic.company_name}</td>
-                    <td>{topic.max}</td>
-                    <td>{topic.no_intern}</td>
-                    {((role === 'student') || (role === 'teacher_manager')) ?
-                      <td>
-                        {(role === 'student') &&
-                        <input type="button" className="btn btn-mini btn-success reg-btn" value="Register"
-                           onClick={this.handleRegister.bind(this, topic.topic_id)}/>
-                        }
-                        {(role === 'teacher_manager') &&
-                        <input type="button" className="btn btn-mini btn-primary reg-btn" value="Approve"/>
-                        }
-                      </td> :
-                      <td>
-                        <p>Not authorized</p>
-                      </td>
-                    }
-                  </tr>
-                ) : <tr>Nothing found</tr>
-              }
+                {filteredTopics.length !== 0 ?
+                  filteredTopics.map((topic, i) =>
+                    <tr key={i}>
+                      <td><Link to={`/topic/${topic.topic_id}`}>{topic.title}</Link></td>
+                      <td>{(topic.description.length > 20) ?
+                        topic.description.slice(0, 20) + "..." :
+                        topic.description}</td>
+                      <td>{topic.company_name}</td>
+                      <td>{topic.max}</td>
+                      <td>{topic.no_intern}</td>
+                      {((role === 'student') || (role === 'teacher_manager')) ?
+                        <td>
+                          {(role === 'student') &&
+                            <i className="fa fa-pencil-square-o"
+                              onClick={this.handleRegister.bind(this, topic.topic_id)}>
+                            </i>
+
+                          }
+                          {(role === 'teacher_manager') &&
+                            <input type="button" className="btn btn-mini btn-primary reg-btn" value="Approve" />
+                          }
+                        </td> :
+                        <td>
+                          <p>Not authorized</p>
+                        </td>
+                      }
+                    </tr>
+                  ) : <tr>Nothing found</tr>
+                }
               </tbody>
             </table>
           </div>
         </div>
-        <hr/>
+        <hr />
         <div className="row">
           <h4>Registered Topics</h4>
           <div className="registered-topics col-md-10 col-md-offset-1">
