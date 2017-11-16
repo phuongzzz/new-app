@@ -1,13 +1,15 @@
 import React from 'react';
 import toastr from 'toastr';
 import _ from 'lodash';
+import './registered_topic.css';
 
 const RegisteredTopic = React.createClass({
 
   handleUnregister(event) {
     event.preventDefault();
     this.props.removeRegisteredTopic(this.props.registered_topic.topic_id);
-    this.props.removeRegisteredTopic(this.props.registered_topic.topic_id);
+    this.props.addTopic(this.props.registered_topics);
+    toastr.success("Unregister " + this.props.registered_topic.title + " done");
   },
 
   handleApprove(event) {
@@ -22,37 +24,19 @@ const RegisteredTopic = React.createClass({
   render() {
     const { registered_topic } = this.props;
     return (
-      <div className="topic-box row">
-        <div className="col-md-2 topic-title">
-          <h6>{registered_topic.title}</h6>
-        </div>
-        <div className="col-md-4 topic-description">
-          <p>{registered_topic.description}</p>
-        </div>
-
-        <div className="col-md-1 topic-description">
-          <p>{registered_topic.company_name}</p>
-        </div>
-
-        <div className="col-md-1 topic-description">
-          <p>{registered_topic.max}</p>
-        </div>
-
-        <div className="col-md-1 topic-description">
-          <p>{registered_topic.no_intern}</p>
-        </div>
-
-        <div className="col-md-1 col-md-offset-1">
+      <tr>
+        <td>{registered_topic.title}</td>
+        <td>{registered_topic.description}</td>
+        <td>{registered_topic.company_name}</td>
+        <td>
           {(sessionStorage.getItem('role') === 'teacher_manager') &&
-            <input type="button" className="btn btn-success" value="Approve"
-              onClick={this.handleApprove} />
+            <i className="fa fa-check-circle phuong-fa phuong-ok" onClick={this.handleApprove} aria-hidden="true"></i>
           }
           {(sessionStorage.getItem('role') === 'student') &&
-            <input type="button" className="btn btn-danger reg-btn" value="Unregister"
-              onClick={this.handleUnregister} />
+            <i className="fa fa-trash phuong-fa phuong-trash" onClick={this.handleUnregister} aria-hidden="true"></i>
           }
-        </div>
-      </div>
+        </td>
+      </tr>
     );
   }
 });

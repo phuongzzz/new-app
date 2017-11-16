@@ -117,12 +117,33 @@ const TopicPage = React.createClass({
         <hr />
         <div className="row">
           <h4>Registered Topics</h4>
-          <div className="registered-topics col-md-10 col-md-offset-1">
-            {this.props.registered_topics.length !== 0 ?
+          <div className="col-md-10 col-md-offset-1">
+            {/* {this.props.registered_topics.length !== 0 ?
               this.props.registered_topics.map((registered_topic, i) =>
                 <RegisteredTopic {...this.props} key={i} i={i} registered_topic={registered_topic} />) :
               <div>You haven't registered any topic yet :( </div>
-            }
+            } */}
+            <table className="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Topic Title</th>
+                  <th>Description</th>
+                  <th>Company Name</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.props.registered_topics.length !== 0 ?
+                  this.props.registered_topics.map((registered_topic, i) =>
+                    <RegisteredTopic {...this.props} key={i} i={i} registered_topic={registered_topic} />) :
+                  <tr>
+                    <td colspan="4">
+                      You haven't registered any topic yet :(
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
