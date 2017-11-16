@@ -49,57 +49,68 @@ const SingleClassResponding = React.createClass({
 
     return(
       <div className="row-responding">
-        <div className="col-md-10 col-md-offset-1">
-          <h3 className="text-center">Responses of {companyName}</h3>
-          {(sessionStorage.getItem('role') === 'company_instructor') &&
-          <button onClick={this.onClick} className="btn btn-success">Add new response</button>
-          }
-          {
-            this.state.showResponse &&
-              <div className="row">
-                <div className="col-md-8 col-md-offset-2 phuong-left-align">
-                  <form ref="addNewResponseForm" className="form-group" onSubmit={this.handleSubmit}>
-                    <input type="text" ref="company" hidden value={companyName} readOnly/>
-                    <label>Student's Name</label>
-                    <input type="text" ref="student" placeholder="Enter Student's Name"
-                           className="form-control"/>
-                    <label>Student's ID</label>
-                    <input type="text" ref="mssv" placeholder="Enter Student's Student ID"
-                           className="form-control"/>
-                    <label>Response Content</label>
-                    <input type="text" ref="responding" placeholder="Enter response for this student"
-                           className="form-control"/>
-                    <input type="submit" hidden/>
-                    <div className="phuong-btn-group">
-                      <input type="submit" className="btn btn-success" value="Save"/>
-                      <button className="btn btn-danger" onClick={this.handleCancel}>Cancel</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-          }
-          <table className="table table-bordered company-table-respon table-hover table-sm table-striped table-fixed ">
-            <thead>
+        <div className="col-md-6 col-md-offset-1">
+          <br/>
+          <h6 className="align">
+            <span className="fa fa-home">&nbsp;FORUM:
+              <span>Responses of {companyName}</span></span>
+          </h6>
+
+          <table className="table company-table-respon table-hover table-sm table-striped table-fixed ">
+            <thead className="content-company">
             <tr>
-              <th className="text-center">ID</th>
-              <th className="text-center">Company</th>
-              <th className="text-center">Student</th>
-              <th className="text-center">Mssv</th>
-              <th className="text-center">Responding</th>
+              <th className="text-left">Responding</th>
+              <th className="text-left">Student</th>
+              <th className="text-left">Mssv</th>
             </tr>
             </thead>
             <tbody>
             {company_filters.map((company_respon, i) =>
-              <tr key={i}>
-                <td>{company_respon.id}</td>
-                <td>{company_respon.company}</td>
+              <tr className="size-i" key={i}>
+                <td>
+                  <span className="fa fa-envelope-open mai-document"></span>
+                  &nbsp;&nbsp;
+                  <a className="color-a">{company_respon.responding}</a>
+                  </td>
                 <td>{company_respon.student}</td>
                 <td>{company_respon.mssv}</td>
-                <td>{company_respon.responding}</td>
               </tr>
             )}
             </tbody>
           </table>
+        </div>
+        <div className="col-md-4">
+          <br/><br/><br/><br/><br/>
+          {(sessionStorage.getItem('role') === 'company_instructor') &&
+          <span onClick={this.onClick}>
+            <img className="img-add" src="http://icons.iconarchive.com/icons/hopstarter/button/32/Button-Add-icon.png" alt=""/>
+            &nbsp; &nbsp;
+            Add new response</span>
+          }
+          {
+            this.state.showResponse &&
+            <div className="row">
+              <div className="col-md-8 col-md-offset-2 phuong-left-align">
+                <form ref="addNewResponseForm" className="form-group" onSubmit={this.handleSubmit}>
+                  <input type="text" ref="company" hidden value={companyName} readOnly/>
+                  <label>Student's Name</label>
+                  <input type="text" ref="student" placeholder="Enter Student's Name"
+                         className="form-control"/>
+                  <label>Student's ID</label>
+                  <input type="text" ref="mssv" placeholder="Enter Student's Student ID"
+                         className="form-control"/>
+                  <label>Response Content</label>
+                  <input type="text" ref="responding" placeholder="Enter response for this student"
+                         className="form-control"/>
+                  <input type="submit" hidden/>
+                  <div className="phuong-btn-group">
+                    <input type="submit" className="btn btn-success" value="Save"/>
+                    <button className="btn btn-danger" onClick={this.handleCancel}>Cancel</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          }
         </div>
       </div>
     )
