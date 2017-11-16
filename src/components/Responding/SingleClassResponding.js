@@ -48,10 +48,45 @@ const SingleClassResponding = React.createClass({
 
     return(
       <div className="row-responding">
-        <div className="col-md-10 col-md-offset-1">
-          <h3 className="text-center">Responses of {className}</h3>
+        <div className="col-md-6 col-md-offset-1">
+          <br/>
+          <h6 className="align">
+            <span className="fa fa-home">&nbsp;FORUM:
+              <span>Responses of {className}</span></span>
+          </h6>
+
+          <table className="table table-bordered company-table-respon table-hover table-sm table-striped table-fixed ">
+            <thead className="content-company">
+            <tr>
+              <th className="text-left">Responding</th>
+              <th className="text-left">Company</th>
+              <th className="text-left">Mssv</th>
+              <th className="text-left">Student</th>
+            </tr>
+            </thead>
+            <tbody>
+            {class_filters.map((class_respon, i) =>
+              <tr className="size-i" key={i}>
+                <td className="phuong-response">
+                  <span className="fa fa-envelope-open mai-document"></span>
+                  &nbsp;&nbsp;
+                  <a className="color-a">{class_respon.responding}</a>
+                  </td>
+                <td>{class_respon.company}</td>
+                <td>{class_respon.mssv}</td>
+                <td>{class_respon.student}</td>
+              </tr>
+            )}
+            </tbody>
+          </table>
+        </div>
+        <div className="col-md-4">
+          <br/><br/><br/><br/><br/>
           {sessionStorage.getItem('role') === 'student' &&
-          <button onClick={this.onClick} className="btn btn-success">Add new response</button>
+          <span onClick={this.onClick}>
+            <img className="img-add" src="http://icons.iconarchive.com/icons/hopstarter/button/32/Button-Add-icon.png" alt=""/>
+            &nbsp; &nbsp;
+            Add new response</span>
           }
           {
             this.state.showResponse &&
@@ -80,30 +115,6 @@ const SingleClassResponding = React.createClass({
               </div>
             </div>
           }
-          <table className="table table-bordered company-table-respon table-hover table-sm table-striped table-fixed ">
-            <thead>
-            <tr>
-              <th className="text-center">ID</th>
-              <th className="text-center">Company</th>
-              <th className="text-center">Student</th>
-              <th className="text-center">Mssv</th>
-              <th className="text-center">Responding</th>
-              <th className="text-center">Class</th>
-            </tr>
-            </thead>
-            <tbody>
-            {class_filters.map((class_respon, i) =>
-              <tr key={i}>
-                <td>{class_respon.id}</td>
-                <td>{class_respon.company}</td>
-                <td>{class_respon.student}</td>
-                <td>{class_respon.mssv}</td>
-                <td className="phuong-response">{class_respon.responding}</td>
-                <td>{class_respon.class_name}</td>
-              </tr>
-            )}
-            </tbody>
-          </table>
         </div>
       </div>
     )
