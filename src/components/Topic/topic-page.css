@@ -27,6 +27,33 @@
 
 .new-btn-row {
   text-align: left;
+  margin-top: 100px;
+}
+
+.mai-form-control {
+  border: transparent;
+  padding: 0;
+  border-radius: 1rem;
+  margin-bottom: 10px !important;
+  margin-top: 10px !important;
+}
+
+.mai-input {
+  width: 300px;
+}
+
+.mai-search {
+  padding: 0;
+  margin-top: 17px;
+}
+
+.mai-col {
+  padding: 0;
+}
+
+.mai-fa-search {
+  border: transparent;
+  background-color: #ffffff;
 }
 
 .topic-wrap table thead th:last-child {

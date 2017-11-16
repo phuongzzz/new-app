@@ -37,7 +37,7 @@ const HomeNotLoggedIn = React.createClass({
               </dl>
               <dl className="form-group mt-0">
                 <dt className="input-label">
-                  <label className="form-label f5" for="user[password]">Password</label>
+                  <label className="form-label f5" htmlFor="user[password]">Password</label>
                 </dt>
                 <dd>
                   <input type="password" name="user[password]" id="user[password]" className="form-control form-control-lg input-block"

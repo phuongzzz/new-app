@@ -8,11 +8,14 @@ const HomeLoggedIn = React.createClass({
     var currentUser = _.find(allUsers, {username: sessionStorage.getItem('username')});
     // console.log(currentUser.username);
     return (
-      <div className="profile-wrapper">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 col-md-offset-2">
-              <h6 className="profile-title">Hi, {currentUser.name}! Here are your brief information</h6>
+      <div className="profile-wrapper panel panel-info">
+        <div className="container panel-heading">
+          <h6 className="profile-title panel-title">Hi, {currentUser.name}! Here are your brief information</h6>
+          <div className="row user-profile">
+            <div className="col-md-3 col-lg-3" >
+              <img className="img-circle img-responsive" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" alt="User Pic"/>
+            </div>
+            <div className="col-md-9 col-lg-9">
               <div className="profile-info">
                 <p><span className="profile-username">Your username: </span>{currentUser.username}</p>
                 <p><span className="profile-email">Your email: </span>{currentUser.email}</p>
@@ -23,8 +26,8 @@ const HomeLoggedIn = React.createClass({
               </div>
             </div>
           </div>
+          </div>
         </div>
-      </div>
     );
   }
 });

@@ -44,7 +44,6 @@ const TopicPage = React.createClass({
 
     return(
       <div>
-        <h1>Topics</h1>
         <div className="row new-btn-row">
           <div className="container">
             { (sessionStorage.getItem('role') === 'company_agent') &&
@@ -53,15 +52,24 @@ const TopicPage = React.createClass({
           </div>
         </div>
         <div className="row">
-          <div className="col-md-4 col-md-offset-4">
-            <input type="text" className="form-control" placeholder="Search topics by title (programing language)..."
-                   value={this.state.search}
-                   onChange={this.updateSearch}/>
+          <div className="col-md-4">
+            <h4>Available Topics</h4>
+          </div>
+          <div className="col-md-5 col-md-offset-1">
+           <div className="row span12">
+            <div className="col-md-4 col-md-offset-3 mai-col">
+              <input type="text" className="form-control mai-form-control search-box" placeholder="Search topics by title (programing language)..."
+                     value={this.state.search}
+                     onChange={this.updateSearch}/>
+            </div>
+            <div className="col-md-1 mai-search">
+              <i className="fa fa-search mai-fa-search"></i>
+            </div>
+           </div>
           </div>
         </div>
 
         <div className="row">
-          <h4>Available Topics</h4>
           <div className="topics col-md-10 col-md-offset-1 topic-wrap">
             <table className="table table-hover table-striped">
               <thead className="">
@@ -88,11 +96,11 @@ const TopicPage = React.createClass({
                     {((role === 'student') || (role === 'teacher_manager')) ?
                       <td>
                         {(role === 'student') &&
-                        <input type="button" className="btn btn-success reg-btn" value="Register"
+                        <input type="button" className="btn btn-mini btn-success reg-btn" value="Register"
                            onClick={this.handleRegister.bind(this, topic.topic_id)}/>
                         }
                         {(role === 'teacher_manager') &&
-                        <input type="button" className="btn btn-primary reg-btn" value="Approve"/>
+                        <input type="button" className="btn btn-mini btn-primary reg-btn" value="Approve"/>
                         }
                       </td> :
                       <td>
