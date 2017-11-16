@@ -36,28 +36,108 @@ const CreateNewTopic = React.createClass({
   render() {
     return(
       <div className="row">
-        <div className="col-md-8 col-md-offset-2">
+        <div className="col-md-10 col-md-offset-1">
           <h2>Create New Topic</h2>
           <form ref="addNewTopic" className="form-group add-topic" onSubmit={this.handleSubmit}>
-            <label>Instructor's Name</label>
-            <input type="text" ref="name" placeholder="Enter Instructor's Name" className="form-control"/>
-            <label>Topic's title</label>
-            <input type="text" ref="title" placeholder="Enter topic's title" className="form-control"/>
-            <label>Topic's Categories</label>
-            <input type="text" ref="categories" placeholder="Enter topic's categories" className="form-control"/>
-            <label>Topic's description</label>
-            <input type="text" ref="description" placeholder="Enter topic's description" className="form-control"/>
-            <label>Topic's maximum of interns</label>
-            <input type="number" ref="max" placeholder="Enter topic's maximum number of interns" className="form-control"/>
-            <label>Topic's time limit</label>
-            <input type="text" ref="timelimit" placeholder="Enter topic's time limit" className="form-control"/>
-            <label>Topic's start date</label>
-            <input type="text" ref="start" placeholder="Enter topic's start date" className="form-control"/>
-            <label>Topic's end date</label>
-            <input type="text" ref="stop" placeholder="Enter topic's end date" className="form-control"/>
-            <label>Company Name</label>
-            <input type="text" ref="company_name" placeholder="Enter company name for this topic" className="form-control"/>
-
+            <div className="col-md-5">
+              <div className="mai-panel">
+                <div className="panel">
+                  <div className="panel-body">
+                    <ul className="list-unstyled task-list">
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4"><span>Instructor's Name(*)</span></div>
+                          <div className="col-md-8">
+                            <input type="text" ref="name" required placeholder="Enter Instructor's Name" className="form-control"/>
+                          </div>
+                        </div>
+                      </li>
+                      <hr/>
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4"><span>Topic's title(*)</span></div>
+                          <div className="col-md-8">
+                            <input type="text" ref="title" required placeholder="Enter topic's title" className="form-control"/>
+                          </div>
+                        </div>
+                      </li>
+                      <hr/>
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4"><span>Topic's Catogories(*)</span></div>
+                          <div className="col-md-8">
+                            <input type="text" ref="categories" required placeholder="Enter topic's categories" className="form-control"/>
+                          </div>
+                        </div>
+                      </li>
+                      <hr/>
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4"><span>Company Name(*)</span></div>
+                          <div className="col-md-8">
+                            <input type="text" ref="company_name" required placeholder="Enter company name for this topic" className="form-control"/>
+                          </div>
+                        </div>
+                      </li>
+                      <hr/>
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4"><span>Maximum of interns(*)</span></div>
+                          <div className="col-md-8">
+                            <input type="number" ref="max" required placeholder="Enter topic's maximum number of interns" className="form-control"/>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-7">              <div className="mai-panel">
+              <div className="panel">
+                <div className="panel-body">
+                  <ul className="list-unstyled task-list">
+                    <li>
+                      <div className="row">
+                        <div className="col-md-4"><span>Topic's time limit(*)</span></div>
+                        <div className="col-md-8">
+                          <input type="text" ref="timelimit" required placeholder="Enter topic's time limit" className="form-control"/>
+                        </div>
+                      </div>
+                    </li>
+                    <hr/>
+                    <li>
+                      <div className="row">
+                        <div className="col-md-4"><span>Topic's start date(*)</span></div>
+                        <div className="col-md-8">
+                          <input type="date" ref="start" required placeholder="Enter topic's start date" className="form-control"/>
+                        </div>
+                      </div>
+                    </li>
+                    <hr/>
+                    <li>
+                      <div className="row">
+                        <div className="col-md-4"><span>Topic's end date(*)</span></div>
+                        <div className="col-md-8">
+                          <input type="date" ref="stop" required placeholder="Enter topic's start date" className="form-control"/>
+                        </div>
+                      </div>
+                    </li>
+                    <hr/>
+                    <li>
+                      <div className="row">
+                        <div className="col-md-4"><span>Topic's description</span></div>
+                        <div className="col-md-8">
+                          <input type="text" ref="description" required placeholder="Enter topic's description" className="form-control mai-description"/>
+                        </div>
+                      </div>
+                    </li>
+                    <hr/>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            </div>
             <input type="submit" hidden/>
             <div className="add-topic-center">
               <input type="submit" className="btn btn-success" value="Save"/>
