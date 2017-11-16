@@ -1,4 +1,4 @@
-function topics (state = [], action) {
+function topics(state = [], action) {
   switch (action.type) {
     case 'ADD_NEW_TOPIC':
     case 'ADD_TOPIC':
