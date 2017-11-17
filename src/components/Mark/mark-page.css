@@ -17,7 +17,20 @@
     height: 40px;
     padding-left: 7px;
 }
+.title-markfor {
+    font-size:20px;
+    margin-top: 80px;
+    margin-left: 190px;
+}
 
+.text-class {
+    margin-left: 210px;
+    font-weight: 400;
+}
+
+.pie-chart {
+    margin-left: 90px;
+}
 .thead-mark {
     background-color: #B2DFDB;
 }
@@ -34,10 +47,6 @@
 .single-mark-wrap {
     text-align: left;
 }
-
-
-/*.save-mark-btn {*/
-
 
 /*margin-top: 20px !important;*/
 

@@ -28,25 +28,114 @@ const SingleMark = React.createClass({
 
     return (
       <div className="row single-mark-wrap">
-        <div className="col-md-8 col-md-offset-2">
-          <h4 className="text-center">Manage marks for {mark.name}</h4>
+        <div className="col-md-3">
+          <h4 className="text-center title-markfor">{mark.name}</h4>
+          <img className="pie-chart" src="https://image.flaticon.com/icons/svg/235/235169.svg" alt=""/>
+          <h6 className="text-class">{mark.class}</h6>
+        </div>
+        <div className="col-md-7 col-md-push-2 background-mark">
           <form ref="managerMarkForm" className="form-group" onSubmit={this.handleSubmit}>
-            <label>Company Rates</label>
-            <input type="number" ref="cstt" placeholder="Company Rates" className="form-control" defaultValue={mark.CSTT}/>
-            <label>Time checking</label>
-            <input type="number" ref="timechecking" placeholder="Time Checking" className="form-control" defaultValue={mark.timechecking}/>
-            <label>Report</label>
-            <input type="number" ref="report" placeholder="Report" className="form-control" defaultValue={mark.report}/>
-            <label>Demo</label>
-            <input type="number" ref="demo" placeholder="Demo" className="form-control" defaultValue={mark.demo}/>
-            <label>Material</label>
-            <input type="number" ref="material" placeholder="Material" className="form-control" defaultValue={mark.material}/>
-            <label>GPA</label>
-            <input type="number" ref="gpa" placeholder="GPA" className="form-control" defaultValue={mark.GPA}/>
-            <label>Result</label>
-            <input type="text" ref="result" placeholder="Result" className="form-control" defaultValue={mark.Result}/>
-            <input type="submit" hidden/>
-            <input type="submit" className="btn btn-success btn-lg save-mark-btn" value="Save"/>
+            <hr/>
+            <div className="col-md-11">
+              <div className="mai-panel">
+                <div className="panel">
+                  <div className="panel-body">
+                    <ul className="list-unstyled task-list">
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4">
+                            <span>Company Rates</span>
+                          </div>
+                          <div className="col-md-8">
+                            <input type="number" ref="cstt" placeholder="Company Rates" className="form-control" defaultValue={mark.CSTT}/>
+                          </div>
+                        </div>
+                      </li>
+                      <hr/>
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4">
+                            <span>Time Checking</span>
+                          </div>
+                          <div className="col-md-8">
+                            <input type="number" ref="timechecking" placeholder="Time Checking" className="form-control" defaultValue={mark.timechecking}/>
+                          </div>
+                        </div>
+                      </li>
+                      <hr/>
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4">
+                            <span>Report</span>
+                          </div>
+                          <div className="col-md-8">
+                            <input type="number" ref="report" placeholder="Report" className="form-control" defaultValue={mark.report}/>
+                          </div>
+                        </div>
+                      </li>
+                      <hr/>
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4">
+                            <span>Demo</span>
+                          </div>
+                          <div className="col-md-8">
+                            <input type="number" ref="demo" placeholder="Demo" className="form-control" defaultValue={mark.demo}/>
+                          </div>
+                        </div>
+                      </li>
+                      <hr/>
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4">
+                            <span>Material</span>
+                          </div>
+                          <div className="col-md-8">
+                            <input type="number" ref="material" placeholder="Material" className="form-control" defaultValue={mark.material}/>
+                          </div>
+                        </div>
+                      </li>
+                      <hr/>
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4">
+                            <span>Material</span>
+                          </div>
+                          <div className="col-md-8">
+                            <input type="number" ref="material" placeholder="Material" className="form-control" defaultValue={mark.material}/>
+                          </div>
+                        </div>
+                      </li>
+                      <hr/>
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4">
+                            <span>GPA</span>
+                          </div>
+                          <div className="col-md-8">
+                            <input type="number" ref="gpa" placeholder="GPA" className="form-control" defaultValue={mark.GPA}/>
+                          </div>
+                        </div>
+                      </li>
+                      <hr/>
+                      <li>
+                        <div className="row">
+                          <div className="col-md-4">
+                            <span>Result</span>
+                          </div>
+                          <div className="col-md-8">
+                            <input type="text" ref="result" placeholder="Result" className="form-control" defaultValue={mark.Result}/>
+                          </div>
+                        </div>
+                      </li>
+                      <div className="col-md-2 col-md-push-7">
+                        <input type="submit" className="btn btn-success btn-lg save-mark-btn" value="Save"/>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </form>
         </div>
       </div>
