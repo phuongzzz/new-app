@@ -36,9 +36,11 @@ const RespondingPage = React.createClass({
           <div className="col-md-12">
             <table className="table class-table-respon table-hover table-sm table-striped">
               <tbody>
-                <span className="content-company">
-                  <span className="font-content">Class Responding Internship</span>
-                </span>
+                <div className="content-company">
+                  <span className="font-content">
+                    Class Responding Internship
+                  </span>
+                </div>
                 {this.props.classes.map((classe, i) =>
                   <tr key={i}>
                     <td>

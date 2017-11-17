@@ -33,9 +33,15 @@ const MarkPage = React.createClass({
     return (
       <div className="row">
         <div className="col-md-10 col-md-offset-1">
-          <h4>Result Internships</h4>
+          <br/>
           <div className="row">
-            <div className="col-md-4 col-md-offset-4">
+            <div className="col-md-4 result">
+              <h4 className="text-left ">
+                <span className=" fa fa-list-alt"></span> &nbsp;
+                Result Internships</h4>
+            </div>
+            <div className="col-md-4 col-md-push-3">
+              <br/>
               <input type="text" className="form-control" placeholder="Search by username..."
                      value={this.state.search}
                      onChange={this.updateSearch}/>
@@ -44,18 +50,18 @@ const MarkPage = React.createClass({
           <div className="table-wrap">
             {filteredMarks.length !== 0 ?
               <table className="table mark-table table-hover">
-                <thead className="thead-mark">
+                <thead className="content-company">
                 <tr>
-                  <th className="text-center">TopicID</th>
-                  <th className="text-center">Student</th>
-                  <th className="text-center">Class</th>
-                  <th className="text-center">CompanyRate</th>
-                  <th className="text-center">Timechecking</th>
-                  <th className="text-center">Report</th>
-                  <th className="text-center">Demo</th>
-                  <th className="text-center">Material</th>
-                  <th className="text-center">GPA</th>
-                  <th className="text-center">Result</th>
+                  <th className="text-left">TopicID</th>
+                  <th className="text-left">Student</th>
+                  <th className="text-left">Class</th>
+                  <th className="text-left">CompanyRate</th>
+                  <th className="text-left">Timechecking</th>
+                  <th className="text-left">Report</th>
+                  <th className="text-left">Demo</th>
+                  <th className="text-left">Material</th>
+                  <th className="text-left">GPA</th>
+                  <th className="text-left">Result</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -66,15 +72,15 @@ const MarkPage = React.createClass({
                       <td><Link to={`/mark/${mark.id}`}>{mark.id}</Link></td> :
                       <td>{mark.id}</td>
                     }
-                    <td>{mark.name}</td>
-                    <td>{mark.class}</td>
-                    <td>{mark.CSTT}</td>
-                    <td>{mark.timechecking}</td>
-                    <td>{mark.report}</td>
-                    <td>{mark.demo}</td>
-                    <td>{mark.material}</td>
-                    <td>{mark.GPA}</td>
-                    <td>{mark.Result}</td>
+                    <td className="text-left">{mark.name}</td>
+                    <td className="text-left">{mark.class}</td>
+                    <td className="text-center">{mark.CSTT}</td>
+                    <td className="text-center">{mark.timechecking}</td>
+                    <td className="text-center">{mark.report}</td>
+                    <td className="text-center">{mark.demo}</td>
+                    <td className="text-center">{mark.material}</td>
+                    <td className="text-center">{mark.GPA}</td>
+                    <td className="text-center">{mark.Result}</td>
                   </tr>
                 )}
                 </tbody>
