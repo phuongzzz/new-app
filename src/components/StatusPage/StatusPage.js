@@ -5,15 +5,21 @@ const StatusPage = React.createClass({
     return(
       <div className="row-status">
           <div className="col-md-10 col-md-offset-1">
-              <h4>Status Internship</h4>
+            <br/>
+              <h4 className="text-left">
+                <span className="fa fa-list-alt"></span> &nbsp; &nbsp;
+                Status Internship</h4>
               <div className="table-wrap">
                   <table className="table status-table table-hover">
-                      <thead className="thead-status">
+                      <thead className=" content-company sthead-status">
                       <tr>
-                          <th className="text-center">Id</th>
-                          <th className="text-center">Student</th>
-                          <th className="text-center">Mssv</th>
-                          <th className="text-center">Status</th>
+                          <th className="text-left">Id</th>
+                          <th className="text-left">Student</th>
+                          <th className="text-left">Mssv</th>
+                          <th className="text-left">Semester</th>
+                          <th className="text-left">Start Time</th>
+                          <th className="text-left">End Time</th>
+                          <th className="text-left">Status</th>
                       </tr>
                       </thead>
                       <tbody>
@@ -22,6 +28,9 @@ const StatusPage = React.createClass({
                             <td>{status_internship.id}</td>
                             <td>{status_internship.name}</td>
                             <td>{status_internship.mssv}</td>
+                            <td>{status_internship.semester}</td>
+                          <td>{status_internship.start_time}</td>
+                          <td>{status_internship.end_time}</td>
                             <td className="td-status">{status_internship.status}</td>
                         </tr>
                       )}
