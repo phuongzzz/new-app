@@ -12,3 +12,26 @@
     height: 40px;
     padding-left: 7px;
 }
+.h4-position {
+    margin-top: 0;
+}
+#submitButton {
+    background: url("https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/search-24.png") no-repeat;
+    width: 83px;
+    height: 36px;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+#s {
+    border: transparent;
+    padding: 0;
+    border-radius: 1rem;
+}
+
+.searchInContainer {
+    text-align: left;
+    padding-left: 30px;
+}

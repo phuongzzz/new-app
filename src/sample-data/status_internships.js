@@ -6,6 +6,7 @@ module.exports = [
         "status": "practicing",
         "semester":"2015-2016",
         "start_time": "21/10/2015",
+        "classname": "LTU12A",
         "end_time": "21/12/2015"
     },
     {
@@ -15,7 +16,8 @@ module.exports = [
         "status": "practicing",
       "semester":"2015-2016",
       "start_time": "21/10/2015",
-      "end_time": "21/12/2015"
+        "classname": "LTU12A",
+        "end_time": "21/12/2015"
     },
     {
         "id" : "32",
@@ -24,7 +26,8 @@ module.exports = [
         "status": "practicing",
       "semester":"2015-2016",
       "start_time": "21/10/2015",
-      "end_time": "21/12/2015"
+        "classname": "LTU12A",
+        "end_time": "21/12/2015"
     },
     {
         "id" : "33",
@@ -32,7 +35,8 @@ module.exports = [
         "mssv": "29825275",
         "status": "practicing",
       "semester":"2015-2016",
-      "start_time": "21/10/2015",
+        "classname": "LTU12A",
+        "start_time": "21/10/2015",
       "end_time": "21/12/2015"
     },
     {
@@ -42,6 +46,7 @@ module.exports = [
         "status": "practicing",
       "semester":"2015-2016",
       "start_time": "21/10/2015",
+        "classname": "LTU12A",
       "end_time": "21/12/2015"
     },
     {
@@ -50,6 +55,7 @@ module.exports = [
         "mssv": "2972857278",
         "status": "practicing",
       "semester":"2015-2016",
+        "classname": "LTU12A",
       "start_time": "21/10/2015",
       "end_time": "21/12/2015"
     },
@@ -59,6 +65,7 @@ module.exports = [
         "mssv": "20118994",
         "status": "complete",
       "semester":"2015-2016",
+        "classname": "LTU12A",
       "start_time": "21/10/2015",
       "end_time": "21/12/2015"
     },
@@ -69,6 +76,7 @@ module.exports = [
         "status": "complete",
       "semester":"2015-2016",
       "start_time": "21/10/2015",
+        "classname": "LTU12A",
       "end_time": "21/12/2015"
     }
 
