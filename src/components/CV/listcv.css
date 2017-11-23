@@ -28,7 +28,7 @@
   margin-top: 20px;
   padding-top:20px;
   transition: all ease .25s;
-  border: 1px dotted rgba(26, 188, 156,.4);
+  border: 1px solid rgba(0, 0, 0, .3);
   border-radius: 5px;
 }
 
@@ -47,4 +47,12 @@
 
 .add-cv-btn{
   float: left;
+}
+
+.cv-info {
+  text-align: left;
+}
+
+.listcv-container {
+  padding-bottom: 30px;
 }

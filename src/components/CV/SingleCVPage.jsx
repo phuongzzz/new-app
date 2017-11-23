@@ -7,7 +7,7 @@ const SingleCVPage = React.createClass({
     const { cvId } = this.props.params;
     console.log(cvId);
     const i = this.props.cvs.findIndex((cv) =>
-    cv.id === parseInt(cvId, 10));
+      cv.id === parseInt(cvId, 10));
     //GET HIM!!!
     const cv = this.props.cvs[i];
 
@@ -19,13 +19,12 @@ const SingleCVPage = React.createClass({
       width: cv.otherskill_level + "%"
     }
 
-
     return (
-      <div className="container">
+      <div className="container list-cv-container">
         <div className="col-md-8 col-md-offset-2 cv-details">
-          <div className="row">
+          <div className="row section odd-section">
             <div className="col-md-7 cv-ava-label">
-              <img src={'https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/16265197_1637576813218714_1150448365707028569_n.jpg?oh=563c3cdb8d9daf93495a5b595fe8ac2f&oe=59766BB6'} className="cv-ava-img" alt=""/>
+              <img src={'https://mdbootstrap.com/img/Photos/Avatars/img%20(4).jpg'} className="cv-ava-img" alt="" />
               <p className="cv-person-name "><b>{cv.name}</b></p>
               <p className="cv-position">
                 <span><b>Position:</b></span>
@@ -36,51 +35,50 @@ const SingleCVPage = React.createClass({
               <p className="cv-label-title"><b>CONTACT</b></p>
               <ul className="list-unstyled">
                 <li>
-                  <span><i>Date of birth:</i> {cv.dateofbirth}</span>
+                  <span><strong>Date of birth:</strong> {cv.dateofbirth}</span>
                 </li>
-                <br/>
+                <br />
                 <li>
-                  <span><i>Gender:</i> {cv.gender}</span>
+                  <span><strong>Gender:</strong> {cv.gender}</span>
                 </li>
-                <br/>
+                <br />
                 <li>
-                  <span><i>Phone number:</i> {cv.phone}</span>
+                  <span><strong>Phone number:</strong> {cv.phone}</span>
                 </li>
-                <br/>
+                <br />
                 <li>
-                  <span><i>Email:</i> {cv.email}</span>
+                  <span><strong>Email:</strong> {cv.email}</span>
                 </li>
-                <br/>
+                <br />
                 <li>
-                  <span><i>Address:</i> {cv.address}</span>
+                  <span><strong>Address:</strong> {cv.address}</span>
                 </li>
               </ul>
             </div>
           </div>
           {/*end row */}
-          <hr/>
-          <div className="row">
+          <div className="row section">
             <div className="col-md-7 cv-education-label cv-left-part">
               <p className="cv-label-title"><b>EDUCATION</b></p>
               <ul className="list-unstyled">
                 <li>
-                  <span>From: {cv.year_start} To: {cv.year_stop}</span>
+                  <span><strong>From:</strong> {cv.year_start} To: {cv.year_stop}</span>
                 </li>
-                <br/>
+                <br />
                 <li>
-                  <span>Grade: {cv.grade}</span>
+                  <span><strong>Grade</strong>: {cv.grade}</span>
                 </li>
-                <br/>
+                <br />
                 <li>
-                  <span>School: {cv.school}</span>
+                  <span><strong>School</strong>: {cv.school}</span>
                 </li>
-                <br/>
+                <br />
                 <li>
-                  <span>Major: {cv.major}</span>
+                  <span><strong>Major</strong>: {cv.major}</span>
                 </li>
-                <br/>
+                <br />
                 <li>
-                  <span>CPA: {cv.cpa}</span>
+                  <span><strong>CPA</strong>: {cv.cpa}</span>
                 </li>
               </ul>
             </div>
@@ -94,14 +92,13 @@ const SingleCVPage = React.createClass({
             </div>
           </div>
           {/*end row 2*/}
-          <hr/>
-          <div className="row">
+          <div className="row section odd-section">
             <div className="col-md-7 cv-skill-label cv-left-part">
               <p className="cv-label-title"><b>SKILL</b></p>
               <ul className="list-unstyled">
                 <li>
                   <span>
-                      <p className="student-skill">{cv.majorskill}</p>
+                    <p className="student-skill">{cv.majorskill}</p>
                   </span>
                   <span>
                     <div className="progress cv-skill-list">
@@ -111,7 +108,7 @@ const SingleCVPage = React.createClass({
                 </li>
                 <li>
                   <span>
-                      <p className="student-skill">{cv.otherskill}</p>
+                    <p className="student-skill">{cv.otherskill}</p>
                   </span>
                   <span>
                     <div className="progress cv-skill-list">
