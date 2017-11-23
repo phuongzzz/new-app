@@ -12,11 +12,12 @@
 
 .report-table {
   margin-top: 80px;
-  border: 2px solid #B2DFDB;
+  /* border: 2px solid #B2DFDB; */
+  text-align: left;
   /*border-radius: 5px !important;*/
 }
 .thead-report{
-  background-color:#B2DFDB;
+  /* background-color:#B2DFDB; */
 }
 
 .phuong-inline-input {
