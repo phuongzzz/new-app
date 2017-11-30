@@ -14,7 +14,8 @@ module.exports =
       "start": "2017-01-03",
       "stop": "2017-04-03",
       "link_topic": "",
-      "company_name": "VIETTEL"
+      "company_name": "VIETTEL",
+      // "featured_pic": "https://cdn.wccftech.com/wp-content/uploads/2017/04/Ruby-on-Rails.png"
     },
     {
       "name": "Tran Quang Chien",
@@ -23,7 +24,7 @@ module.exports =
       "categories": "Desktop App",
       "description": "Building weather forecast using Java",
       "max": 5,
-      "no_intern":2,
+      "no_intern": 2,
       "content": "",
       "timelimit": "3months",
       "status": "0",

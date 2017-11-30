@@ -137,7 +137,7 @@ const TopicPage = React.createClass({
                   this.props.registered_topics.map((registered_topic, i) =>
                     <RegisteredTopic {...this.props} key={i} i={i} registered_topic={registered_topic} />) :
                   <tr>
-                    <td colspan="4">
+                    <td colSpan="4">
                       You haven't registered any topic yet :(
                     </td>
                   </tr>
