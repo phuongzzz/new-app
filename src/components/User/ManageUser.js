@@ -17,7 +17,7 @@ const ManageUser = React.createClass({
   confirmDelete(e) {
     e.preventDefault();
     if(confirm("Are you sure you want to delete your user?")) {
-      this.props.removeUser(parseInt(this.refs.userId.value),10);
+      this.props.removeUser(parseInt(this.refs.userId.value, 10));
       hashHistory.push("/users");
       toastr.success("Delete done");
     } else {

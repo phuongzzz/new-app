@@ -4,24 +4,49 @@ import toastr from 'toastr';
 
 const AddNewUser = React.createClass({
 
+  getInitialState() {
+    return {
+      errors: {}
+    }
+  },
+
+  formIsValid() {
+    var formIsValid = true;
+
+    if(this.refs.name.value.length < 3) {
+      toastr.error("name must be exist");
+      formIsValid = false;
+    }
+
+    // this.setState({
+    //   errors: this.state.errors
+    // });
+    return formIsValid;
+
+  },
+
+
   handleSubmit(e) {
     e.preventDefault();
-    // console.log(this.refs);
-    //GET THE LAST USER:
-    var lastUser = this.props.users[this.props.users.length - 1];
-    //GET HIS INDEX
-    var lastUserIndex = parseInt(lastUser.id, 10);
-    var userId = lastUserIndex += 1;
-    var groupnames = this.refs.groupnames;
-    const name = this.refs.name.value;
-    const username = this.refs.username.value;
-    const email = this.refs.email.value;
-    const password = this.refs.password.value;
-    const phonenumber = this.refs.phonenumber.value;
-    const role = groupnames.options[groupnames.selectedIndex].value;
-    this.props.addUser(userId, name, username, email, password, phonenumber, role);
-    hashHistory.push("/users");
-    toastr.success("Done");
+
+    if(!this.formIsValid()) {
+      return;
+    }
+    else {
+      var lastUser = this.props.users[this.props.users.length - 1];
+      var lastUserIndex = parseInt(lastUser.id, 10);
+      var userId = lastUserIndex += 1;
+      var groupnames = this.refs.groupnames;
+      const name = this.refs.name.value;
+      const username = this.refs.username.value;
+      const email = this.refs.email.value;
+      const password = this.refs.password.value;
+      const phonenumber = this.refs.phonenumber.value;
+      const role = groupnames.options[groupnames.selectedIndex].value;
+      this.props.addUser(userId, name, username, email, password, phonenumber, role);
+      hashHistory.push("/users");
+      toastr.success("Done");
+    }
   },
 
 
@@ -40,7 +65,7 @@ const AddNewUser = React.createClass({
     return (
       <div className="row">
         <div className="col-md-8 col-md-offset-2">
-          <h2>Manage User</h2>
+          <h2>Add User</h2>
           <form ref="addNewUserForm" className="form-group" onSubmit={this.handleSubmit}>
             <label>Name</label>
             <input type="text" ref="name" placeholder="Enter User's Name" className="form-control" />
@@ -49,7 +74,7 @@ const AddNewUser = React.createClass({
             <label>Email</label>
             <input type="email" ref="email" placeholder="Enter User's Email" className="form-control"/>
             <label>Password</label>
-            <input type="text" ref="password" placeholder="Enter User's Password" className="form-control"/>
+            <input type="password" ref="password" placeholder="Enter User's Password" className="form-control"/>
             <label>Phone number</label>
             <input type="text" ref="phonenumber" placeholder="Enter User's Number" className="form-control"/>
             <label>Role</label>

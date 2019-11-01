@@ -1,0 +1,33 @@
+.noti-header {
+  text-align: left;
+  color: #2c3e50;
+  font-weight: bolder;
+  border-bottom: 1px solid #2c3e50;
+  padding-bottom: 20px;
+}
+
+.noti-wrapper {
+  /*background-color: red;*/
+  text-align: left;
+  border-bottom: 1px solid rgba(52, 73, 94,.2);
+  margin-top: 10px;
+  transition: all ease .25s;
+  padding: 6px;
+  /*line-height: 90%;*/
+}
+
+.noti-wrapper:hover {
+  background-color: rgba(149, 165, 166,.1);
+}
+
+.noti-wrapper span, .noti-wrapper p {
+  font-size: .9em;
+  margin-bottom: 0;
+}
+.noti-name, .noti-email, .noti-message {
+  font-weight: bolder;
+}
+
+.noti-create {
+  font-weight: bolder !important;
+}

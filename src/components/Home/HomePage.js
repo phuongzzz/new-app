@@ -1,23 +1,17 @@
 import React from "react";
 import './home.css';
+import HomeNotLoggedIn from './HomeNotLoggedIn';
+import HomeLoggedIn from './HomeLoggedIn';
 
-const HomePage = React.createClass ({
+const HomePage = React.createClass({
   render() {
-    if(Object.keys(this.props.session).length !== 0) {
+    if (Object.keys(this.props.session).length !== 0) {
       return (
-        <div className="jumbotron banner">
-          <div className="banner-wrapper">
-            <h2>Welcome, {this.props.session}</h2>
-          </div>
-        </div>
+        <HomeLoggedIn {...this.props} />
       )
     } else {
       return (
-        <div className="jumbotron banner">
-          <div className="banner-wrapper">
-            <h2>Welcome</h2>
-          </div>
-        </div>
+        <HomeNotLoggedIn {...this.props} />
       )
     }
   }

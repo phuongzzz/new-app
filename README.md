@@ -6,6 +6,10 @@ Latest stable live app:
 
 ```sie-intern.herokuapp.com```
 
+test:
+  username: admin
+  password: admin
+
 Run in local:
 
  * ```git clone git@github.com:phuongzzz/new-app.git```

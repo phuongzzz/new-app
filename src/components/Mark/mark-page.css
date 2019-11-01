@@ -1,11 +1,40 @@
 .mark-table {
-    margin-top: 60px;
-    border: 2px solid #B2DFDB;
+    margin-top: 30px;
     border-radius: 2px;
 }
-.thead-mark{
-    background-color:#B2DFDB;
+.result {
+    padding: 0;
+    margin-top: 20px;
 }
+
+.content-company {
+    background-attachment: scroll;
+    background-repeat: repeat-x;
+    background-color: #3B4658;
+    color: #ffffff;
+    text-align: left;
+    border-radius: 0.3rem;
+    height: 40px;
+    padding-left: 7px;
+}
+.title-markfor {
+    font-size:20px;
+    margin-top: 80px;
+    margin-left: 190px;
+}
+
+.text-class {
+    margin-left: 210px;
+    font-weight: 400;
+}
+
+.pie-chart {
+    margin-left: 90px;
+}
+.thead-mark {
+    background-color: #B2DFDB;
+}
+
 .table-wrap {
     height: 400px;
     overflow-y: scroll;
@@ -15,10 +44,20 @@
     display: none;
 }
 
-.single-mark-wrap{
-  text-align: left;
+.single-mark-wrap {
+    text-align: left;
 }
 
-/*.save-mark-btn {*/
-  /*margin-top: 20px !important;*/
+/*margin-top: 20px !important;*/
+
+
 /*}*/
+
+.mark-search-error {
+    font-weight: bold;
+    margin-top: 40px;
+    background-color: rgba(231, 76, 60, 1);
+    color: white;
+    border-radius: 6px;
+    padding: 15px;
+}

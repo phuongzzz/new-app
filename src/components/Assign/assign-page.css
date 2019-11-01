@@ -1,8 +1,9 @@
 .registed-table{
     margin-top: 50px;
 }
-h6{
+.h6head{
     text-align: left !important;
-    margin-top: 50px;
+    margin-top: 5px;
     color: #00a1cb;
+    font-weight: bolder;
 }

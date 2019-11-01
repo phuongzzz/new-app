@@ -1,0 +1,15 @@
+.add-topic {
+  text-align: left;
+}
+.add-topic-center {
+  text-align: center;
+}
+
+.add-topic label {
+  font-weight: bolder;
+}
+
+.mai-description {
+  height: 179px;
+  width: 100%;
+}

@@ -2,19 +2,29 @@
 
 }
 .info-table {
-    margin-top: 80px;
-    border-radius: 2px ;
-    border: 2px solid #B2DFDB;
+  margin-top: 80px;
+  border-radius: 2px ;
+  border: 2px solid #B2DFDB;
 }
 .sigle-report{
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .report-table {
-    margin-top: 80px;
-    border: 2px solid #B2DFDB;
-    /*border-radius: 5px !important;*/
+  margin-top: 80px;
+  /* border: 2px solid #B2DFDB; */
+  text-align: left;
+  /*border-radius: 5px !important;*/
 }
 .thead-report{
-    background-color:#B2DFDB;
+  /* background-color:#B2DFDB; */
+}
+
+.phuong-inline-input {
+  display: inline-block !important;
+  width: 200px;
+}
+
+.report-search-error {
+  margin-top: 40px;
 }

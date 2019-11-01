@@ -1,6 +1,6 @@
-import { createStore, compose, applyMiddleware } from 'redux';
-import { syncHistoryWithStore } from 'react-router-redux';
-import { hashHistory } from 'react-router';
+import { createStore, applyMiddleware } from 'redux';
+// import { syncHistoryWithStore } from 'react-router-redux';
+// import { hashHistory } from 'react-router';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 
@@ -23,6 +23,7 @@ import class_respondings from '../sample-data/class_respondings';
 import status_internships from '../sample-data/status_internships';
 import schedules from '../sample-data/schedules';
 import groupnames from '../sample-data/groupnames';
+import notifications from '../sample-data/notifications';
 
 // const defaultState = loadState();
 
@@ -43,7 +44,8 @@ const defaultState = {
   company_respondings,
   status_internships,
   groupnames,
-  session: sessionStorage.username
+  notifications,
+  session: {}
 };
 
 // saveState(defaultState);

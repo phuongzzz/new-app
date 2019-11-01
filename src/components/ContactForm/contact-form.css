@@ -1,0 +1,52 @@
+.contact-form-wrapper {
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.9) 100%), url('https://www.psfk.com/wp-content/uploads/2016/11/Literai_ArtificialFiction_PSFK.com_.jpg') no-repeat fixed center center;
+  background-size: cover;
+  padding: 30px 20px;
+}
+
+.contact-form-wrapper h4 {
+  color: white;
+}
+
+.contact-form-wrapper form {
+  text-align: left;
+}
+
+.contact-form-wrapper label {
+  font-weight: bolder;
+}
+
+.contact-form-wrapper p, .contact-form-wrapper label {
+  color: white;
+}
+
+.contact-form-wrapper input, .contact-form-wrapper textarea {
+  background-color: transparent;
+  color: white;
+}
+
+.btn-danger-custom {
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  color: white;
+}
+
+.btn-danger-custom:hover {
+  background-color: #e74c3c;
+}
+
+.btn-success-custom {
+  background-color: #1abc9c !important;
+  border: 2px solid #1abc9c;
+  color: white;
+}
+
+.btn-success-custom:hover {
+  background-color: #2ecc71 !important;
+  border: 2px solid #2ecc71;
+}
+
+.center-box {
+  text-align: center;
+}
